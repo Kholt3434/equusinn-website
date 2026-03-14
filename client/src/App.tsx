@@ -9,16 +9,18 @@ import Rooms from "./pages/Rooms";
 import Amenities from "./pages/Amenities";
 import Location from "./pages/Location";
 import Contact from "./pages/Contact";
+import Meetings from "./pages/Meetings";
 
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/rooms" component={Rooms} />
-      <Route path="/amenities" component={Amenities} />
-      <Route path="/location" component={Location} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/404" component={NotFound} />
+      <Route path={"/"} component={Home} />
+      <Route path={"/rooms"} component={Rooms} />
+      <Route path={"/amenities"} component={Amenities} />
+      <Route path={"/location"} component={Location} />
+      <Route path={"/contact"} component={Contact} />
+      <Route path={"/meetings"} component={Meetings} />
+      <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
   );

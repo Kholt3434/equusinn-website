@@ -1,14 +1,20 @@
+/**
+ * EQUUS INN — GLOBAL STYLES
+ * Design: Modern Equestrian Luxury
+ * Brand Colors:
+ *   Deep Navy:   #1C2B4A  (primary — authority, depth, elegance)
+ *   Saddle Brown:#8B5E3C  (secondary — warmth, leather, heritage)
+ *   Champagne:   #D4AF6A  (accent gold — prestige, refinement)
+ *   Ivory:       #FAF7F2  (background — clean, airy)
+ *   Charcoal:    #2A2A2A  (text)
+ *   Slate:       #4A5568  (muted text)
+ * Typography: Cormorant Garamond (display) + Lato (body)
+ */
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-
-/* 
-  EQUUS INN DESIGN SYSTEM
-  Design Movement: Southern Equestrian Heritage / Modern Boutique
-  Color Philosophy: Hunter Green (#2C4C3B) + Warm Gold (#C9A84C) + Ivory (#FDFBF7) + Charcoal (#2A2A2A)
-  Typography: Playfair Display (headings) + Raleway (body/UI)
-*/
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -34,67 +40,47 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
 }
 
 :root {
-  /* Equus Inn Brand Colors */
-  --equus-green: oklch(0.33 0.07 155);        /* Hunter Green #2C4C3B */
-  --equus-green-dark: oklch(0.24 0.06 155);   /* Deep Forest Green */
-  --equus-green-light: oklch(0.45 0.08 155);  /* Medium Green */
-  --equus-gold: oklch(0.72 0.12 75);          /* Warm Gold #C9A84C */
-  --equus-gold-light: oklch(0.82 0.10 75);    /* Light Gold */
-  --equus-ivory: oklch(0.99 0.01 90);         /* Ivory #FDFBF7 */
-  --equus-cream: oklch(0.96 0.02 85);         /* Warm Cream */
-  --equus-charcoal: oklch(0.22 0.01 270);     /* Charcoal #2A2A2A */
-  --equus-warm-gray: oklch(0.55 0.01 270);    /* Warm Gray */
+  --radius: 0;
 
-  /* Semantic tokens */
-  --primary: var(--equus-green);
-  --primary-foreground: var(--equus-ivory);
-  --secondary: var(--equus-cream);
-  --secondary-foreground: var(--equus-charcoal);
-  --accent: var(--equus-gold);
-  --accent-foreground: var(--equus-charcoal);
-  --muted: oklch(0.94 0.01 90);
-  --muted-foreground: oklch(0.50 0.02 90);
-  --background: var(--equus-ivory);
-  --foreground: var(--equus-charcoal);
-  --card: oklch(1 0 0);
-  --card-foreground: var(--equus-charcoal);
-  --popover: oklch(1 0 0);
-  --popover-foreground: var(--equus-charcoal);
-  --border: oklch(0.88 0.02 90);
-  --input: oklch(0.88 0.02 90);
-  --ring: var(--equus-green);
-  --destructive: oklch(0.577 0.245 27.325);
+  /* === EQUUS INN BRAND PALETTE === */
+  --navy:        #1C2B4A;
+  --navy-dark:   #111B30;
+  --navy-mid:    #243460;
+  --saddle:      #8B5E3C;
+  --saddle-light:#A67C55;
+  --champagne:   #D4AF6A;
+  --champagne-light: #E8CC90;
+  --ivory:       #FAF7F2;
+  --ivory-warm:  #F2EDE4;
+  --charcoal:    #2A2A2A;
+  --slate:       #4A5568;
+
+  /* === TAILWIND SEMANTIC TOKENS === */
+  --background:          oklch(0.98 0.008 75);
+  --foreground:          oklch(0.18 0.01 240);
+  --card:                oklch(1 0 0);
+  --card-foreground:     oklch(0.18 0.01 240);
+  --popover:             oklch(1 0 0);
+  --popover-foreground:  oklch(0.18 0.01 240);
+  --primary:             oklch(0.25 0.07 240);
+  --primary-foreground:  oklch(0.98 0 0);
+  --secondary:           oklch(0.55 0.08 50);
+  --secondary-foreground:oklch(0.98 0 0);
+  --muted:               oklch(0.95 0.01 75);
+  --muted-foreground:    oklch(0.45 0.02 240);
+  --accent:              oklch(0.72 0.1 75);
+  --accent-foreground:   oklch(0.18 0.01 240);
+  --destructive:         oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --radius: 0.5rem;
-  --sidebar: oklch(0.33 0.07 155);
-  --sidebar-foreground: var(--equus-ivory);
-  --sidebar-primary: var(--equus-gold);
-  --sidebar-primary-foreground: var(--equus-charcoal);
-  --sidebar-accent: oklch(0.40 0.07 155);
-  --sidebar-accent-foreground: var(--equus-ivory);
-  --sidebar-border: oklch(0.40 0.06 155);
-  --sidebar-ring: var(--equus-gold);
-  --chart-1: var(--equus-green);
-  --chart-2: var(--equus-gold);
-  --chart-3: oklch(0.55 0.08 155);
-  --chart-4: oklch(0.65 0.10 75);
-  --chart-5: oklch(0.45 0.06 155);
+  --border:              oklch(0.88 0.01 75);
+  --input:               oklch(0.88 0.01 75);
+  --ring:                oklch(0.25 0.07 240);
+  --sidebar:             oklch(0.98 0.008 75);
+  --sidebar-foreground:  oklch(0.18 0.01 240);
+  --sidebar-border:      oklch(0.88 0.01 75);
 }
 
 @layer base {
@@ -103,10 +89,8 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Raleway', sans-serif;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -129,19 +113,16 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
-
   .flex {
     min-height: 0;
     min-width: 0;
   }
-
   @media (min-width: 640px) {
     .container {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
   }
-
   @media (min-width: 1024px) {
     .container {
       padding-left: 2rem;
@@ -150,155 +131,123 @@
     }
   }
 
-  /* Equus Inn Custom Utilities */
+  /* === TYPOGRAPHY === */
   .font-display {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
   }
-
   .font-body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Lato', sans-serif;
   }
 
-  .text-equus-green {
-    color: var(--equus-green);
-  }
-
-  .bg-equus-green {
-    background-color: var(--equus-green);
-  }
-
-  .text-equus-gold {
-    color: var(--equus-gold);
-  }
-
-  .bg-equus-gold {
-    background-color: var(--equus-gold);
-  }
-
-  .text-equus-ivory {
-    color: var(--equus-ivory);
-  }
-
-  .bg-equus-ivory {
-    background-color: var(--equus-ivory);
-  }
-
-  .gold-divider {
-    width: 60px;
-    height: 2px;
-    background-color: var(--equus-gold);
-    display: inline-block;
-  }
-
+  /* === SECTION LABEL === */
   .section-label {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    font-style: italic;
-    letter-spacing: 0.2em;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    font-size: 0.75rem;
-    color: var(--equus-gold);
+    color: var(--saddle);
   }
 
+  /* === GOLD DIVIDER === */
+  .gold-divider {
+    width: 3rem;
+    height: 2px;
+    background: var(--champagne);
+  }
+
+  /* === BUTTONS === */
   .btn-primary {
-    background-color: var(--equus-green);
-    color: var(--equus-ivory);
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.1em;
+    display: inline-block;
+    background-color: var(--navy);
+    color: #FAF7F2;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    font-size: 0.8rem;
-    padding: 0.875rem 2rem;
-    border: none;
-    transition: all 0.3s ease;
+    padding: 0.875rem 2.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    border: 2px solid transparent;
   }
-
   .btn-primary:hover {
-    background-color: var(--equus-green-dark);
+    background-color: var(--navy-dark);
     transform: translateY(-1px);
-    box-shadow: 0 4px 20px oklch(0.33 0.07 155 / 0.3);
   }
 
   .btn-gold {
-    background-color: var(--equus-gold);
-    color: var(--equus-charcoal);
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.1em;
+    display: inline-block;
+    background-color: var(--champagne);
+    color: var(--navy-dark);
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    font-size: 0.8rem;
-    padding: 0.875rem 2rem;
-    border: none;
-    transition: all 0.3s ease;
+    padding: 0.875rem 2.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    border: 2px solid transparent;
+  }
+  .btn-gold:hover {
+    background-color: var(--champagne-light);
+    transform: translateY(-1px);
   }
 
-  .btn-gold:hover {
-    background-color: var(--equus-gold-light);
+  .btn-saddle {
+    display: inline-block;
+    background-color: var(--saddle);
+    color: #FAF7F2;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.875rem 2.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+  }
+  .btn-saddle:hover {
+    background-color: var(--saddle-light);
     transform: translateY(-1px);
   }
 
   .btn-outline {
+    display: inline-block;
     background-color: transparent;
-    color: var(--equus-ivory);
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.1em;
+    color: #FAF7F2;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    font-size: 0.8rem;
-    padding: 0.875rem 2rem;
-    border: 1.5px solid var(--equus-ivory);
+    padding: 0.875rem 2.5rem;
+    border: 2px solid rgba(250,247,242,0.5);
     transition: all 0.3s ease;
+    text-decoration: none;
   }
-
   .btn-outline:hover {
-    background-color: var(--equus-ivory);
-    color: var(--equus-charcoal);
+    border-color: #FAF7F2;
+    background-color: rgba(250,247,242,0.1);
   }
 
-  .card-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .card-hover:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px oklch(0 0 0 / 0.12);
-  }
-
-  .img-overlay {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .img-overlay::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, oklch(0 0 0 / 0.5) 0%, transparent 60%);
-    pointer-events: none;
-  }
-
-  .nav-link {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
-    font-size: 0.85rem;
-    letter-spacing: 0.12em;
+  .btn-outline-dark {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--navy);
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    position: relative;
-    transition: color 0.3s ease;
+    padding: 0.875rem 2.5rem;
+    border: 2px solid var(--navy);
+    transition: all 0.3s ease;
+    text-decoration: none;
   }
-
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 1.5px;
-    background-color: var(--equus-gold);
-    transition: width 0.3s ease;
-  }
-
-  .nav-link:hover::after {
-    width: 100%;
+  .btn-outline-dark:hover {
+    background-color: var(--navy);
+    color: #FAF7F2;
   }
 }

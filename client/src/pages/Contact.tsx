@@ -1,7 +1,7 @@
 /**
  * EQUUS INN CONTACT PAGE
- * Design: Southern Equestrian Heritage
- * Colors: Hunter Green #2C4C3B, Gold #C9A84C, Ivory #FDFBF7, Charcoal #2A2A2A
+ * Design: Modern Equestrian Luxury
+ * Colors: Deep Navy #1C2B4A, Saddle #8B5E3C, Champagne #D4AF6A, Ivory #FAF7F2
  */
 
 import { useEffect, useRef, useState } from "react";
@@ -11,8 +11,8 @@ import Footer from "@/components/Footer";
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Send, ExternalLink } from "lucide-react";
 import { toast } from "sonner";
 
-const LOBBY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/equusinn_lobby_1d494f06.jpg";
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/equusinn_exterior_f60796b2.jpg";
+const LOBBY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488551_be582543.webp";
+const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_exterior_main_decd433b.webp";
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
@@ -66,7 +66,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FDFBF7]">
+    <div className="min-h-screen bg-[#FAF7F2]">
       <Navigation />
 
       {/* Page Hero */}
@@ -75,14 +75,14 @@ export default function Contact() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${HERO_IMG})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1E3328]/90 via-[#1E3328]/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#111B30]/90 via-[#111B30]/40 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-12 w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <p className="section-label text-[#C9A84C] mb-3">We'd Love to Hear From You</p>
+            <p className="section-label text-[#D4AF6A] mb-3">We'd Love to Hear From You</p>
             <h1 className="font-display text-4xl sm:text-5xl font-bold text-white">
               Contact Us
             </h1>
@@ -100,7 +100,7 @@ export default function Contact() {
               <AnimatedSection>
                 <p className="section-label mb-4">Get in Touch</p>
                 <div className="gold-divider mb-6" />
-                <h2 className="font-display text-3xl font-bold text-[#2C4C3B] mb-6">
+                <h2 className="font-display text-3xl font-bold text-[#1C2B4A] mb-6">
                   We're Here<br />
                   <span className="italic">For You</span>
                 </h2>
@@ -110,11 +110,11 @@ export default function Contact() {
 
                 <div className="space-y-6 mb-10">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[#2C4C3B]/10 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-4 h-4 text-[#2C4C3B]" />
+                    <div className="w-10 h-10 rounded-full bg-[#1C2B4A]/10 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-4 h-4 text-[#1C2B4A]" />
                     </div>
                     <div>
-                      <p className="font-display font-600 text-sm text-[#2C4C3B] mb-1">Address</p>
+                      <p className="font-display font-600 text-sm text-[#1C2B4A] mb-1">Address</p>
                       <p className="font-body text-sm text-[#2A2A2A]/65 leading-relaxed">
                         3434 SW College Road<br />
                         Ocala, FL 34474
@@ -122,33 +122,33 @@ export default function Contact() {
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[#2C4C3B]/10 flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-4 h-4 text-[#2C4C3B]" />
+                    <div className="w-10 h-10 rounded-full bg-[#1C2B4A]/10 flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-4 h-4 text-[#1C2B4A]" />
                     </div>
                     <div>
-                      <p className="font-display font-600 text-sm text-[#2C4C3B] mb-1">Phone</p>
-                      <a href="tel:+13528543200" className="font-body text-sm text-[#2A2A2A]/65 hover:text-[#2C4C3B] transition-colors">
+                      <p className="font-display font-600 text-sm text-[#1C2B4A] mb-1">Phone</p>
+                      <a href="tel:+13528543200" className="font-body text-sm text-[#2A2A2A]/65 hover:text-[#1C2B4A] transition-colors">
                         (352) 854-3200
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[#2C4C3B]/10 flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-4 h-4 text-[#2C4C3B]" />
+                    <div className="w-10 h-10 rounded-full bg-[#1C2B4A]/10 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-4 h-4 text-[#1C2B4A]" />
                     </div>
                     <div>
-                      <p className="font-display font-600 text-sm text-[#2C4C3B] mb-1">Email</p>
-                      <a href="mailto:OcalaFD@paxproperties.com" className="font-body text-sm text-[#2A2A2A]/65 hover:text-[#2C4C3B] transition-colors">
+                      <p className="font-display font-600 text-sm text-[#1C2B4A] mb-1">Email</p>
+                      <a href="mailto:OcalaFD@paxproperties.com" className="font-body text-sm text-[#2A2A2A]/65 hover:text-[#1C2B4A] transition-colors">
                         OcalaFD@paxproperties.com
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[#2C4C3B]/10 flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-4 h-4 text-[#2C4C3B]" />
+                    <div className="w-10 h-10 rounded-full bg-[#1C2B4A]/10 flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-4 h-4 text-[#1C2B4A]" />
                     </div>
                     <div>
-                      <p className="font-display font-600 text-sm text-[#2C4C3B] mb-1">Front Desk Hours</p>
+                      <p className="font-display font-600 text-sm text-[#1C2B4A] mb-1">Front Desk Hours</p>
                       <p className="font-body text-sm text-[#2A2A2A]/65">Open 24 hours, 7 days a week</p>
                     </div>
                   </div>
@@ -156,13 +156,13 @@ export default function Contact() {
 
                 {/* Social Links */}
                 <div className="mb-10">
-                  <p className="font-display font-600 text-sm text-[#2C4C3B] mb-4">Follow Us</p>
+                  <p className="font-display font-600 text-sm text-[#1C2B4A] mb-4">Follow Us</p>
                   <div className="flex gap-3">
                     <a
                       href="https://www.facebook.com/EquusInn/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2.5 border border-[#2C4C3B]/20 text-[#2C4C3B] hover:bg-[#2C4C3B] hover:text-white transition-all duration-300 font-body text-xs tracking-wide"
+                      className="flex items-center gap-2 px-4 py-2.5 border border-[#1C2B4A]/20 text-[#1C2B4A] hover:bg-[#1C2B4A] hover:text-white transition-all duration-300 font-body text-xs tracking-wide"
                     >
                       <Facebook className="w-4 h-4" /> Facebook
                     </a>
@@ -170,7 +170,7 @@ export default function Contact() {
                       href="https://www.instagram.com/equusinn/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2.5 border border-[#2C4C3B]/20 text-[#2C4C3B] hover:bg-[#2C4C3B] hover:text-white transition-all duration-300 font-body text-xs tracking-wide"
+                      className="flex items-center gap-2 px-4 py-2.5 border border-[#1C2B4A]/20 text-[#1C2B4A] hover:bg-[#1C2B4A] hover:text-white transition-all duration-300 font-body text-xs tracking-wide"
                     >
                       <Instagram className="w-4 h-4" /> Instagram
                     </a>
@@ -199,7 +199,7 @@ export default function Contact() {
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div>
-                        <label className="block font-body text-xs font-600 tracking-widest uppercase text-[#2C4C3B] mb-2">
+                        <label className="block font-body text-xs font-600 tracking-widest uppercase text-[#1C2B4A] mb-2">
                           Full Name *
                         </label>
                         <input
@@ -209,11 +209,11 @@ export default function Contact() {
                           onChange={handleChange}
                           required
                           placeholder="Your full name"
-                          className="w-full border border-[#2C4C3B]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#2C4C3B] transition-colors bg-[#FDFBF7]"
+                          className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FDFBF7]"
                         />
                       </div>
                       <div>
-                        <label className="block font-body text-xs font-600 tracking-widest uppercase text-[#2C4C3B] mb-2">
+                        <label className="block font-body text-xs font-600 tracking-widest uppercase text-[#1C2B4A] mb-2">
                           Email Address *
                         </label>
                         <input
@@ -223,13 +223,13 @@ export default function Contact() {
                           onChange={handleChange}
                           required
                           placeholder="your@email.com"
-                          className="w-full border border-[#2C4C3B]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#2C4C3B] transition-colors bg-[#FDFBF7]"
+                          className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FDFBF7]"
                         />
                       </div>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div>
-                        <label className="block font-body text-xs font-600 tracking-widest uppercase text-[#2C4C3B] mb-2">
+                        <label className="block font-body text-xs font-600 tracking-widest uppercase text-[#1C2B4A] mb-2">
                           Phone Number
                         </label>
                         <input
@@ -238,18 +238,18 @@ export default function Contact() {
                           value={form.phone}
                           onChange={handleChange}
                           placeholder="(555) 000-0000"
-                          className="w-full border border-[#2C4C3B]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#2C4C3B] transition-colors bg-[#FDFBF7]"
+                          className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FDFBF7]"
                         />
                       </div>
                       <div>
-                        <label className="block font-body text-xs font-600 tracking-widest uppercase text-[#2C4C3B] mb-2">
+                        <label className="block font-body text-xs font-600 tracking-widest uppercase text-[#1C2B4A] mb-2">
                           Room Type
                         </label>
                         <select
                           name="roomType"
                           value={form.roomType}
                           onChange={handleChange}
-                          className="w-full border border-[#2C4C3B]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#2C4C3B] transition-colors bg-[#FDFBF7]"
+                          className="w-full border border-[#2C4C3B]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]"
                         >
                           <option value="">Select room type</option>
                           <option value="king">King Room</option>
@@ -261,7 +261,7 @@ export default function Contact() {
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
                       <div>
-                        <label className="block font-body text-xs font-600 tracking-widest uppercase text-[#2C4C3B] mb-2">
+                        <label className="block font-body text-xs font-600 tracking-widest uppercase text-[#1C2B4A] mb-2">
                           Check-In Date
                         </label>
                         <input
@@ -269,11 +269,11 @@ export default function Contact() {
                           name="checkIn"
                           value={form.checkIn}
                           onChange={handleChange}
-                          className="w-full border border-[#2C4C3B]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#2C4C3B] transition-colors bg-[#FDFBF7]"
+                          className="w-full border border-[#2C4C3B]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]"
                         />
                       </div>
                       <div>
-                        <label className="block font-body text-xs font-600 tracking-widest uppercase text-[#2C4C3B] mb-2">
+                        <label className="block font-body text-xs font-600 tracking-widest uppercase text-[#1C2B4A] mb-2">
                           Check-Out Date
                         </label>
                         <input
@@ -281,18 +281,18 @@ export default function Contact() {
                           name="checkOut"
                           value={form.checkOut}
                           onChange={handleChange}
-                          className="w-full border border-[#2C4C3B]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#2C4C3B] transition-colors bg-[#FDFBF7]"
+                          className="w-full border border-[#2C4C3B]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]"
                         />
                       </div>
                       <div>
-                        <label className="block font-body text-xs font-600 tracking-widest uppercase text-[#2C4C3B] mb-2">
+                        <label className="block font-body text-xs font-600 tracking-widest uppercase text-[#1C2B4A] mb-2">
                           Guests
                         </label>
                         <select
                           name="guests"
                           value={form.guests}
                           onChange={handleChange}
-                          className="w-full border border-[#2C4C3B]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#2C4C3B] transition-colors bg-[#FDFBF7]"
+                          className="w-full border border-[#2C4C3B]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]"
                         >
                           <option value="">Guests</option>
                           <option value="1">1 Guest</option>
@@ -304,9 +304,8 @@ export default function Contact() {
                       </div>
                     </div>
                     <div>
-                      <label className="block font-body text-xs font-600 tracking-widest uppercase text-[#2C4C3B] mb-2">
-                        Message *
-                      </label>
+                      <label className="block font-body text-xs font-600 tracking-widest uppercasetext-[#1C2B4A] mb-2">
+                  Send Us a Message                      </label>
                       <textarea
                         name="message"
                         value={form.message}
@@ -314,7 +313,7 @@ export default function Contact() {
                         required
                         rows={5}
                         placeholder="Tell us about your stay, any special requests, or questions you have..."
-                        className="w-full border border-[#2C4C3B]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#2C4C3B] transition-colors bg-[#FDFBF7] resize-none"
+                        className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FDFBF7] resize-none"
                       />
                     </div>
                     <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-2">
@@ -328,7 +327,7 @@ export default function Contact() {
                         )}
                       </button>
                       <p className="font-body text-xs text-[#2A2A2A]/40">
-                        Or call us directly: <a href="tel:+13528543200" className="text-[#2C4C3B] hover:underline">(352) 854-3200</a>
+                        Or call us directly: <a href="tel:+13528543200" className="text-[#1C2B4A] hover:underline">(352) 854-3200</a>
                       </p>
                     </div>
                   </form>
@@ -340,15 +339,15 @@ export default function Contact() {
       </section>
 
       {/* Book Direct CTA */}
-      <section className="py-16 px-6 lg:px-8 bg-[#2C4C3B]">
+      <section className="py-16 px-6 lg:px-8 bg-[#1C2B4A]">
         <div className="max-w-5xl mx-auto">
           <AnimatedSection>
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               <div>
-                <h2 className="font-display text-3xl font-bold text-[#FDFBF7] mb-3">
+                <h2 className="font-display text-3xl font-bold text-[#FAF7F2] mb-3">
                   Ready to Book?
                 </h2>
-                <p className="font-body text-[#FDFBF7]/65 text-sm leading-relaxed max-w-lg">
+                <p className="font-body text-[#FAF7F2]/65 text-sm leading-relaxed max-w-lg">
                   Reserve your room online for instant confirmation. Rooms fill quickly during show season — book early to secure your preferred dates.
                 </p>
               </div>

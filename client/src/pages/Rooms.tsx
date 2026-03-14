@@ -1,22 +1,26 @@
 /**
  * EQUUS INN ROOMS & SUITES PAGE
- * Design: Southern Equestrian Heritage
- * Colors: Hunter Green #2C4C3B, Gold #C9A84C, Ivory #FDFBF7, Charcoal #2A2A2A
- * Typography: Playfair Display (headings) + Raleway (body)
+ * Design: Modern Equestrian Luxury
+ * Colors: Deep Navy #1C2B4A, Saddle #8B5E3C, Champagne #D4AF6A, Ivory #FAF7F2
+ * Typography: Cormorant Garamond (display) + Lato (body)
  */
 
 import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Tv, Wifi, Wind, Coffee, Bath, Refrigerator, Utensils, Check, ArrowRight } from "lucide-react";
+import { Tv, Wifi, Wind, Coffee, Bath, Check, ArrowRight, BedDouble } from "lucide-react";
 
-const ROOM_MURAL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/equusinn_room_mural-awzoBnDHR2dKQohS7ZsnQp.webp";
-const ROOM_KING = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/equusinn_room_king_161d87ce.jpg";
-const ROOM_QUEEN = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/equusinn_room_queen_c8d47e56.jpg";
-const SUITE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/equusinn_suite_3029ddf4.jpg";
-const BATHROOM_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/equusinn_bathroom_989c9365.jpg";
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/equusinn_room_king_161d87ce.jpg";
+// Real hotel images
+const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/room_interior_actual_4f6cee2f.jpg";
+const ROOM_1A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/room_interior_actual_4f6cee2f.jpg";
+const ROOM_1B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488549_e9772347.webp";
+const ROOM_2A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488540_89174581.webp";
+const ROOM_2B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488570_ebe17d16.webp";
+const ROOM_3A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488627_71752dc4.webp";
+const ROOM_3B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_room_2991_5f6c62b0.webp";
+const EXTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_exterior_main_decd433b.webp";
+const POOL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_pool_actual_be656166.webp";
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
@@ -34,13 +38,13 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
   );
 }
 
-const standardAmenities = [
-  { icon: Tv, label: "Smart TV with streaming" },
-  { icon: Wifi, label: "Fiber optic high-speed WiFi" },
-  { icon: Wind, label: "Individual climate control" },
-  { icon: Coffee, label: "In-room coffee maker" },
-  { icon: Bath, label: "Luxury rain showerhead" },
-  { icon: Refrigerator, label: "Mini-fridge & microwave" },
+const standardFeatures = [
+  { icon: Tv, label: "Smart TV" },
+  { icon: Wifi, label: "Fiber Optic WiFi" },
+  { icon: Coffee, label: "Coffee Maker" },
+  { icon: Bath, label: "Luxury Rain Shower" },
+  { icon: Wind, label: "Climate Control" },
+  { icon: Check, label: "Equestrian Décor" },
 ];
 
 const rooms = [
@@ -48,76 +52,73 @@ const rooms = [
     id: "king",
     tag: "Most Popular",
     title: "King Room",
-    subtitle: "Our Signature Equestrian Suite",
-    img: ROOM_MURAL_IMG,
-    img2: ROOM_KING,
-    description:
-      "Our signature King Rooms are the heart of the Equus Inn experience. Each room features a dramatic full-wall equestrian mural depicting galloping horses in a timeless black-and-white photographic style — a true conversation piece that sets us apart from any other hotel in Ocala.",
-    details:
-      "Newly renovated with hardwood-style tile flooring, a luxury king-size bed with premium linens, a modern bathroom with a large bowl sink and rain showerhead, and all the technology you need for a comfortable stay.",
+    subtitle: "Signature Equestrian Experience",
+    imgA: ROOM_1A,
+    imgB: ROOM_1B,
+    beds: "1 King Bed",
+    guests: "Up to 2 Guests",
+    sqft: "~320 sq ft",
+    desc: "Our signature king rooms are the heart of the Equus Inn experience. Each room has been thoughtfully renovated with equestrian-themed décor that pays homage to Ocala's horse heritage. Featuring new hardwood-style tile floors, a luxury rain showerhead, modern bowl sink, and a Smart TV, these rooms blend comfort with character.",
     features: [
-      "King-size bed with premium linens",
-      "Full-wall equestrian mural",
+      "1 King Bed with premium linens",
+      "Equestrian-themed décor throughout",
+      "Luxury rain showerhead & modern bowl sink",
       "Hardwood-style tile floors",
-      "Luxury rain showerhead",
-      "Modern bowl sink vanity",
-      "Smart TV (50\"+)",
+      "Smart TV with streaming",
       "Fiber optic WiFi",
-      "Mini-fridge & microwave",
+      "Coffee maker & mini fridge",
+      "Climate control (A/C & heat)",
       "In-room safe",
-      "Individual A/C control",
+      "Complimentary hot breakfast included",
     ],
-    color: "#2C4C3B",
   },
   {
-    id: "queen",
-    tag: "Great for Families",
+    id: "double-queen",
+    tag: "Great for Groups",
     title: "Double Queen Room",
-    subtitle: "Spacious Comfort for Groups",
-    img: ROOM_QUEEN,
-    img2: ROOM_MURAL_IMG,
-    description:
-      "Our Double Queen Rooms offer generous space and two plush queen beds, making them ideal for families, traveling companions, or equestrian teams attending shows at the World Equestrian Center or HITS.",
-    details:
-      "Like all our rooms, the Double Queen features the same high-quality renovation with equestrian-themed décor, modern bathrooms, and premium amenities. Extra space means extra comfort for longer stays.",
+    subtitle: "Spacious Comfort for Families & Teams",
+    imgA: ROOM_2A,
+    imgB: ROOM_2B,
+    beds: "2 Queen Beds",
+    guests: "Up to 4 Guests",
+    sqft: "~380 sq ft",
+    desc: "Our double queen rooms offer the perfect solution for families, groups attending equestrian events, or travelers who simply want extra space. Two queen beds with premium linens, all-new furnishings, and the same equestrian-inspired décor found throughout the property make this room a comfortable base for your Ocala adventures.",
     features: [
-      "Two queen-size beds",
-      "Equestrian-themed wall art",
+      "2 Queen Beds with premium linens",
+      "Equestrian-themed décor throughout",
+      "Luxury rain showerhead & modern bowl sink",
       "Hardwood-style tile floors",
-      "Luxury rain showerhead",
-      "Modern bowl sink vanity",
-      "Smart TV (50\"+)",
+      "Smart TV with streaming",
       "Fiber optic WiFi",
-      "Mini-fridge & microwave",
-      "Seating area",
-      "Individual A/C control",
+      "Coffee maker & mini fridge",
+      "Climate control (A/C & heat)",
+      "Ideal for families & groups",
+      "Complimentary hot breakfast included",
     ],
-    color: "#1E3328",
   },
   {
     id: "suite",
     tag: "Extended Stay",
     title: "Suite with Kitchenette",
-    subtitle: "Home Away from Home",
-    img: SUITE_IMG,
-    img2: BATHROOM_IMG,
-    description:
-      "For guests planning an extended stay during show season or those who simply prefer more space, our Suites with Kitchenette offer the ultimate in comfort and convenience. These spacious accommodations include a full-size refrigerator, a dedicated dining area, and a separate living space.",
-    details:
-      "Perfect for equestrian competitors staying for multi-week events at the World Equestrian Center. All the amenities of our standard rooms, plus the added convenience of a kitchenette for preparing light meals.",
+    subtitle: "Home Away From Home",
+    imgA: ROOM_3A,
+    imgB: ROOM_3B,
+    beds: "1 King Bed",
+    guests: "Up to 2 Guests",
+    sqft: "~480 sq ft",
+    desc: "For longer stays during show season or extended visits to Ocala, our suites with kitchenettes offer everything you need to feel at home. A full-size refrigerator, microwave, and dedicated dining area mean you can prepare meals at your convenience, while still enjoying all the amenities of the hotel.",
     features: [
-      "King or queen bed configuration",
-      "Full kitchenette",
-      "Full-size refrigerator",
-      "Dining area",
-      "Separate living space",
-      "Smart TV (50\"+)",
+      "1 King Bed with premium linens",
+      "Full kitchenette with full-size refrigerator",
+      "Microwave & dining area",
+      "Separate living/sitting area",
+      "Equestrian-themed décor throughout",
+      "Luxury rain showerhead & modern bowl sink",
+      "Smart TV with streaming",
       "Fiber optic WiFi",
-      "Luxury rain showerhead",
-      "Modern bowl sink vanity",
-      "Individual A/C control",
+      "Coffee maker",
+      "Complimentary hot breakfast included",
     ],
-    color: "#2C4C3B",
   },
 ];
 
@@ -127,7 +128,7 @@ export default function Rooms() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#FDFBF7]">
+    <div className="min-h-screen bg-[#FAF7F2]">
       <Navigation />
 
       {/* Page Hero */}
@@ -136,14 +137,14 @@ export default function Rooms() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${HERO_IMG})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1E3328]/90 via-[#1E3328]/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#111B30]/90 via-[#111B30]/40 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-12 w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <p className="section-label text-[#C9A84C] mb-3">Accommodations</p>
+            <p className="section-label text-[#D4AF6A] mb-3">Accommodations</p>
             <h1 className="font-display text-4xl sm:text-5xl font-bold text-white">
               Rooms & Suites
             </h1>
@@ -152,117 +153,174 @@ export default function Rooms() {
       </section>
 
       {/* Intro */}
-      <section className="py-16 px-6 lg:px-8 bg-[#FDFBF7]">
+      <section className="py-16 px-6 lg:px-8 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="max-w-3xl">
-            <p className="font-body text-[#2A2A2A]/70 text-lg leading-relaxed mb-4">
-              Every room at Equus Inn has been thoughtfully renovated to celebrate Ocala's equestrian heritage. From our signature full-wall horse murals to the modern rain showers and Smart TVs, each detail is designed to make your stay both memorable and comfortable.
-            </p>
-            <p className="font-body text-[#2A2A2A]/60 text-base leading-relaxed">
-              All 152 rooms and suites include complimentary fiber optic WiFi, in-room coffee makers, mini-fridges, microwaves, and access to all hotel amenities — including our free hot breakfast each morning.
+            <p className="section-label mb-4">152 Rooms & Suites</p>
+            <div className="gold-divider mb-6" />
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#1C2B4A] mb-5">
+              Every Room Tells a Story
+            </h2>
+            <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed">
+              Each of our 152 rooms and suites has been recently renovated with equestrian-themed décor, luxury finishes, and modern technology. From our signature king rooms to our extended-stay suites, every accommodation reflects the spirit and heritage of Ocala's horse country.
             </p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Standard Amenities Bar */}
-      <div className="bg-[#F5F0E8] py-8 px-6 lg:px-8">
+      {/* Standard Features Bar */}
+      <section className="py-10 px-6 lg:px-8 bg-[#1C2B4A]">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap gap-6 justify-center">
-            {standardAmenities.map((a, i) => (
-              <div key={i} className="flex items-center gap-2 text-[#2C4C3B]">
-                <a.icon className="w-4 h-4 text-[#C9A84C]" />
-                <span className="font-body text-xs tracking-wide text-[#2A2A2A]/70">{a.label}</span>
+          <div className="flex flex-wrap items-center justify-center gap-8">
+            {standardFeatures.map((f, i) => (
+              <div key={i} className="flex items-center gap-3 text-[#FAF7F2]/75">
+                <f.icon className="w-4 h-4 text-[#D4AF6A]" />
+                <span className="font-body font-700 text-xs tracking-widest uppercase">{f.label}</span>
+                {i < standardFeatures.length - 1 && <span className="hidden sm:block text-[#D4AF6A]/30 ml-4">·</span>}
               </div>
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Room Cards */}
+      {/* Room Listings */}
       <section className="py-20 px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto space-y-24">
+        <div className="max-w-7xl mx-auto space-y-20">
           {rooms.map((room, i) => (
             <AnimatedSection key={room.id}>
-              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-0 shadow-lg overflow-hidden ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
+              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start`}>
                 {/* Images */}
-                <div className={`grid grid-cols-2 gap-0 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
-                  <div className="h-64 lg:h-full overflow-hidden">
+                <div className={`space-y-3 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
+                  <div className="relative h-80 overflow-hidden">
                     <img
-                      src={room.img}
-                      alt={`Equus Inn ${room.title}`}
+                      src={room.imgA}
+                      alt={`Equus Inn ${room.title} — main view`}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     />
+                    <div className="absolute top-4 left-4 bg-[#D4AF6A] text-[#111B30] font-body font-700 text-[0.6rem] tracking-widest uppercase px-3 py-1.5">
+                      {room.tag}
+                    </div>
                   </div>
-                  <div className="h-64 lg:h-full overflow-hidden">
+                  <div className="h-48 overflow-hidden">
                     <img
-                      src={room.img2}
-                      alt={`Equus Inn ${room.title} detail`}
+                      src={room.imgB}
+                      alt={`Equus Inn ${room.title} — detail view`}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     />
                   </div>
                 </div>
+
                 {/* Content */}
-                <div
-                  className={`p-10 lg:p-14 flex flex-col justify-center ${i % 2 === 1 ? "lg:order-1" : ""}`}
-                  style={{ backgroundColor: room.color }}
-                >
-                  <span className="inline-block bg-[#C9A84C] text-[#2A2A2A] font-body font-600 text-xs tracking-widest uppercase px-3 py-1 mb-6 w-fit">
-                    {room.tag}
-                  </span>
-                  <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#FDFBF7] mb-2">
-                    {room.title}
-                  </h2>
-                  <p className="font-body text-[#C9A84C] text-sm tracking-wide mb-6 italic">{room.subtitle}</p>
-                  <p className="font-body text-[#FDFBF7]/75 text-sm leading-relaxed mb-4">{room.description}</p>
-                  <p className="font-body text-[#FDFBF7]/60 text-sm leading-relaxed mb-8">{room.details}</p>
+                <div className={i % 2 === 1 ? "lg:order-1" : ""}>
+                  <p className="section-label mb-3">{room.subtitle}</p>
+                  <div className="gold-divider mb-5" />
+                  <h2 className="font-display text-4xl font-bold text-[#1C2B4A] mb-4">{room.title}</h2>
+
+                  {/* Quick specs */}
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    <div className="flex items-center gap-2 bg-[#F2EDE4] px-4 py-2">
+                      <BedDouble className="w-4 h-4 text-[#8B5E3C]" />
+                      <span className="font-body text-xs font-700 text-[#1C2B4A]">{room.beds}</span>
+                    </div>
+                    <div className="flex items-center gap-2 bg-[#F2EDE4] px-4 py-2">
+                      <span className="font-body text-xs font-700 text-[#1C2B4A]">{room.guests}</span>
+                    </div>
+                    <div className="flex items-center gap-2 bg-[#F2EDE4] px-4 py-2">
+                      <span className="font-body text-xs font-700 text-[#1C2B4A]">{room.sqft}</span>
+                    </div>
+                  </div>
+
+                  <p className="font-body text-[#2A2A2A]/70 text-sm leading-relaxed mb-6">{room.desc}</p>
+
+                  {/* Features list */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-8">
                     {room.features.map((f, j) => (
-                      <div key={j} className="flex items-center gap-2">
-                        <Check className="w-3.5 h-3.5 text-[#C9A84C] flex-shrink-0" />
-                        <span className="font-body text-xs text-[#FDFBF7]/70">{f}</span>
+                      <div key={j} className="flex items-start gap-2">
+                        <Check className="w-3.5 h-3.5 text-[#D4AF6A] mt-0.5 flex-shrink-0" />
+                        <span className="font-body text-xs text-[#2A2A2A]/65 leading-relaxed">{f}</span>
                       </div>
                     ))}
                   </div>
-                  <a
-                    href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-gold text-xs px-7 py-3.5 font-body font-600 tracking-widest uppercase inline-flex items-center gap-2 w-fit"
-                  >
-                    Book This Room <ArrowRight className="w-4 h-4" />
-                  </a>
+
+                  <div className="flex flex-wrap gap-4">
+                    <a
+                      href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-gold text-xs px-8 py-4 inline-flex items-center gap-2"
+                    >
+                      Book This Room <ArrowRight className="w-4 h-4" />
+                    </a>
+                    <a href="tel:+13528543200" className="btn-outline-dark text-xs px-8 py-4 inline-block">
+                      Call to Reserve
+                    </a>
+                  </div>
                 </div>
               </div>
+              {i < rooms.length - 1 && <div className="border-b border-[#1C2B4A]/10 mt-20" />}
             </AnimatedSection>
           ))}
         </div>
       </section>
 
-      {/* Booking CTA */}
-      <section className="py-20 px-6 lg:px-8 bg-[#2C4C3B]">
-        <div className="max-w-3xl mx-auto text-center">
+      {/* Property Photos Strip */}
+      <section className="py-0 overflow-hidden">
+        <div className="grid grid-cols-2 h-56">
+          <div className="overflow-hidden">
+            <img src={EXTERIOR_IMG} alt="Equus Inn hotel exterior" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+          </div>
+          <div className="overflow-hidden">
+            <img src={POOL_IMG} alt="Equus Inn heated pool" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+          </div>
+        </div>
+      </section>
+
+      {/* Policies */}
+      <section className="py-16 px-6 lg:px-8 bg-[#F2EDE4]">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection className="mb-10">
+            <p className="section-label mb-4">Good to Know</p>
+            <div className="gold-divider mb-6" />
+            <h2 className="font-display text-3xl font-bold text-[#1C2B4A]">Hotel Policies</h2>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: "Check-In / Check-Out", body: "Check-in: 3:00 PM\nCheck-out: 11:00 AM\nEarly/late check-in available upon request and subject to availability." },
+              { title: "Pet Policy", body: "All pets welcome at no additional charge. Please notify us at booking. Pets must be kept on leash in common areas." },
+              { title: "Cancellation", body: "Free cancellation up to 24 hours before check-in. Please review the cancellation policy at time of booking as it may vary by rate." },
+              { title: "Parking", body: "Free on-site parking for all guests. Extended trailer parking available for equestrian travelers — please call ahead to confirm space." },
+            ].map((policy, i) => (
+              <AnimatedSection key={i}>
+                <div className="bg-white p-6 shadow-sm h-full">
+                  <h3 className="font-display font-600 text-base text-[#1C2B4A] mb-3">{policy.title}</h3>
+                  <p className="font-body text-xs text-[#2A2A2A]/65 leading-relaxed whitespace-pre-line">{policy.body}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 px-6 lg:px-8 bg-[#1C2B4A]">
+        <div className="max-w-5xl mx-auto text-center">
           <AnimatedSection>
-            <p className="section-label text-[#C9A84C] mb-4">Ready to Book?</p>
-            <h2 className="font-display text-4xl font-bold text-[#FDFBF7] mb-6">
-              Reserve Your Room Today
+            <h2 className="font-display text-4xl font-bold text-[#FAF7F2] mb-4">
+              Ready to Book Your Room?
             </h2>
-            <p className="font-body text-[#FDFBF7]/70 text-base mb-8 leading-relaxed">
-              Rooms fill quickly during WEC show seasons. Book early to secure your preferred room type and enjoy all that Equus Inn has to offer.
+            <p className="font-body text-[#FAF7F2]/65 text-sm max-w-xl mx-auto mb-8">
+              Rooms fill quickly during WEC and HITS show seasons. Book early to secure your preferred room type and dates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-gold text-sm px-10 py-4 font-body font-600 tracking-widest uppercase inline-block"
+                className="btn-gold text-xs px-10 py-4 inline-block"
               >
                 Book Now
               </a>
-              <a
-                href="tel:+13528543200"
-                className="btn-outline text-sm px-10 py-4 font-body font-600 tracking-widest uppercase inline-block"
-              >
+              <a href="tel:+13528543200" className="btn-outline text-xs px-10 py-4 inline-block">
                 Call (352) 854-3200
               </a>
             </div>

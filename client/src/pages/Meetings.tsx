@@ -1,0 +1,483 @@
+/**
+ * EQUUS INN MEETINGS & EVENTS PAGE
+ * Design: Modern Equestrian Luxury
+ * Colors: Deep Navy #1C2B4A, Saddle #8B5E3C, Champagne #D4AF6A, Ivory #FAF7F2
+ * Typography: Cormorant Garamond (display) + Lato (body)
+ */
+
+import { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import {
+  Users, Wifi, Coffee, Tv, Projector, Check, Phone, Mail,
+  Send, PawPrint, Heart, Shield, Star,
+} from "lucide-react";
+import { toast } from "sonner";
+
+// Real hotel photos
+const MEETING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488564_6b936a06.webp";
+const MEETING_IMG2 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488551_be582543.webp";
+const PET_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488570_ebe17d16.webp";
+const EXTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_exterior_main_decd433b.webp";
+const ROOM_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/room_interior_actual_4f6cee2f.jpg";
+const POOL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_pool_actual_be656166.webp";
+// Stock photo for pet (appropriate for pet-friendly section)
+const PET_STOCK_IMG = "https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=900&q=80";
+
+function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 28 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+const meetingFeatures = [
+  { icon: Users, label: "Flexible Capacity", desc: "Configurable for 10–80 guests" },
+  { icon: Wifi, label: "Fiber Optic WiFi", desc: "High-speed throughout" },
+  { icon: Tv, label: "AV Equipment", desc: "Screen, projector & sound" },
+  { icon: Coffee, label: "Catering Available", desc: "Coffee service & meals" },
+  { icon: Projector, label: "Presentation Ready", desc: "HDMI & wireless display" },
+  { icon: Check, label: "Natural Light", desc: "Bright, comfortable space" },
+];
+
+const meetingSetups = [
+  {
+    name: "Boardroom",
+    capacity: "Up to 20 guests",
+    desc: "Ideal for executive meetings, strategy sessions, and small team gatherings. Intimate and focused.",
+  },
+  {
+    name: "Classroom",
+    capacity: "Up to 40 guests",
+    desc: "Perfect for training sessions, workshops, and educational seminars with rows of tables and chairs.",
+  },
+  {
+    name: "Theater",
+    capacity: "Up to 80 guests",
+    desc: "Rows of chairs facing a presentation screen — ideal for presentations, lectures, and larger group events.",
+  },
+  {
+    name: "Reception / Banquet",
+    capacity: "Up to 60 guests",
+    desc: "Round tables for networking events, team dinners, award ceremonies, and social gatherings.",
+  },
+];
+
+export default function Meetings() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const [form, setForm] = useState({
+    name: "", email: "", phone: "", company: "",
+    eventDate: "", attendees: "", eventType: "", message: "",
+  });
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.name || !form.email || !form.message) {
+      toast.error("Please fill in your name, email, and message.");
+      return;
+    }
+    setSubmitting(true);
+    await new Promise((r) => setTimeout(r, 1200));
+    setSubmitting(false);
+    toast.success("Thank you! Your meeting inquiry has been received. We'll respond within one business day.");
+    setForm({ name: "", email: "", phone: "", company: "", eventDate: "", attendees: "", eventType: "", message: "" });
+  };
+
+  return (
+    <div className="min-h-screen bg-[#FAF7F2]">
+      <Navigation />
+
+      {/* Page Hero */}
+      <section className="relative h-72 sm:h-96 flex items-end overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${EXTERIOR_IMG})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#111B30]/90 via-[#111B30]/40 to-transparent" />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-12 w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            <p className="section-label text-[#D4AF6A] mb-3">Events & Groups</p>
+            <h1 className="font-display text-4xl sm:text-5xl font-bold text-white">
+              Meetings & Events
+            </h1>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Intro */}
+      <section className="py-16 px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <AnimatedSection>
+              <p className="section-label mb-4">Meeting Space at Equus Inn</p>
+              <div className="gold-divider mb-6" />
+              <h2 className="font-display text-4xl font-bold text-[#1C2B4A] mb-6">
+                Where Business Meets<br />
+                <span className="italic">Southern Hospitality</span>
+              </h2>
+              <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed mb-5">
+                Equus Inn offers a versatile, fully equipped meeting room ideal for corporate events, team retreats, training sessions, equestrian industry gatherings, and private celebrations. Our space accommodates groups of all sizes with flexible configurations.
+              </p>
+              <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed mb-8">
+                Located minutes from the World Equestrian Center, our meeting facilities are a natural choice for equestrian industry professionals, show organizers, sponsors, and teams who want to combine productive meetings with proximity to Ocala's premier venues.
+              </p>
+              <a
+                href="#meeting-inquiry"
+                className="btn-primary text-xs px-8 py-4 inline-block"
+              >
+                Request a Quote
+              </a>
+            </AnimatedSection>
+            <AnimatedSection>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="h-64 overflow-hidden">
+                  <img src={MEETING_IMG} alt="Equus Inn meeting space" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                </div>
+                <div className="h-64 overflow-hidden">
+                  <img src={MEETING_IMG2} alt="Equus Inn event space" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                </div>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Meeting Features */}
+      <section className="py-16 px-6 lg:px-8 bg-[#1C2B4A]">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection className="text-center mb-12">
+            <p className="section-label text-[#D4AF6A] mb-4">What's Included</p>
+            <div className="gold-divider mx-auto mb-6" />
+            <h2 className="font-display text-3xl font-bold text-[#FAF7F2]">
+              Fully Equipped for Your Event
+            </h2>
+          </AnimatedSection>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-5">
+            {meetingFeatures.map((f, i) => (
+              <AnimatedSection key={i}>
+                <div className="text-center p-6 border border-[#D4AF6A]/20 hover:border-[#D4AF6A]/50 hover:bg-white/5 transition-all duration-300">
+                  <div className="w-12 h-12 mx-auto mb-4 bg-[#D4AF6A]/10 flex items-center justify-center">
+                    <f.icon className="w-5 h-5 text-[#D4AF6A]" />
+                  </div>
+                  <p className="font-display font-600 text-sm text-[#FAF7F2] mb-1">{f.label}</p>
+                  <p className="font-body text-xs text-[#FAF7F2]/45">{f.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Room Configurations */}
+      <section className="py-20 px-6 lg:px-8 bg-[#FAF7F2]">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection className="mb-12">
+            <p className="section-label mb-4">Room Configurations</p>
+            <div className="gold-divider mb-6" />
+            <h2 className="font-display text-3xl font-bold text-[#1C2B4A]">
+              Flexible Setups for Every Event
+            </h2>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {meetingSetups.map((setup, i) => (
+              <AnimatedSection key={i}>
+                <div className="p-8 bg-white shadow-sm border-l-4 border-[#D4AF6A] hover:shadow-md transition-shadow duration-300">
+                  <div className="flex items-start justify-between gap-4 mb-4">
+                    <h3 className="font-display text-xl font-600 text-[#1C2B4A]">{setup.name}</h3>
+                    <span className="font-body font-700 text-[0.6rem] tracking-widest uppercase px-3 py-1 bg-[#1C2B4A] text-[#FAF7F2] flex-shrink-0">
+                      {setup.capacity}
+                    </span>
+                  </div>
+                  <p className="font-body text-sm text-[#2A2A2A]/65 leading-relaxed">{setup.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Amenities for Groups */}
+      <section className="py-16 px-6 lg:px-8 bg-[#F2EDE4]">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection className="mb-10">
+            <p className="section-label mb-4">For Your Group</p>
+            <div className="gold-divider mb-6" />
+            <h2 className="font-display text-3xl font-bold text-[#1C2B4A]">
+              Everything Your Group Needs
+            </h2>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <AnimatedSection>
+              <div className="bg-white p-8 shadow-sm">
+                <div className="w-12 h-12 bg-[#1C2B4A]/10 flex items-center justify-center mb-5">
+                  <Coffee className="w-5 h-5 text-[#1C2B4A]" />
+                </div>
+                <h3 className="font-display font-600 text-lg text-[#1C2B4A] mb-3">Group Catering</h3>
+                <p className="font-body text-sm text-[#2A2A2A]/65 leading-relaxed">
+                  From morning coffee service and continental breakfast to full group lunches and dinner arrangements, we can coordinate catering for your event. All guests also enjoy our complimentary daily hot breakfast buffet.
+                </p>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection>
+              <div className="bg-white p-8 shadow-sm">
+                <div className="w-12 h-12 bg-[#1C2B4A]/10 flex items-center justify-center mb-5">
+                  <Users className="w-5 h-5 text-[#1C2B4A]" />
+                </div>
+                <h3 className="font-display font-600 text-lg text-[#1C2B4A] mb-3">Group Room Blocks</h3>
+                <p className="font-body text-sm text-[#2A2A2A]/65 leading-relaxed">
+                  Planning a multi-day event or bringing a team to Ocala? We offer group room block pricing for 10 or more rooms. Contact us directly to discuss rates and availability for your group dates.
+                </p>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection>
+              <div className="bg-white p-8 shadow-sm">
+                <div className="w-12 h-12 bg-[#1C2B4A]/10 flex items-center justify-center mb-5">
+                  <Check className="w-5 h-5 text-[#1C2B4A]" />
+                </div>
+                <h3 className="font-display font-600 text-lg text-[#1C2B4A] mb-3">Event Coordination</h3>
+                <p className="font-body text-sm text-[#2A2A2A]/65 leading-relaxed">
+                  Our team is experienced in coordinating equestrian industry events, corporate retreats, and group stays. We'll work with you to ensure every detail is handled — from room setup to parking for trailers and vehicles.
+                </p>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── PET-FRIENDLY SECTION ─── */}
+      <section className="py-0 overflow-hidden" id="pet-friendly">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          {/* Image */}
+          <div className="relative h-[500px] lg:h-auto overflow-hidden">
+            <img
+              src={PET_STOCK_IMG}
+              alt="Pet-friendly hotel Ocala — Equus Inn welcomes all pets"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#8B5E3C]/10" />
+          </div>
+          {/* Text */}
+          <div className="bg-[#8B5E3C] flex items-center px-10 lg:px-16 py-20">
+            <AnimatedSection>
+              <div className="flex items-center gap-3 mb-4">
+                <PawPrint className="w-5 h-5 text-[#D4AF6A]" />
+                <p className="section-label text-[#D4AF6A]">Pet-Friendly Policy</p>
+              </div>
+              <div className="gold-divider mb-6" />
+              <h2 className="font-display text-4xl font-bold text-[#FAF7F2] mb-6 leading-tight">
+                Your Pets Are<br />
+                <span className="italic text-[#D4AF6A]">Always Welcome</span>
+              </h2>
+              <p className="font-body text-[#FAF7F2]/75 text-base leading-relaxed mb-6">
+                At Equus Inn, we believe life is better with your animals by your side. That's why we proudly welcome pets of all sizes — from small dogs to large breeds — with absolutely no additional pet fees.
+              </p>
+              <p className="font-body text-[#FAF7F2]/75 text-base leading-relaxed mb-8">
+                We understand that for equestrian travelers, animals are family. Whether you're bringing your dog along for a show season trip or simply can't imagine a vacation without your furry companion, you'll find a warm welcome here.
+              </p>
+              <div className="space-y-3 mb-8">
+                {[
+                  { icon: Heart, text: "All pet sizes welcome — no restrictions" },
+                  { icon: Shield, text: "No additional pet fees or deposits" },
+                  { icon: Star, text: "Pet-friendly rooms available on request" },
+                  { icon: PawPrint, text: "Spacious grounds for walks and exercise" },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <item.icon className="w-4 h-4 text-[#D4AF6A] flex-shrink-0" />
+                    <span className="font-body text-sm text-[#FAF7F2]/75">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+              <a
+                href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold text-xs px-8 py-4 inline-block"
+              >
+                Book a Pet-Friendly Room
+              </a>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Meeting Inquiry Form */}
+      <section className="py-20 px-6 lg:px-8 bg-[#FAF7F2]" id="meeting-inquiry">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
+            {/* Info */}
+            <div className="lg:col-span-2">
+              <AnimatedSection>
+                <p className="section-label mb-4">Get a Quote</p>
+                <div className="gold-divider mb-6" />
+                <h2 className="font-display text-3xl font-bold text-[#1C2B4A] mb-6">
+                  Plan Your Event<br />
+                  <span className="italic">at Equus Inn</span>
+                </h2>
+                <p className="font-body text-[#2A2A2A]/65 text-sm leading-relaxed mb-8">
+                  Tell us about your event and we'll put together a customized proposal. Our team typically responds within one business day.
+                </p>
+                <div className="space-y-5">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-[#1C2B4A]/10 flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-4 h-4 text-[#1C2B4A]" />
+                    </div>
+                    <div>
+                      <p className="font-display font-600 text-sm text-[#1C2B4A] mb-1">Call Us Directly</p>
+                      <a href="tel:+13528543200" className="font-body text-sm text-[#2A2A2A]/65 hover:text-[#1C2B4A] transition-colors">
+                        (352) 854-3200
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-[#1C2B4A]/10 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-4 h-4 text-[#1C2B4A]" />
+                    </div>
+                    <div>
+                      <p className="font-display font-600 text-sm text-[#1C2B4A] mb-1">Email</p>
+                      <a href="mailto:OcalaFD@paxproperties.com" className="font-body text-sm text-[#2A2A2A]/65 hover:text-[#1C2B4A] transition-colors">
+                        OcalaFD@paxproperties.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-8 overflow-hidden h-48">
+                  <img src={ROOM_IMG} alt="Equus Inn room" className="w-full h-full object-cover" />
+                </div>
+              </AnimatedSection>
+            </div>
+
+            {/* Form */}
+            <div className="lg:col-span-3">
+              <AnimatedSection>
+                <div className="bg-white shadow-sm p-8 lg:p-12">
+                  <h3 className="font-display text-2xl font-bold text-[#1C2B4A] mb-2">Meeting Inquiry</h3>
+                  <p className="font-body text-sm text-[#2A2A2A]/55 mb-8">
+                    Fill out the form below and we'll respond with availability and pricing within one business day.
+                  </p>
+                  <form onSubmit={handleSubmit} className="space-y-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                      <div>
+                        <label className="block font-body text-xs font-700 tracking-widest uppercase text-[#1C2B4A] mb-2">Full Name *</label>
+                        <input type="text" name="name" value={form.name} onChange={handleChange} required placeholder="Your full name"
+                          className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]" />
+                      </div>
+                      <div>
+                        <label className="block font-body text-xs font-700 tracking-widest uppercase text-[#1C2B4A] mb-2">Email Address *</label>
+                        <input type="email" name="email" value={form.email} onChange={handleChange} required placeholder="your@email.com"
+                          className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]" />
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                      <div>
+                        <label className="block font-body text-xs font-700 tracking-widest uppercase text-[#1C2B4A] mb-2">Phone</label>
+                        <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="(555) 000-0000"
+                          className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]" />
+                      </div>
+                      <div>
+                        <label className="block font-body text-xs font-700 tracking-widest uppercase text-[#1C2B4A] mb-2">Company / Organization</label>
+                        <input type="text" name="company" value={form.company} onChange={handleChange} placeholder="Your organization"
+                          className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]" />
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                      <div>
+                        <label className="block font-body text-xs font-700 tracking-widest uppercase text-[#1C2B4A] mb-2">Event Date</label>
+                        <input type="date" name="eventDate" value={form.eventDate} onChange={handleChange}
+                          className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]" />
+                      </div>
+                      <div>
+                        <label className="block font-body text-xs font-700 tracking-widest uppercase text-[#1C2B4A] mb-2">Attendees</label>
+                        <select name="attendees" value={form.attendees} onChange={handleChange}
+                          className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]">
+                          <option value="">Select</option>
+                          <option value="10-20">10–20</option>
+                          <option value="20-40">20–40</option>
+                          <option value="40-60">40–60</option>
+                          <option value="60-80">60–80</option>
+                          <option value="80+">80+</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block font-body text-xs font-700 tracking-widest uppercase text-[#1C2B4A] mb-2">Event Type</label>
+                        <select name="eventType" value={form.eventType} onChange={handleChange}
+                          className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]">
+                          <option value="">Select</option>
+                          <option value="corporate">Corporate Meeting</option>
+                          <option value="training">Training / Workshop</option>
+                          <option value="equestrian">Equestrian Industry</option>
+                          <option value="social">Social / Celebration</option>
+                          <option value="retreat">Team Retreat</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div>
+                      <label className="block font-body text-xs font-700 tracking-widest uppercase text-[#1C2B4A] mb-2">Tell Us About Your Event *</label>
+                      <textarea name="message" value={form.message} onChange={handleChange} required rows={4}
+                        placeholder="Describe your event, any special requirements, catering needs, or questions..."
+                        className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2] resize-none" />
+                    </div>
+                    <button type="submit" disabled={submitting}
+                      className="btn-primary text-xs px-8 py-4 inline-flex items-center gap-2 disabled:opacity-60">
+                      {submitting ? "Sending..." : <><Send className="w-4 h-4" /> Submit Inquiry</>}
+                    </button>
+                  </form>
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 px-6 lg:px-8 bg-[#1C2B4A]">
+        <div className="max-w-5xl mx-auto">
+          <AnimatedSection>
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div>
+                <h2 className="font-display text-3xl font-bold text-[#FAF7F2] mb-3">
+                  Ready to Plan Your Event?
+                </h2>
+                <p className="font-body text-[#FAF7F2]/65 text-sm leading-relaxed max-w-lg">
+                  Contact us today to check availability and receive a customized proposal for your meeting or event.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 flex-shrink-0">
+                <a href="tel:+13528543200" className="btn-gold text-xs px-8 py-4 inline-flex items-center gap-2">
+                  <Phone className="w-4 h-4" /> Call Now
+                </a>
+                <a href="#meeting-inquiry" className="btn-outline text-xs px-8 py-4 inline-block">
+                  Submit Inquiry
+                </a>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}

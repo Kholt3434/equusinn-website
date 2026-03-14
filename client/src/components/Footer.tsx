@@ -1,77 +1,88 @@
 /**
  * EQUUS INN FOOTER
- * Design: Dark hunter green background, gold accents, ivory text
- * Includes: address, phone, email, social links, quick nav, booking CTA
+ * Deep Navy #1C2B4A | Champagne #D4AF6A | Ivory #FAF7F2 | Saddle #8B5E3C
  */
 
 import { Link } from "wouter";
 import { MapPin, Phone, Mail, Instagram, Facebook, ExternalLink } from "lucide-react";
 
+const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/equus_logo_white_02b7b265.webp";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#1E3328] text-[#FDFBF7]">
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+    <footer className="bg-[#111B30] text-[#FAF7F2]">
+      {/* Champagne top strip */}
+      <div className="bg-[#D4AF6A] py-3 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p className="font-body font-700 text-[0.6rem] tracking-[0.2em] uppercase text-[#111B30]">
+            Ocala's Premier Equestrian Boutique Hotel
+          </p>
+          <a
+            href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body font-700 text-[0.6rem] tracking-[0.2em] uppercase text-[#111B30] hover:underline flex items-center gap-1"
+          >
+            Book Your Stay <ExternalLink className="w-3 h-3" />
+          </a>
+        </div>
+      </div>
+
+      {/* Main Footer */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          
+
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-full bg-[#C9A84C] flex items-center justify-center flex-shrink-0">
-                <svg viewBox="0 0 40 40" className="w-7 h-7 fill-[#2C4C3B]" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20 4C20 4 12 10 10 18C8 26 14 32 20 32C26 32 32 26 30 18C28 10 20 4 20 4Z" opacity="0.3"/>
-                  <path d="M15 20C15 20 13 16 16 13C19 10 23 12 24 15C25 18 22 22 20 22C18 22 15 20 15 20Z"/>
-                  <path d="M20 22L18 30L20 28L22 30L20 22Z"/>
-                  <path d="M16 18L12 20L14 22L16 18Z"/>
-                  <path d="M24 18L28 20L26 22L24 18Z"/>
-                </svg>
-              </div>
-              <div>
-                <div className="font-display font-bold text-xl text-[#FDFBF7]">Equus Inn</div>
-                <div className="text-[10px] font-body tracking-[0.2em] uppercase text-[#C9A84C]">Ocala, Florida</div>
-              </div>
-            </div>
-            <p className="text-[#FDFBF7]/70 font-body text-sm leading-relaxed mb-6">
-              Ocala's premier equestrian-themed boutique hotel. Where Southern hospitality meets the spirit of the Horse Capital of the World.
+            <img
+              src={LOGO_URL}
+              alt="Equus Inn"
+              className="h-14 w-auto object-contain mb-5"
+            />
+            <p className="font-body text-xs text-[#FAF7F2]/50 leading-relaxed mb-5">
+              Where the Spirit of the Horse Meets Southern Comfort. Ocala, Florida's most distinctive boutique hotel.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               <a
                 href="https://www.facebook.com/EquusInn/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] hover:bg-[#C9A84C] hover:text-[#2C4C3B] transition-all duration-300"
                 aria-label="Facebook"
+                className="w-8 h-8 border border-white/20 flex items-center justify-center hover:border-[#D4AF6A] hover:text-[#D4AF6A] transition-colors duration-200"
               >
-                <Facebook className="w-4 h-4" />
+                <Facebook className="w-3.5 h-3.5" />
               </a>
               <a
                 href="https://www.instagram.com/equusinn/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full border border-[#C9A84C]/40 flex items-center justify-center text-[#C9A84C] hover:bg-[#C9A84C] hover:text-[#2C4C3B] transition-all duration-300"
                 aria-label="Instagram"
+                className="w-8 h-8 border border-white/20 flex items-center justify-center hover:border-[#D4AF6A] hover:text-[#D4AF6A] transition-colors duration-200"
               >
-                <Instagram className="w-4 h-4" />
+                <Instagram className="w-3.5 h-3.5" />
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Navigation */}
           <div>
-            <h4 className="font-display font-600 text-base text-[#C9A84C] mb-6 tracking-wide">Explore</h4>
+            <h4 className="font-body font-700 text-[0.6rem] tracking-[0.2em] uppercase text-[#D4AF6A] mb-5">
+              Explore
+            </h4>
             <ul className="space-y-3">
               {[
                 { href: "/", label: "Home" },
                 { href: "/rooms", label: "Rooms & Suites" },
                 { href: "/amenities", label: "Amenities" },
+                { href: "/meetings", label: "Meetings & Events" },
                 { href: "/location", label: "Location & Ocala" },
                 { href: "/contact", label: "Contact Us" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>
-                    <span className="text-[#FDFBF7]/70 hover:text-[#C9A84C] font-body text-sm transition-colors duration-200 cursor-pointer">
+                    <span className="font-body text-xs text-[#FAF7F2]/55 hover:text-[#D4AF6A] transition-colors duration-200 cursor-pointer">
                       {link.label}
                     </span>
                   </Link>
@@ -82,66 +93,67 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-display font-600 text-base text-[#C9A84C] mb-6 tracking-wide">Contact</h4>
+            <h4 className="font-body font-700 text-[0.6rem] tracking-[0.2em] uppercase text-[#D4AF6A] mb-5">
+              Contact
+            </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#C9A84C] mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="text-[#FDFBF7]/70 font-body text-sm leading-relaxed">
-                    3434 SW College Road<br />
-                    Ocala, FL 34474
-                  </p>
-                </div>
+                <MapPin className="w-3.5 h-3.5 text-[#D4AF6A] mt-0.5 flex-shrink-0" />
+                <span className="font-body text-xs text-[#FAF7F2]/55 leading-relaxed">
+                  3434 SW College Road<br />Ocala, FL 34474
+                </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-[#C9A84C] flex-shrink-0" />
-                <a href="tel:+13528543200" className="text-[#FDFBF7]/70 hover:text-[#C9A84C] font-body text-sm transition-colors duration-200">
+                <Phone className="w-3.5 h-3.5 text-[#D4AF6A] flex-shrink-0" />
+                <a href="tel:+13528543200" className="font-body text-xs text-[#FAF7F2]/55 hover:text-[#D4AF6A] transition-colors">
                   (352) 854-3200
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-[#C9A84C] flex-shrink-0" />
-                <a href="mailto:OcalaFD@paxproperties.com" className="text-[#FDFBF7]/70 hover:text-[#C9A84C] font-body text-sm transition-colors duration-200">
+                <Mail className="w-3.5 h-3.5 text-[#D4AF6A] flex-shrink-0" />
+                <a href="mailto:OcalaFD@paxproperties.com" className="font-body text-xs text-[#FAF7F2]/55 hover:text-[#D4AF6A] transition-colors">
                   OcalaFD@paxproperties.com
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Book Now CTA */}
+          {/* Book */}
           <div>
-            <h4 className="font-display font-600 text-base text-[#C9A84C] mb-6 tracking-wide">Reserve Your Stay</h4>
-            <p className="text-[#FDFBF7]/70 font-body text-sm leading-relaxed mb-6">
-              Book directly for the best rates. Open 24 hours, 7 days a week.
+            <h4 className="font-body font-700 text-[0.6rem] tracking-[0.2em] uppercase text-[#D4AF6A] mb-5">
+              Reserve
+            </h4>
+            <p className="font-body text-xs text-[#FAF7F2]/50 leading-relaxed mb-5">
+              Rooms fill quickly during WEC and HITS show seasons. Book early to secure your preferred dates.
             </p>
             <a
               href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 btn-gold text-xs px-6 py-3 font-body font-600 tracking-widest uppercase"
+              className="btn-gold text-[0.6rem] px-6 py-3 inline-block"
             >
               Book Now
-              <ExternalLink className="w-3 h-3" />
             </a>
-            <div className="mt-6 pt-6 border-t border-[#C9A84C]/20">
-              <p className="text-[#FDFBF7]/50 font-body text-xs leading-relaxed">
-                <span className="text-[#C9A84C] font-600">20 min</span> to World Equestrian Center<br />
-                <span className="text-[#C9A84C] font-600">Minutes</span> from I-75 Exit
-              </p>
+            <div className="mt-4 pt-4 border-t border-white/10">
+              <p className="font-body text-[0.6rem] tracking-[0.15em] uppercase text-[#FAF7F2]/30 mb-2">Also on</p>
+              <div className="flex flex-col gap-1.5">
+                <a href="https://www.tripadvisor.com/Hotel_Review-g34496-d86798-Reviews-Equus_Inn-Ocala_Florida.html" target="_blank" rel="noopener noreferrer" className="font-body text-xs text-[#FAF7F2]/40 hover:text-[#D4AF6A] transition-colors flex items-center gap-1">TripAdvisor <ExternalLink className="w-2.5 h-2.5" /></a>
+                <a href="https://www.expedia.com" target="_blank" rel="noopener noreferrer" className="font-body text-xs text-[#FAF7F2]/40 hover:text-[#D4AF6A] transition-colors flex items-center gap-1">Expedia <ExternalLink className="w-2.5 h-2.5" /></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-[#C9A84C]/15">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-[#FDFBF7]/40 font-body text-xs">
-            © {currentYear} Equus Inn. All rights reserved. | Ocala, Florida
+      {/* Bottom bar */}
+      <div className="border-t border-white/10 py-5 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p className="font-body text-[0.6rem] text-[#FAF7F2]/30">
+            © {currentYear} Equus Inn. All rights reserved. Managed by Pax Properties.
           </p>
-          <div className="flex items-center gap-6">
-            <span className="text-[#FDFBF7]/40 font-body text-xs">Pet-Friendly · Trailer Parking · Free Breakfast</span>
-          </div>
+          <p className="font-body text-[0.6rem] text-[#FAF7F2]/20">
+            Pet-Friendly · Trailer Parking · Free Breakfast · 24/7 Front Desk
+          </p>
         </div>
       </div>
     </footer>
