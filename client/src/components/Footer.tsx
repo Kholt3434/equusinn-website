@@ -79,6 +79,7 @@ export default function Footer() {
                 { href: "/meetings", label: "Meetings & Events" },
                 { href: "/groups", label: "Groups" },
                 { href: "/gallery", label: "Photo Gallery" },
+                { href: "/reviews", label: "Guest Reviews" },
                 { href: "/location", label: "Location & Ocala" },
                 { href: "/contact", label: "Contact Us" },
               ].map((link) => (

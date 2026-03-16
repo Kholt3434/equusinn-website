@@ -17,6 +17,7 @@ const navLinks = [
   { href: "/meetings", label: "Meetings" },
   { href: "/groups", label: "Groups" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/reviews", label: "Reviews" },
   { href: "/location", label: "Location" },
   { href: "/contact", label: "Contact" },
 ];

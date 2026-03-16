@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import Meetings from "./pages/Meetings";
 import Groups from "./pages/Groups";
 import Gallery from "./pages/Gallery";
+import Reviews from "./pages/Reviews";
 
 function Router() {
   return (
@@ -24,6 +25,7 @@ function Router() {
       <Route path={"/meetings"} component={Meetings} />
       <Route path={"/groups"} component={Groups} />
       <Route path={"/gallery"} component={Gallery} />
+      <Route path={"/reviews"} component={Reviews} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
