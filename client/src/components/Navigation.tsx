@@ -50,14 +50,14 @@ export default function Navigation() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-24">
             {/* Logo */}
             <Link href="/">
               <div className="flex items-center gap-3 cursor-pointer">
                 <img
                   src={LOGO_URL}
                   alt="Equus Inn"
-                  className="h-11 w-auto object-contain"
+                  className="h-14 w-auto object-contain"
                 />
               </div>
             </Link>
@@ -67,7 +67,7 @@ export default function Navigation() {
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
                   <span
-                    className={`font-body font-700 text-[0.62rem] tracking-[0.18em] uppercase transition-colors duration-200 ${
+                    className={`font-body font-700 text-[0.72rem] tracking-[0.18em] uppercase transition-colors duration-200 ${
                       location === link.href
                         ? "text-[#D4AF6A]"
                         : "text-white/80 hover:text-[#D4AF6A]"
@@ -83,7 +83,7 @@ export default function Navigation() {
             <div className="flex items-center gap-4">
               <a
                 href="tel:+13528543200"
-                className="hidden md:flex items-center gap-1.5 font-body font-700 text-[0.6rem] tracking-[0.15em] uppercase text-white/60 hover:text-[#D4AF6A] transition-colors duration-200"
+                className="hidden md:flex items-center gap-1.5 font-body font-700 text-[0.7rem] tracking-[0.15em] uppercase text-white/60 hover:text-[#D4AF6A] transition-colors duration-200"
               >
                 <Phone className="w-3 h-3" />
                 (352) 854-3200
@@ -92,7 +92,7 @@ export default function Navigation() {
                 href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden md:block btn-gold text-[0.6rem] px-5 py-2.5"
+                className="hidden md:block btn-gold text-[0.72rem] px-6 py-3"
               >
                 Book Now
               </a>
