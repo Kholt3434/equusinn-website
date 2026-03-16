@@ -14,15 +14,15 @@ import {
   Truck, Wifi, Check, Users, Flame,
 } from "lucide-react";
 
-// Real hotel images
-const POOL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_pool_actual_be656166.webp";
-const POOL_AREA_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_pool_area_d1728e09.webp";
-const DINING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/dining_area_8fab07c7.webp";
-const OUTDOOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488570_ebe17d16.webp";
-const EXTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_exterior_main_decd433b.webp";
-const LOUNGE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488551_be582543.webp";
-const PROPERTY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488448_13f49019.webp";
-const BUILDING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488632_07428c5e.webp";
+// Real hotel images — updated
+const POOL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/outdoorpool_41fd32e0.webp";
+const POOL_AREA_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/outdoorpool_41fd32e0.webp";
+const DINING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/diningarea(2)_d0bc3ff8.jpg";
+const OUTDOOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/LoungeandFireplace_471e8721.webp";
+const EXTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/FrontExterior_578913ce.webp";
+const BEER_WINE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/BeerNWineMachine_93fd1e00.webp";
+const BEER_AREA_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/beerandwinearea(2)_9f5e21c1.jpg";
+const MEETING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomBoardroomProjector_400eafd0.png";
 // Stock for breakfast (buffet style) and pets
 const BREAKFAST_IMG = "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=900&q=80";
 const PET_IMG = "https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=900&q=80";
@@ -69,8 +69,8 @@ const amenities = [
     title: "Self-Service Beer & Wine Bar",
     subtitle: "Available Anytime",
     desc: "Unwind after a long day at the show ring with a glass of wine or a cold beer from our self-service bar. Available to guests throughout the day and evening — no waiting for a bartender. Enjoy your drink poolside, at the outdoor fireplace, or in the comfort of your room.",
-    img: LOUNGE_IMG,
-    alt: "Equus Inn self-service beer and wine bar",
+    img: BEER_WINE_IMG,
+    alt: "Equus Inn self-service beer and wine machine",
     items: ["Selection of wines", "Cold beer selection", "Available all day", "Serve yourself anytime", "Enjoy poolside or at the gazebo"],
   },
   {
@@ -101,22 +101,13 @@ const amenities = [
     items: ["All pet sizes welcome", "No additional pet fees", "Pet-friendly rooms available", "Spacious grounds for walks", "Please notify us at booking"],
   },
   {
-    icon: Truck,
-    title: "Trailer Parking",
-    subtitle: "For Equestrian Travelers",
-    desc: "Equus Inn is one of the few hotels in Ocala that offers dedicated trailer parking for equestrian travelers. Whether you're hauling horses to WEC, HITS, or the Florida Horse Park, we have the space to accommodate your rig. Please call ahead to confirm availability and space requirements.",
-    img: PROPERTY_IMG,
-    alt: "Equus Inn trailer parking for equestrian travelers",
-    items: ["Extended trailer parking available", "Call ahead to confirm space", "Convenient access to WEC & HITS", "Secure on-site parking", "Free standard vehicle parking"],
-  },
-  {
     icon: Users,
     title: "Meeting Room & Event Space",
     subtitle: "For Groups & Corporate Events",
     desc: "Equus Inn offers a versatile, fully equipped meeting room ideal for corporate events, team retreats, training sessions, equestrian industry gatherings, and private celebrations. Our space accommodates groups of all sizes with flexible configurations and full AV support.",
-    img: BUILDING_IMG,
+    img: MEETING_IMG,
     alt: "Equus Inn meeting room and event space",
-    items: ["Flexible capacity up to 80 guests", "AV equipment included", "Fiber optic WiFi", "Catering available", "Multiple room configurations"],
+    items: ["Theater: 35 guests", "Classroom: 24 guests", "U-Shape: 18 guests", "AV equipment & projector included", "Fiber optic WiFi", "Multiple room configurations"],
   },
 ];
 

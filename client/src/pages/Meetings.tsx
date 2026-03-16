@@ -15,13 +15,14 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 
-// Real hotel photos
-const MEETING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488564_6b936a06.webp";
-const MEETING_IMG2 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488551_be582543.webp";
-const PET_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488570_ebe17d16.webp";
-const EXTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_exterior_main_decd433b.webp";
-const ROOM_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/room_interior_actual_4f6cee2f.jpg";
-const POOL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_pool_actual_be656166.webp";
+// Real meeting room photos
+const MEETING_BOARDROOM = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomBoardroomProjector_400eafd0.png";
+const MEETING_THEATRE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomTheatre_a5915433.png";
+const MEETING_CLASSROOM = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomClassroom_1bea37f5.png";
+const MEETING_EQUINE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomEquine_20f540e2.png";
+const MEETING_BIRTHDAY = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomGirlsBirthday_ed47bdfc.png";
+const MEETING_BABY = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomBoysBabyShower_29e078af.png";
+const EXTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomBoardroomProjector_400eafd0.png";
 // Stock photo for pet (appropriate for pet-friendly section)
 const PET_STOCK_IMG = "https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=900&q=80";
 
@@ -52,24 +53,34 @@ const meetingFeatures = [
 
 const meetingSetups = [
   {
-    name: "Boardroom",
-    capacity: "Up to 20 guests",
-    desc: "Ideal for executive meetings, strategy sessions, and small team gatherings. Intimate and focused.",
-  },
-  {
-    name: "Classroom",
-    capacity: "Up to 40 guests",
-    desc: "Perfect for training sessions, workshops, and educational seminars with rows of tables and chairs.",
+    name: "U-Shape",
+    capacity: "18 guests",
+    img: MEETING_CLASSROOM,
+    desc: "Tables arranged in a U-shape for collaborative discussions, training sessions, and interactive workshops where everyone can see each other.",
   },
   {
     name: "Theater",
-    capacity: "Up to 80 guests",
-    desc: "Rows of chairs facing a presentation screen — ideal for presentations, lectures, and larger group events.",
+    capacity: "35 guests",
+    img: MEETING_THEATRE,
+    desc: "Rows of chairs facing a presentation screen — ideal for presentations, lectures, product launches, and larger group events.",
   },
   {
-    name: "Reception / Banquet",
-    capacity: "Up to 60 guests",
-    desc: "Round tables for networking events, team dinners, award ceremonies, and social gatherings.",
+    name: "Classroom",
+    capacity: "24 guests",
+    img: MEETING_CLASSROOM,
+    desc: "Rows of tables with chairs for training sessions, workshops, and educational seminars. Includes writing surface for each attendee.",
+  },
+  {
+    name: "Boardroom",
+    capacity: "18 guests",
+    img: MEETING_BOARDROOM,
+    desc: "Ideal for executive meetings, strategy sessions, and focused team gatherings. Intimate, professional, and fully equipped.",
+  },
+  {
+    name: "Banquet",
+    capacity: "35 guests",
+    img: MEETING_BABY,
+    desc: "Round or rectangular tables for networking events, team dinners, celebrations, award ceremonies, and social gatherings.",
   },
 ];
 
@@ -153,10 +164,13 @@ export default function Meetings() {
             <AnimatedSection>
               <div className="grid grid-cols-2 gap-3">
                 <div className="h-64 overflow-hidden">
-                  <img src={MEETING_IMG} alt="Equus Inn meeting space" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                  <img src={MEETING_BOARDROOM} alt="Equus Inn boardroom meeting setup" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="h-64 overflow-hidden">
-                  <img src={MEETING_IMG2} alt="Equus Inn event space" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                  <img src={MEETING_THEATRE} alt="Equus Inn theatre meeting setup" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                </div>
+                <div className="h-48 overflow-hidden col-span-2">
+                  <img src={MEETING_EQUINE} alt="Equus Inn meeting room equine event" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
               </div>
             </AnimatedSection>
@@ -200,17 +214,22 @@ export default function Meetings() {
               Flexible Setups for Every Event
             </h2>
           </AnimatedSection>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {meetingSetups.map((setup, i) => (
               <AnimatedSection key={i}>
-                <div className="p-8 bg-white shadow-sm border-l-4 border-[#D4AF6A] hover:shadow-md transition-shadow duration-300">
-                  <div className="flex items-start justify-between gap-4 mb-4">
-                    <h3 className="font-display text-xl font-600 text-[#1C2B4A]">{setup.name}</h3>
-                    <span className="font-body font-700 text-[0.6rem] tracking-widest uppercase px-3 py-1 bg-[#1C2B4A] text-[#FAF7F2] flex-shrink-0">
-                      {setup.capacity}
-                    </span>
+                <div className="bg-white shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+                  <div className="h-44 overflow-hidden">
+                    <img src={setup.img} alt={`Equus Inn ${setup.name} setup`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                   </div>
-                  <p className="font-body text-sm text-[#2A2A2A]/65 leading-relaxed">{setup.desc}</p>
+                  <div className="p-6 border-t-4 border-[#D4AF6A]">
+                    <div className="flex items-start justify-between gap-4 mb-3">
+                      <h3 className="font-display text-xl font-600 text-[#1C2B4A]">{setup.name}</h3>
+                      <span className="font-body font-700 text-[0.6rem] tracking-widest uppercase px-3 py-1 bg-[#1C2B4A] text-[#FAF7F2] flex-shrink-0">
+                        {setup.capacity}
+                      </span>
+                    </div>
+                    <p className="font-body text-sm text-[#2A2A2A]/65 leading-relaxed">{setup.desc}</p>
+                  </div>
                 </div>
               </AnimatedSection>
             ))}
@@ -236,7 +255,7 @@ export default function Meetings() {
                 </div>
                 <h3 className="font-display font-600 text-lg text-[#1C2B4A] mb-3">Group Catering</h3>
                 <p className="font-body text-sm text-[#2A2A2A]/65 leading-relaxed">
-                  From morning coffee service and continental breakfast to full group lunches and dinner arrangements, we can coordinate catering for your event. All guests also enjoy our complimentary daily hot breakfast buffet.
+                  We allow outside catering for your event. Our sales team is happy to provide recommendations for local caterers who know our space well. Contact sales for a curated list of trusted catering partners.
                 </p>
               </div>
             </AnimatedSection>
@@ -363,7 +382,7 @@ export default function Meetings() {
                   </div>
                 </div>
                 <div className="mt-8 overflow-hidden h-48">
-                  <img src={ROOM_IMG} alt="Equus Inn room" className="w-full h-full object-cover" />
+                  <img src={MEETING_BIRTHDAY} alt="Equus Inn meeting room event" className="w-full h-full object-cover" />
                 </div>
               </AnimatedSection>
             </div>

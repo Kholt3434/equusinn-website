@@ -11,16 +11,19 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Tv, Wifi, Wind, Coffee, Bath, Check, ArrowRight, BedDouble } from "lucide-react";
 
-// Real hotel images
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/room_interior_actual_4f6cee2f.jpg";
-const ROOM_1A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/room_interior_actual_4f6cee2f.jpg";
-const ROOM_1B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488549_e9772347.webp";
-const ROOM_2A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488540_89174581.webp";
-const ROOM_2B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488570_ebe17d16.webp";
-const ROOM_3A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488627_71752dc4.webp";
-const ROOM_3B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_room_2991_5f6c62b0.webp";
-const EXTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_exterior_main_decd433b.webp";
-const POOL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_pool_actual_be656166.webp";
+// Real hotel images — updated with actual room photos
+const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/KingRoom_5ae99094.webp";
+const ROOM_1A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/KingRoom_5ae99094.webp";
+const ROOM_1B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/KingRoom(1)_3538aab1.webp";
+const ROOM_2A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/TwoQueenRoom_ecf1b94f.webp";
+const ROOM_2B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/TwoQueenSuite_07e01bad.webp";
+const ROOM_3A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/SuiteKitchenette_392204ac.webp";
+const ROOM_3B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/BathroomandVanity_36d4711a.webp";
+const EXTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/FrontExterior_578913ce.webp";
+const POOL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/outdoorpool_41fd32e0.webp";
+const BATH_1 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/BathroomandVanity_36d4711a.webp";
+const BATH_2 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/Bathroom(1)_860b652a.webp";
+const WATERFALL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/WaterfallWall_edfd5f66.jpg";
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
@@ -260,6 +263,29 @@ export default function Rooms() {
               {i < rooms.length - 1 && <div className="border-b border-[#1C2B4A]/10 mt-20" />}
             </AnimatedSection>
           ))}
+        </div>
+      </section>
+
+      {/* Bathroom Gallery */}
+      <section className="py-16 px-6 lg:px-8 bg-[#FAF7F2]">
+        <div className="max-w-7xl mx-auto">
+          <AnimatedSection className="mb-10">
+            <p className="section-label mb-4">Luxury Finishes</p>
+            <div className="gold-divider mb-6" />
+            <h2 className="font-display text-3xl font-bold text-[#1C2B4A]">Bathrooms & Amenities</h2>
+            <p className="font-body text-[#2A2A2A]/65 text-sm mt-3 max-w-2xl">Every bathroom features a luxury rain showerhead, modern bowl sink, and premium finishes — designed to make every morning feel like a spa retreat.</p>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="h-72 overflow-hidden">
+              <img src={BATH_1} alt="Equus Inn bathroom vanity" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </div>
+            <div className="h-72 overflow-hidden">
+              <img src={BATH_2} alt="Equus Inn bathroom" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </div>
+            <div className="h-72 overflow-hidden">
+              <img src={WATERFALL} alt="Equus Inn waterfall wall feature" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+            </div>
+          </div>
         </div>
       </section>
 

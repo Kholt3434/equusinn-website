@@ -10,6 +10,7 @@ import Amenities from "./pages/Amenities";
 import Location from "./pages/Location";
 import Contact from "./pages/Contact";
 import Meetings from "./pages/Meetings";
+import Groups from "./pages/Groups";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
       <Route path={"/location"} component={Location} />
       <Route path={"/contact"} component={Contact} />
       <Route path={"/meetings"} component={Meetings} />
+      <Route path={"/groups"} component={Groups} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

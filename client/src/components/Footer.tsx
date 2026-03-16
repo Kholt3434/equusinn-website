@@ -77,6 +77,7 @@ export default function Footer() {
                 { href: "/rooms", label: "Rooms & Suites" },
                 { href: "/amenities", label: "Amenities" },
                 { href: "/meetings", label: "Meetings & Events" },
+                { href: "/groups", label: "Groups" },
                 { href: "/location", label: "Location & Ocala" },
                 { href: "/contact", label: "Contact Us" },
               ].map((link) => (

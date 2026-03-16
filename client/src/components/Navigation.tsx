@@ -15,6 +15,7 @@ const navLinks = [
   { href: "/rooms", label: "Rooms & Suites" },
   { href: "/amenities", label: "Amenities" },
   { href: "/meetings", label: "Meetings" },
+  { href: "/groups", label: "Groups" },
   { href: "/location", label: "Location" },
   { href: "/contact", label: "Contact" },
 ];
