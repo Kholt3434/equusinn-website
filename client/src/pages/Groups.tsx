@@ -18,8 +18,8 @@ const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi
 // Stock images for each group type (Unsplash)
 const GROUP_SWIM = "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=900&q=80";
 const GROUP_GOLF = "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=900&q=80";
-const GROUP_BASEBALL = "https://images.unsplash.com/photo-1566577739112-5180d4bf9390?w=900&q=80";
-const GROUP_SOFTBALL = "https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?w=900&q=80";
+const GROUP_BASEBALL = "https://images.unsplash.com/photo-1508344928928-7165b67de128?w=900&q=80";
+const GROUP_SOFTBALL = "https://images.unsplash.com/photo-1562077981-4d7eafd44932?w=900&q=80";
 const GROUP_VOLLEYBALL = "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=900&q=80";
 const GROUP_RELIGIOUS = "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=80";
 const GROUP_SOCIAL = "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=900&q=80";

@@ -43,10 +43,10 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
 }
 
 const meetingFeatures = [
-  { icon: Users, label: "Flexible Capacity", desc: "Configurable for 10–80 guests" },
+  { icon: Users, label: "Flexible Capacity", desc: "Configurable for up to 45 guests" },
   { icon: Wifi, label: "Fiber Optic WiFi", desc: "High-speed throughout" },
   { icon: Tv, label: "AV Equipment", desc: "Screen, projector & sound" },
-  { icon: Coffee, label: "Catering Available", desc: "Coffee service & meals" },
+  { icon: Coffee, label: "Catering Available", desc: "Coffee service & breakfast. Outside catering welcome." },
   { icon: Projector, label: "Presentation Ready", desc: "HDMI & wireless display" },
   { icon: Check, label: "Natural Light", desc: "Bright, comfortable space" },
 ];
@@ -55,7 +55,7 @@ const meetingSetups = [
   {
     name: "U-Shape",
     capacity: "18 guests",
-    img: MEETING_CLASSROOM,
+    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/Ushape_56433fc1.png",
     desc: "Tables arranged in a U-shape for collaborative discussions, training sessions, and interactive workshops where everyone can see each other.",
   },
   {
@@ -170,7 +170,7 @@ export default function Meetings() {
                   <img src={MEETING_THEATRE} alt="Equus Inn theatre meeting setup" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="h-48 overflow-hidden col-span-2">
-                  <img src={MEETING_EQUINE} alt="Equus Inn meeting room equine event" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                  <img src={MEETING_BABY} alt="Equus Inn meeting room event setup" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
               </div>
             </AnimatedSection>
@@ -255,7 +255,7 @@ export default function Meetings() {
                 </div>
                 <h3 className="font-display font-600 text-lg text-[#1C2B4A] mb-3">Group Catering</h3>
                 <p className="font-body text-sm text-[#2A2A2A]/65 leading-relaxed">
-                  We allow outside catering for your event. Our sales team is happy to provide recommendations for local caterers who know our space well. Contact sales for a curated list of trusted catering partners.
+                  We offer coffee service and breakfast for your event. We also allow outside catering — contact our sales team for recommendations on trusted local caterers who know our space well.
                 </p>
               </div>
             </AnimatedSection>

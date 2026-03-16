@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Send, ExternalLink } from "lucide-react";
 import { toast } from "sonner";
 
-const LOBBY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_1488551_be582543.webp";
+const LOBBY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/LobbyLoungeAre_v2_943f919a.webp";
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/hotel_exterior_main_decd433b.webp";
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -181,7 +181,7 @@ export default function Contact() {
                 <div className="overflow-hidden h-48">
                   <img
                     src={LOBBY_IMG}
-                    alt="Equus Inn lobby"
+                    alt="Equus Inn lobby lounge area with horse racing mural"
                     className="w-full h-full object-cover"
                   />
                 </div>
