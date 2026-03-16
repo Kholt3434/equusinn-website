@@ -49,11 +49,11 @@ export default function Navigation() {
             : "bg-[#1C2B4A] shadow-lg"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 xl:px-10">
           <div className="flex items-center justify-between h-24">
-            {/* Logo */}
+            {/* Logo — fixed width so it doesn't shrink */}
             <Link href="/">
-              <div className="flex items-center gap-3 cursor-pointer">
+              <div className="flex items-center gap-3 cursor-pointer flex-shrink-0">
                 <img
                   src={LOGO_URL}
                   alt="Equus Inn"
@@ -62,12 +62,12 @@ export default function Navigation() {
               </div>
             </Link>
 
-            {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center gap-7">
+            {/* Desktop Nav — nowrap on every item, tighter gap on smaller screens */}
+            <div className="hidden lg:flex items-center gap-4 xl:gap-6 flex-shrink min-w-0">
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
                   <span
-                    className={`font-body font-700 text-[0.72rem] tracking-[0.18em] uppercase transition-colors duration-200 ${
+                    className={`whitespace-nowrap font-body font-700 text-[0.65rem] xl:text-[0.72rem] tracking-[0.14em] uppercase transition-colors duration-200 ${
                       location === link.href
                         ? "text-[#D4AF6A]"
                         : "text-white/80 hover:text-[#D4AF6A]"
@@ -79,20 +79,20 @@ export default function Navigation() {
               ))}
             </div>
 
-            {/* CTA + Mobile Toggle */}
-            <div className="flex items-center gap-4">
+            {/* CTA + Phone + Mobile Toggle — flex-shrink-0 so they never compress */}
+            <div className="flex items-center gap-3 flex-shrink-0">
               <a
                 href="tel:+13528543200"
-                className="hidden md:flex items-center gap-1.5 font-body font-700 text-[0.7rem] tracking-[0.15em] uppercase text-white/60 hover:text-[#D4AF6A] transition-colors duration-200"
+                className="hidden xl:flex items-center gap-1.5 font-body font-700 text-[0.65rem] tracking-[0.12em] uppercase text-white/60 hover:text-[#D4AF6A] transition-colors duration-200 whitespace-nowrap"
               >
-                <Phone className="w-3 h-3" />
+                <Phone className="w-3 h-3 flex-shrink-0" />
                 (352) 854-3200
               </a>
               <a
                 href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden md:block btn-gold text-[0.72rem] px-6 py-3"
+                className="hidden md:block btn-gold whitespace-nowrap text-[0.68rem] px-5 py-2.5"
               >
                 Book Now
               </a>
@@ -127,9 +127,9 @@ export default function Navigation() {
               <div className="pt-4 border-t border-[#D4AF6A]/20 space-y-3">
                 <a
                   href="tel:+13528543200"
-                  className="flex items-center gap-2 text-[#D4AF6A] font-body text-sm"
+                  className="flex items-center gap-2 text-[#D4AF6A] font-body text-sm whitespace-nowrap"
                 >
-                  <Phone className="w-4 h-4" />
+                  <Phone className="w-4 h-4 flex-shrink-0" />
                   (352) 854-3200
                 </a>
                 <a
