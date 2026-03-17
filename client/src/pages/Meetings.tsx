@@ -18,7 +18,7 @@ import { toast } from "sonner";
 
 // Real meeting room photos
 const MEETING_BOARDROOM = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomBoardroomProjector_400eafd0.png";
-const MEETING_THEATRE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/TheaterStyle_b9e6e5a5.webp";
+const MEETING_THEATRE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/theaterstyle2_b80cc898.png";
 const MEETING_CLASSROOM = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomClassroom_1bea37f5.png";
 const MEETING_EQUINE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/upshapecorporate_0b80dc44.png";
 const MEETING_BIRTHDAY = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomGirlsBirthday_ed47bdfc.png";

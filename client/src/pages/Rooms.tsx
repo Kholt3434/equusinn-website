@@ -59,8 +59,8 @@ const SPA_SUITE_B = `${CDN}/SpaSuiteBathroom_172a9e7d.webp`;
 // ADA King
 const ADA_KING_A = `${CDN}/KingADAbedroomUSE_ede95188.jpg`;
 const ADA_KING_B = `${CDN}/KingADAbathroom_493444c0.jpg`;
-// ADA Two Queen (using ADABathroom for second image)
-const ADA_TQ_A = `${CDN}/TwoQueenRoom_ecf1b94f.webp`;
+// ADA Two Queen — actual room photos
+const ADA_TQ_A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/QQADA_0d955f4f.webp";
 const ADA_TQ_B = `${CDN}/ADABathroom_fa553d74.webp`;
 // Shared
 const EXTERIOR_IMG = `${CDN}/FrontExterior_578913ce.webp`;
@@ -352,7 +352,7 @@ export default function Rooms() {
               Every Room Tells a Story
             </h2>
             <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed">
-              Each of our 152 rooms and suites has been designed with equestrian-themed décor, luxury finishes, and modern technology. From our signature king rooms to our spa suites, every accommodation reflects the spirit and heritage of Ocala's horse country. All suites include kitchenettes with full-size refrigerators and dining areas.
+              Each of our 152 rooms and suites has been designed with equestrian-themed décor, luxury finishes, and modern technology. From our signature king rooms to our spa suites, every accommodation reflects the spirit and heritage of Ocala's horse country. All suites offer additional living space and upgraded amenities for a more comfortable extended stay.
             </p>
           </AnimatedSection>
         </div>
