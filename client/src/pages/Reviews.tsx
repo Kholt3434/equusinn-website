@@ -250,6 +250,37 @@ export default function Reviews() {
         </div>
       </section>
 
+      {/* TripAdvisor Award Widget — top placement */}
+      <section className="py-12 bg-[#FAF7F2] border-b border-[#1C2B4A]/10">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <p className="font-lato text-xs tracking-widest uppercase text-[#8B5E3C] mb-6">Award-Winning Hospitality</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-10">
+            {/* TripAdvisor Travelers Choice 2025 Widget */}
+            <div id="TA_certificateOfExcellence586" className="TA_certificateOfExcellence">
+              <ul id="svZXhbNzz6F" className="TA_links R3E9zHluokWy" style={{listStyle: "none", padding: 0, margin: 0}}>
+                <li id="QnI9zo6h0Zkm" className="zDBi3f">
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.tripadvisor.com/Hotel_Review-g34496-d86798-Reviews-Equus_Inn-Ocala_Florida.html">
+                    <img src="https://static.tacdn.com/img2/travelers_choice/widgets/tchotel_2025_L.png" alt="TripAdvisor Travelers Choice 2025" className="widCOEImg h-36 w-auto" id="CDSWIDCOELOGO" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="text-left">
+              <p className="font-display text-3xl font-bold text-[#1C2B4A] mb-2">TripAdvisor Travelers' Choice 2025</p>
+              <p className="font-body text-base text-[#2A2A2A]/65 mb-3">Recognized as one of the best hotels in Ocala, Florida — awarded to the top 10% of hotels worldwide based on verified guest reviews.</p>
+              <a
+                href="https://www.tripadvisor.com/Hotel_Review-g34496-d86798-Reviews-Equus_Inn-Ocala_Florida.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-body text-sm font-700 tracking-widest uppercase text-[#8B5E3C] border-b border-[#8B5E3C] pb-0.5 hover:text-[#1C2B4A] hover:border-[#1C2B4A] transition-colors"
+              >
+                Read All Reviews on TripAdvisor
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Overall Rating Banner */}
       <section className="bg-[#1C2B4A] py-12">
         <div className="max-w-6xl mx-auto px-4">
@@ -458,36 +489,7 @@ export default function Reviews() {
         </div>
       </section>
 
-      {/* TripAdvisor Award Widget */}
-      <section className="py-10 bg-[#FAF7F2] border-t border-[#1C2B4A]/10">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <p className="font-lato text-xs tracking-widest uppercase text-[#8B5E3C] mb-6">Award-Winning Hospitality</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-            {/* TripAdvisor Travelers Choice 2025 Widget */}
-            <div id="TA_certificateOfExcellence586" className="TA_certificateOfExcellence">
-              <ul id="svZXhbNzz6F" className="TA_links R3E9zHluokWy" style={{listStyle: "none", padding: 0, margin: 0}}>
-                <li id="QnI9zo6h0Zkm" className="zDBi3f">
-                  <a target="_blank" rel="noopener noreferrer" href="https://www.tripadvisor.com/Hotel_Review-g34496-d86798-Reviews-Equus_Inn-Ocala_Florida.html">
-                    <img src="https://static.tacdn.com/img2/travelers_choice/widgets/tchotel_2025_L.png" alt="TripAdvisor Travelers Choice 2025" className="widCOEImg h-24 w-auto" id="CDSWIDCOELOGO" />
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="text-left">
-              <p className="font-display text-2xl font-bold text-[#1C2B4A] mb-1">TripAdvisor Travelers' Choice</p>
-              <p className="font-body text-sm text-[#2A2A2A]/65 mb-2">Recognized as one of the best hotels in Ocala, Florida</p>
-              <a
-                href="https://www.tripadvisor.com/Hotel_Review-g34496-d86798-Reviews-Equus_Inn-Ocala_Florida.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-body text-xs font-700 tracking-widest uppercase text-[#8B5E3C] border-b border-[#8B5E3C] pb-0.5 hover:text-[#1C2B4A] hover:border-[#1C2B4A] transition-colors"
-              >
-                Read All Reviews on TripAdvisor
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       <Footer />
     </div>

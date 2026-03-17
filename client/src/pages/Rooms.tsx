@@ -18,17 +18,17 @@ const roomsSchema = {
   "name": "Equus Inn Room Types",
   "description": "All room types available at Equus Inn, Ocala's premier equestrian boutique hotel.",
   "url": "https://www.equusinn.com/rooms",
-  "numberOfItems": 9,
+  "numberOfItems": 10,
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "King Room", "url": "https://www.equusinn.com/rooms#king" },
-    { "@type": "ListItem", "position": 2, "name": "King Junior Suite", "url": "https://www.equusinn.com/rooms#king-junior" },
+    { "@type": "ListItem", "position": 2, "name": "King Junior Room", "url": "https://www.equusinn.com/rooms#king-junior" },
     { "@type": "ListItem", "position": 3, "name": "Double Queen Room", "url": "https://www.equusinn.com/rooms#double-queen" },
     { "@type": "ListItem", "position": 4, "name": "Two Queen Suite", "url": "https://www.equusinn.com/rooms#two-queen-suite" },
-    { "@type": "ListItem", "position": 5, "name": "Suite with Kitchenette", "url": "https://www.equusinn.com/rooms#kitchenette" },
-    { "@type": "ListItem", "position": 6, "name": "King Suite", "url": "https://www.equusinn.com/rooms#king-suite" },
-    { "@type": "ListItem", "position": 7, "name": "Spa Junior Suite", "url": "https://www.equusinn.com/rooms#spa-junior" },
-    { "@type": "ListItem", "position": 8, "name": "Spa Suite", "url": "https://www.equusinn.com/rooms#spa-suite" },
-    { "@type": "ListItem", "position": 9, "name": "ADA Accessible King Room", "url": "https://www.equusinn.com/rooms#ada" }
+    { "@type": "ListItem", "position": 5, "name": "King Suite", "url": "https://www.equusinn.com/rooms#king-suite" },
+    { "@type": "ListItem", "position": 6, "name": "Spa Junior Suite", "url": "https://www.equusinn.com/rooms#spa-junior" },
+    { "@type": "ListItem", "position": 7, "name": "Spa Suite", "url": "https://www.equusinn.com/rooms#spa-suite" },
+    { "@type": "ListItem", "position": 8, "name": "ADA Accessible King Room", "url": "https://www.equusinn.com/rooms#ada-king" },
+    { "@type": "ListItem", "position": 9, "name": "ADA Accessible Two Queen Room", "url": "https://www.equusinn.com/rooms#ada-two-queen" }
   ]
 };
 
@@ -47,27 +47,26 @@ const ROOM_2B = `${CDN}/Bathroom(1)_860b652a.webp`;
 // Two Queen Suite
 const TWO_QUEEN_SUITE_A = `${CDN}/TwoQueenSuite_72c25328.webp`;
 const TWO_QUEEN_SUITE_B = `${CDN}/BathroomandVanity_36d4711a.webp`;
-// King Suite
+// King Suite — bedroom + living room
 const KING_SUITE_A = `${CDN}/KingRoom(1)_5ae99094.webp`;
-const KING_SUITE_B = `${CDN}/BathroomandVanity_36d4711a.webp`;
-// Suite with Kitchenette
-const ROOM_3A = `${CDN}/SuiteKitchenette_392204ac.webp`;
-const ROOM_3B = `${CDN}/BathroomandVanity_36d4711a.webp`;
+const KING_SUITE_B = `${CDN}/king-suite-living-room_bb20b25f.jpg`;
 // Spa Junior Suite
 const SPA_JR_A = `${CDN}/spasuitejrbedroom_42d10bdb.jpg`;
 const SPA_JR_B = `${CDN}/SpaSuiteJrLivingArea_d53b4a8c.webp`;
 // Spa Suite
 const SPA_SUITE_A = `${CDN}/spasuitebedroom_a29eb507.jpg`;
 const SPA_SUITE_B = `${CDN}/SpaSuiteBathroom_172a9e7d.webp`;
-// ADA
-const ADA_A = `${CDN}/KingADAbedroomUSE_67b4766e.jpg`;
-const ADA_B = `${CDN}/KingADAbathroom_d6f92cf5.jpg`;
+// ADA King
+const ADA_KING_A = `${CDN}/KingADAbedroomUSE_ede95188.jpg`;
+const ADA_KING_B = `${CDN}/KingADAbathroom_493444c0.jpg`;
+// ADA Two Queen (using ADABathroom for second image)
+const ADA_TQ_A = `${CDN}/TwoQueenRoom_ecf1b94f.webp`;
+const ADA_TQ_B = `${CDN}/ADABathroom_fa553d74.webp`;
 // Shared
 const EXTERIOR_IMG = `${CDN}/FrontExterior_578913ce.webp`;
 const POOL_IMG = `${CDN}/outdoorpool_41fd32e0.webp`;
 const BATH_1 = `${CDN}/BathroomandVanity_36d4711a.webp`;
-const BATH_2 = `${CDN}/ADABathroom_1530368b.webp`;
-const BATH_3 = `${CDN}/ADAbathroom2_68f52347.webp`;
+const BATH_2 = `${CDN}/ADABathroom_fa553d74.webp`;
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
@@ -177,16 +176,17 @@ const rooms = [
     beds: "2 Queen Beds",
     guests: "Up to 4 Guests",
     sqft: "~440 sq ft",
-    desc: "The Two Queen Suite combines the sleeping capacity of our double queen rooms with the added space and comfort of a suite layout. Ideal for families or small groups who want a little more room to spread out during a show week or extended stay in Ocala.",
+    desc: "The Two Queen Suite combines the sleeping capacity of our double queen rooms with the added space and comfort of a suite layout. Includes a kitchenette with full-size refrigerator, microwave, and dining area — ideal for families or small groups who want a little more room to spread out during a show week or extended stay in Ocala.",
     features: [
       "2 Queen Beds with premium linens",
+      "Kitchenette with full-size refrigerator",
+      "Microwave & dining area",
       "Additional living space",
       "Equestrian-themed décor throughout",
       "Luxury rain showerhead & modern bowl sink",
       "Smart TV with streaming",
       "Fiber optic WiFi",
-      "Coffee maker & mini fridge",
-      "Climate control (A/C & heat)",
+      "Coffee maker",
       "Complimentary hot breakfast included",
     ],
   },
@@ -194,41 +194,18 @@ const rooms = [
     id: "king-suite",
     tag: "Suite",
     title: "King Suite",
-    subtitle: "Elevated Comfort with Extra Living Space",
+    subtitle: "Elevated Comfort with Separate Living Area",
     imgA: KING_SUITE_A,
     imgB: KING_SUITE_B,
     beds: "1 King Bed",
     guests: "Up to 2 Guests",
     sqft: "~460 sq ft",
-    desc: "The King Suite elevates your stay with a separate living area and premium finishes throughout. Ideal for guests who want more room to relax after a long day at the show grounds, or for those who simply prefer a more spacious retreat. All the character of Equus Inn, with added comfort.",
+    desc: "The King Suite elevates your stay with a separate living area featuring a sofa, coffee table, and dining space, plus a full kitchenette with a full-size refrigerator and microwave. Ideal for guests who want more room to relax after a long day at the show grounds, or for those who prefer a more spacious retreat. All the character of Equus Inn, with added comfort.",
     features: [
       "1 King Bed with premium linens",
-      "Separate living/sitting area",
-      "Equestrian-themed décor throughout",
-      "Luxury rain showerhead & modern bowl sink",
-      "Smart TV with streaming",
-      "Fiber optic WiFi",
-      "Coffee maker & mini fridge",
-      "Climate control (A/C & heat)",
-      "Complimentary hot breakfast included",
-    ],
-  },
-  {
-    id: "suite-kitchenette",
-    tag: "Best for Long Stays",
-    title: "Suite with Kitchenette",
-    subtitle: "Home Away From Home",
-    imgA: ROOM_3A,
-    imgB: ROOM_3B,
-    beds: "1 King Bed",
-    guests: "Up to 2 Guests",
-    sqft: "~480 sq ft",
-    desc: "For longer stays during show season or extended visits to Ocala, our suites with kitchenettes offer everything you need to feel at home. A full-size refrigerator, microwave, and dedicated dining area mean you can prepare meals at your convenience, while still enjoying all the amenities of the hotel.",
-    features: [
-      "1 King Bed with premium linens",
-      "Full kitchenette with full-size refrigerator",
+      "Separate living/sitting area with sofa",
+      "Kitchenette with full-size refrigerator",
       "Microwave & dining area",
-      "Separate living/sitting area",
       "Equestrian-themed décor throughout",
       "Luxury rain showerhead & modern bowl sink",
       "Smart TV with streaming",
@@ -247,7 +224,7 @@ const rooms = [
     beds: "1 King Bed",
     guests: "Up to 2 Guests",
     sqft: "~420 sq ft",
-    desc: "The Spa Junior Suite is designed for guests who want to unwind in style. Featuring upgraded spa-inspired bathroom finishes and a relaxing ambiance, this suite is the perfect choice after a long day in the saddle or at the show grounds. Indulge in a little luxury without leaving the property.",
+    desc: "The Spa Junior Suite is designed for guests who want a touch of luxury without sacrificing the warm, equestrian character of the Equus Inn. A spa-inspired bathroom with premium finishes and upgraded bath amenities makes this suite a perfect choice for a romantic getaway or a well-deserved retreat.",
     features: [
       "1 King Bed with premium linens",
       "Spa-inspired bathroom with premium finishes",
@@ -277,6 +254,54 @@ const rooms = [
       "Upgraded bath amenities & robes",
       "Separate living/sitting area",
       "Equestrian-themed décor throughout",
+      "Smart TV with streaming",
+      "Fiber optic WiFi",
+      "Coffee maker & mini fridge",
+      "Climate control (A/C & heat)",
+      "Complimentary hot breakfast included",
+    ],
+  },
+  {
+    id: "ada-king",
+    tag: "ADA Accessible",
+    title: "King ADA Room",
+    subtitle: "Accessible Comfort Without Compromise",
+    imgA: ADA_KING_A,
+    imgB: ADA_KING_B,
+    beds: "1 King Bed",
+    guests: "Up to 2 Guests",
+    sqft: "~340 sq ft",
+    desc: "Our King ADA Room is thoughtfully designed to provide full accessibility without sacrificing the equestrian character and modern comfort that define the Equus Inn. Features a roll-in shower with grab bars, an accessible bathroom layout, and wide doorways throughout. The same equestrian-themed décor and premium finishes found in all our rooms.",
+    features: [
+      "1 King Bed with premium linens",
+      "Roll-in shower with grab bars",
+      "Accessible bathroom with wide clearances",
+      "Wide doorways throughout",
+      "Equestrian-themed décor",
+      "Smart TV with streaming",
+      "Fiber optic WiFi",
+      "Coffee maker & mini fridge",
+      "Climate control (A/C & heat)",
+      "Complimentary hot breakfast included",
+    ],
+  },
+  {
+    id: "ada-two-queen",
+    tag: "ADA Accessible",
+    title: "Two Queen ADA Room",
+    subtitle: "Accessible Space for Families & Groups",
+    imgA: ADA_TQ_A,
+    imgB: ADA_TQ_B,
+    beds: "2 Queen Beds",
+    guests: "Up to 4 Guests",
+    sqft: "~400 sq ft",
+    desc: "The Two Queen ADA Room offers full accessibility for families and groups traveling with guests who require ADA accommodations. Two queen beds, a spacious accessible bathroom with roll-in shower and grab bars, and wide doorways make this room an ideal choice for those who need accessible features without giving up sleeping capacity.",
+    features: [
+      "2 Queen Beds with premium linens",
+      "Roll-in shower with grab bars",
+      "Accessible bathroom with wide clearances",
+      "Wide doorways throughout",
+      "Equestrian-themed décor",
       "Smart TV with streaming",
       "Fiber optic WiFi",
       "Coffee maker & mini fridge",
@@ -327,7 +352,7 @@ export default function Rooms() {
               Every Room Tells a Story
             </h2>
             <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed">
-              Each of our 152 rooms and suites has been designed with equestrian-themed décor, luxury finishes, and modern technology. From our signature king rooms to our spa suites, every accommodation reflects the spirit and heritage of Ocala's horse country.
+              Each of our 152 rooms and suites has been designed with equestrian-themed décor, luxury finishes, and modern technology. From our signature king rooms to our spa suites, every accommodation reflects the spirit and heritage of Ocala's horse country. All suites include kitchenettes with full-size refrigerators and dining areas.
             </p>
           </AnimatedSection>
         </div>
@@ -435,19 +460,19 @@ export default function Rooms() {
             <p className="section-label mb-4">Luxury Finishes</p>
             <div className="gold-divider mb-6" />
             <h2 className="font-display text-3xl font-bold text-[#1C2B4A]">Bathrooms & Amenities</h2>
-            <p className="font-body text-[#2A2A2A]/65 text-sm mt-3 max-w-2xl">Every bathroom features a luxury rain showerhead, modern bowl sink, and premium finishes. Please note that ADA-accessible rooms feature roll-in showers and grab bars — room layouts may vary. Guests requiring ADA accommodations are encouraged to call ahead so we can ensure the right room is reserved for you.</p>
+            <p className="font-body text-[#2A2A2A]/65 text-sm mt-3 max-w-2xl">Every bathroom features a luxury rain showerhead, modern bowl sink, and premium finishes. ADA-accessible rooms feature roll-in showers and grab bars — room layouts may vary. Guests requiring ADA accommodations are encouraged to call ahead so we can ensure the right room is reserved for you.</p>
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="h-72 overflow-hidden">
               <img src={BATH_1} alt="Equus Inn bathroom vanity" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="h-72 overflow-hidden">
-              <img src={BATH_2} alt="Equus Inn bathroom" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <img src={BATH_2} alt="Equus Inn ADA accessible bathroom" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
           </div>
           <div className="mt-4 bg-[#1C2B4A]/5 border-l-4 border-[#D4AF6A] p-4">
             <p className="font-body text-xs text-[#1C2B4A] leading-relaxed">
-              <strong>ADA Accessible Rooms Available:</strong> ADA rooms feature roll-in showers, grab bars, and accessible layouts. Room configurations differ from standard rooms — please call <a href="tel:+13528543200" className="underline">(352) 854-3200</a> to reserve an ADA room and confirm availability.
+              <strong>ADA Accessible Rooms Available:</strong> Both King ADA and Two Queen ADA rooms feature roll-in showers, grab bars, and accessible layouts. Room configurations differ from standard rooms — please call <a href="tel:+13528543200" className="underline">(352) 854-3200</a> to reserve an ADA room and confirm availability.
             </p>
           </div>
         </div>
@@ -478,7 +503,7 @@ export default function Rooms() {
               { title: "Check-In / Check-Out", body: "Check-in: 3:00 PM\nCheck-out: 11:00 AM\nEarly check-in available upon request, subject to availability. Early or late check-in fees may apply." },
               { title: "Pet Policy", body: "Pets of all sizes welcome. A pet fee of $35 per pet, per night applies. Please notify us at booking. Pets must be kept on leash in common areas." },
               { title: "Cancellation", body: "Free cancellation up to 24 hours before check-in. Please review the cancellation policy at time of booking as it may vary by rate." },
-              { title: "Parking", body: "Free on-site parking for all guests. Equestrian trailer parking may be available — please call ahead for availability." },
+              { title: "Parking", body: "Free on-site parking for all guests. Please call ahead for trailer parking availability." },
             ].map((policy, i) => (
               <AnimatedSection key={i}>
                 <div className="bg-white p-6 shadow-sm h-full">

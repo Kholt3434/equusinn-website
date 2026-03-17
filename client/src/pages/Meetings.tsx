@@ -286,9 +286,9 @@ export default function Meetings() {
                 <div className="w-12 h-12 bg-[#1C2B4A]/10 flex items-center justify-center mb-5">
                   <Check className="w-5 h-5 text-[#1C2B4A]" />
                 </div>
-                <h3 className="font-display font-600 text-lg text-[#1C2B4A] mb-3">Event Coordination</h3>
+                <h3 className="font-display font-600 text-lg text-[#1C2B4A] mb-3">Event Coordination & Local Expertise</h3>
                 <p className="font-body text-sm text-[#2A2A2A]/65 leading-relaxed">
-                  Our team is experienced in coordinating equestrian industry events, corporate retreats, and group stays. We'll work with you to ensure every detail is handled — from room setup to parking for trailers and vehicles.
+                  Our team is experienced in coordinating equestrian industry events, corporate retreats, and group stays. We're also your local experts for everything Ocala has to offer — from the best restaurants and shopping to outdoor activities, attractions, and things to do near the World Equestrian Center. We'll help make your group's entire stay memorable, not just the event itself.
                 </p>
               </div>
             </AnimatedSection>

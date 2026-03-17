@@ -22,7 +22,7 @@ const GROUP_GOLF = "https://images.unsplash.com/photo-1535131749006-b7f58c99034b
 const GROUP_BASEBALL = "https://images.unsplash.com/photo-1508344928928-7165b67de128?w=900&q=80";
 const GROUP_SOFTBALL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/softball_3cc68f8b.jpg";
 const GROUP_VOLLEYBALL = "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=900&q=80";
-const GROUP_RELIGIOUS = "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=900&q=80";
+const GROUP_RELIGIOUS = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/religious-group-gathering_585e46aa.webp";
 const GROUP_SOCIAL = "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=900&q=80";
 const GROUP_EQUINE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomEquine_20f540e2.png";
 const GROUP_RODEO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/rodeo_8eb9fc69.webp";
