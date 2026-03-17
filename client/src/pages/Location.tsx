@@ -258,6 +258,15 @@ export default function Location() {
                     Head east on NW 80th Avenue, then south on NW Gainesville Road. Continue to SW College Road and head east. Equus Inn is approximately 20 minutes from the WEC main entrance.
                   </p>
                 </div>
+                <div className="p-6 bg-[#F5F0E8] border-l-4 border-[#C9A84C]">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Car className="w-4 h-4 text-[#2C4C3B]" />
+                    <h3 className="font-display font-600 text-base text-[#2C4C3B]">From SR-301 (US-301)</h3>
+                  </div>
+                  <p className="font-body text-sm text-[#2A2A2A]/70 leading-relaxed">
+                    Head west on SW College Road (SR-200). Equus Inn will be on your right approximately 0.5 miles west of the I-75 interchange. The hotel is easily accessible from SR-301 via SW College Road.
+                  </p>
+                </div>
               </div>
             </AnimatedSection>
           </div>

@@ -11,8 +11,8 @@ import { motion, useInView } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import {
-  Coffee, Waves, Dumbbell, PawPrint, Truck, Wifi, Wine, Flame,
-  Star, MapPin, ChevronDown, ArrowRight, Users,
+  Coffee, Waves, Dumbbell, PawPrint, Wifi, Wine, Flame,
+  Star, MapPin, ChevronDown, ArrowRight, Users, Phone,
 } from "lucide-react";
 
 // ─── REAL HOTEL IMAGES (CDN) ───
@@ -29,8 +29,8 @@ const OUTDOOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/Wf
 const PROPERTY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/LobbyLoungeAre_ff1e71f3.webp";
 const ROOM_DETAIL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/BathroomandVanity_36d4711a.webp";
 const MEETING_SECTION_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomBoardroomProjector_400eafd0.png";
-// Stock-style images for breakfast (appropriate since it's a buffet)
-const BREAKFAST_IMG = "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=900&q=80";
+// Real Equus Inn branded breakfast photo
+const BREAKFAST_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/newbreakfastimage_9961f052.png";
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
@@ -49,14 +49,13 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
 }
 
 const amenities = [
-  { icon: Coffee, label: "Free Hot Breakfast", desc: "Served every morning" },
-  { icon: Waves, label: "Heated Pool", desc: "Seasonally heated outdoor pool" },
-  { icon: Wine, label: "Beer & Wine Bar", desc: "Self-service, any time of day" },
-  { icon: Flame, label: "Outdoor Fireplace", desc: "Covered gazebo & fire" },
+  { icon: Coffee, label: "Free Hot Breakfast", desc: "Mon–Fri 6–9am · Sat–Sun 6–10am" },
+  { icon: Waves, label: "Seasonally Heated Pool", desc: "Outdoor pool" },
+  { icon: Wine, label: "Beer & Wine Bar", desc: "Self-service · 11am–11pm" },
+  { icon: Flame, label: "Outdoor Fireplace", desc: "Covered gazebo" },
   { icon: Dumbbell, label: "24/7 Fitness Center", desc: "Full gym access" },
-  { icon: PawPrint, label: "Pet Friendly", desc: "All sizes, no extra fee" },
-  { icon: Truck, label: "Trailer Parking", desc: "For equestrian travelers" },
-  { icon: Users, label: "Meeting Space", desc: "Events & corporate groups" },
+  { icon: PawPrint, label: "Pet Friendly", desc: "$35 per pet, per night" },
+  { icon: Users, label: "Meeting Space", desc: "Up to 45 guests" },
 ];
 
 const testimonials = [
@@ -73,7 +72,7 @@ const testimonials = [
     rating: 5,
   },
   {
-    quote: "Finally a hotel that understands equestrians! Trailer parking, proximity to WEC, and rooms that feel like home. The outdoor fireplace area at night is magical.",
+    quote: "Finally a hotel that understands equestrians! The proximity to WEC, the equestrian-themed rooms, and the cozy outdoor fireplace at night — this place truly feels like home.",
     author: "Renee K.",
     source: "Booking.com",
     rating: 5,
@@ -123,7 +122,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="font-body text-white/80 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Ocala's premier equestrian-themed boutique hotel. Minutes from the World Equestrian Center, with free hot breakfast, a heated pool, and trailer parking.
+            Ocala's premier equestrian-themed boutique hotel. Minutes from the World Equestrian Center, with free hot breakfast, a seasonally heated pool, and pet-friendly accommodations.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -169,7 +168,6 @@ export default function Home() {
               { label: "20 min to WEC", icon: MapPin },
               { label: "152 Rooms & Suites", icon: null },
               { label: "Pet-Friendly Always", icon: PawPrint },
-              { label: "Trailer Parking Available", icon: Truck },
               { label: "Free Hot Breakfast Daily", icon: Coffee },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2 text-[#FAF7F2]/75">
@@ -195,7 +193,7 @@ export default function Home() {
                 <span className="italic">Boutique Hotel</span>
               </h2>
               <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed mb-5">
-                Nestled in the heart of Florida's Horse Capital of the World, Equus Inn is a recently renovated boutique hotel designed with equestrian lovers in mind. Our property celebrates Ocala's rich heritage as home to more than 1,200 horse farms and some of the most prestigious equestrian venues in the country.
+                Nestled in the heart of Florida's Horse Capital of the World, Equus Inn is a thoughtfully designed boutique hotel for equestrian lovers. Our property celebrates Ocala's rich heritage as home to more than 1,200 horse farms and some of the most prestigious equestrian venues in the country.
               </p>
               <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed mb-8">
                 Every one of our 152 rooms and suites features unique equestrian-themed décor, new hardwood-style tile floors, luxury rain showerheads, modern bowl sinks, and Smart TVs. We offer the comfort of a boutique hotel with the convenience of a prime location — just minutes off I-75 and 20 minutes from the World Equestrian Center.
@@ -397,10 +395,13 @@ export default function Home() {
                 <span className="italic">The Right Way</span>
               </h2>
               <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed mb-6">
-                Our free hot and cold breakfast is included with every stay. Each morning, our rotating menu features freshly made waffles, scrambled eggs, sausage, biscuits, seasonal fruits, baked goods, hot and cold cereals, and freshly brewed coffee.
+                Our free hot and cold breakfast is included with every stay. Each morning, our rotating menu features scrambled eggs, sausage, biscuits, grits, seasonal fruits, baked goods, hot and cold cereals, and freshly brewed coffee.
               </p>
-              <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed mb-8">
+              <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed mb-2">
                 Whether you're fueling up for a full day at the show ring or heading out to explore Ocala's natural wonders, a hearty breakfast awaits you — at no extra charge.
+              </p>
+              <p className="font-body text-[#8B5E3C] text-xs font-semibold tracking-wide uppercase mb-8">
+                Mon–Fri: 6:00am–9:00am &nbsp;·&nbsp; Sat–Sun: 6:00am–10:00am
               </p>
               <a
                 href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
@@ -415,8 +416,8 @@ export default function Home() {
           {/* Image */}
           <div className="relative h-[500px] lg:h-auto order-1 lg:order-2 overflow-hidden">
             <img
-              src={DINING_IMG}
-              alt="Equus Inn dining area"
+              src={BREAKFAST_IMG}
+              alt="Equus Inn complimentary breakfast"
               className="w-full h-full object-cover"
             />
           </div>

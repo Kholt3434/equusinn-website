@@ -137,7 +137,7 @@ export default function Contact() {
                       <Mail className="w-4 h-4 text-[#1C2B4A]" />
                     </div>
                     <div>
-                      <p className="font-display font-600 text-sm text-[#1C2B4A] mb-1">Email</p>
+                      <p className="font-display font-600 text-sm text-[#1C2B4A] mb-1">Front Desk Email</p>
                       <a href="mailto:OcalaFD@paxproperties.com" className="font-body text-sm text-[#2A2A2A]/65 hover:text-[#1C2B4A] transition-colors">
                         OcalaFD@paxproperties.com
                       </a>
@@ -150,6 +150,16 @@ export default function Contact() {
                     <div>
                       <p className="font-display font-600 text-sm text-[#1C2B4A] mb-1">Front Desk Hours</p>
                       <p className="font-body text-sm text-[#2A2A2A]/65">Open 24 hours, 7 days a week</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-[#1C2B4A]/10 flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-4 h-4 text-[#D4AF6A]" />
+                    </div>
+                    <div>
+                      <p className="font-display font-600 text-sm text-[#1C2B4A] mb-1">Breakfast Hours</p>
+                      <p className="font-body text-sm text-[#2A2A2A]/65">Mon–Fri: 6:00 am – 9:00 am</p>
+                      <p className="font-body text-sm text-[#2A2A2A]/65">Sat – Sun: 6:00 am – 10:00 am</p>
                     </div>
                   </div>
                 </div>

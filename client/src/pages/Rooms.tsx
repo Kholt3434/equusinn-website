@@ -19,11 +19,12 @@ const ROOM_2A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2
 const ROOM_2B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/Bathroom(1)_860b652a.webp";
 const ROOM_3A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/SuiteKitchenette_392204ac.webp";
 const ROOM_3B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/BathroomandVanity_36d4711a.webp";
+const ROOM_KING1 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/KingRoom(1)_5ae99094.webp";
 const EXTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/FrontExterior_578913ce.webp";
 const POOL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/outdoorpool_41fd32e0.webp";
 const BATH_1 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/BathroomandVanity_36d4711a.webp";
 const BATH_2 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/Bathroom(1)_860b652a.webp";
-const WATERFALL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/WaterfallWall_edfd5f66.jpg";
+const TWO_QUEEN_SUITE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/TwoQueenSuite_2b9f3a12.webp";
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
@@ -61,7 +62,7 @@ const rooms = [
     beds: "1 King Bed",
     guests: "Up to 2 Guests",
     sqft: "~320 sq ft",
-    desc: "Our signature king rooms are the heart of the Equus Inn experience. Each room has been thoughtfully renovated with equestrian-themed décor that pays homage to Ocala's horse heritage. Featuring new hardwood-style tile floors, a luxury rain showerhead, modern bowl sink, and a Smart TV, these rooms blend comfort with character.",
+    desc: "Our signature king rooms are the heart of the Equus Inn experience. Each room has been thoughtfully designed with equestrian-themed décor that pays homage to Ocala's horse heritage. Featuring hardwood-style tile floors, a luxury rain showerhead, modern bowl sink, and a Smart TV, these rooms blend comfort with character.",
     features: [
       "1 King Bed with premium linens",
       "Equestrian-themed décor throughout",
@@ -72,6 +73,30 @@ const rooms = [
       "Coffee maker & mini fridge",
       "Climate control (A/C & heat)",
       "In-room safe",
+      "Complimentary hot breakfast included",
+    ],
+  },
+  {
+    id: "king-junior",
+    tag: "Comfortable & Cozy",
+    title: "King Junior Room",
+    subtitle: "Relaxed Comfort for Solo Travelers & Couples",
+    imgA: ROOM_KING1,
+    imgB: ROOM_1B,
+    beds: "1 King Bed",
+    guests: "Up to 2 Guests",
+    sqft: "~300 sq ft",
+    desc: "The King Junior offers all the comfort of our signature king rooms in a cozy, well-appointed layout. Perfect for solo travelers or couples, this room features the same equestrian-inspired décor, premium linens, and modern finishes. Note: this room features a comfortable chair rather than a sofa.",
+    features: [
+      "1 King Bed with premium linens",
+      "Comfortable seating chair",
+      "Equestrian-themed décor throughout",
+      "Luxury rain showerhead & modern bowl sink",
+      "Hardwood-style tile floors",
+      "Smart TV with streaming",
+      "Fiber optic WiFi",
+      "Coffee maker & mini fridge",
+      "Climate control (A/C & heat)",
       "Complimentary hot breakfast included",
     ],
   },
@@ -100,8 +125,54 @@ const rooms = [
     ],
   },
   {
-    id: "suite",
-    tag: "Extended Stay",
+    id: "two-queen-suite",
+    tag: "Suite",
+    title: "Two Queen Suite",
+    subtitle: "Extra Space for Families & Groups",
+    imgA: TWO_QUEEN_SUITE,
+    imgB: ROOM_2B,
+    beds: "2 Queen Beds",
+    guests: "Up to 4 Guests",
+    sqft: "~440 sq ft",
+    desc: "The Two Queen Suite combines the sleeping capacity of our double queen rooms with the added space and comfort of a suite layout. Ideal for families or small groups who want a little more room to spread out during a show week or extended stay in Ocala.",
+    features: [
+      "2 Queen Beds with premium linens",
+      "Additional living space",
+      "Equestrian-themed décor throughout",
+      "Luxury rain showerhead & modern bowl sink",
+      "Smart TV with streaming",
+      "Fiber optic WiFi",
+      "Coffee maker & mini fridge",
+      "Climate control (A/C & heat)",
+      "Complimentary hot breakfast included",
+    ],
+  },
+  {
+    id: "king-suite",
+    tag: "Suite",
+    title: "King Suite",
+    subtitle: "Elevated Comfort with Extra Living Space",
+    imgA: ROOM_1A,
+    imgB: ROOM_3B,
+    beds: "1 King Bed",
+    guests: "Up to 2 Guests",
+    sqft: "~460 sq ft",
+    desc: "The King Suite elevates your stay with a separate living area and premium finishes throughout. Ideal for guests who want more room to relax after a long day at the show grounds, or for those who simply prefer a more spacious retreat. All the character of Equus Inn, with added comfort.",
+    features: [
+      "1 King Bed with premium linens",
+      "Separate living/sitting area",
+      "Equestrian-themed décor throughout",
+      "Luxury rain showerhead & modern bowl sink",
+      "Smart TV with streaming",
+      "Fiber optic WiFi",
+      "Coffee maker & mini fridge",
+      "Climate control (A/C & heat)",
+      "Complimentary hot breakfast included",
+    ],
+  },
+  {
+    id: "suite-kitchenette",
+    tag: "Best for Long Stays",
     title: "Suite with Kitchenette",
     subtitle: "Home Away From Home",
     imgA: ROOM_3A,
@@ -120,6 +191,53 @@ const rooms = [
       "Smart TV with streaming",
       "Fiber optic WiFi",
       "Coffee maker",
+      "Complimentary hot breakfast included",
+    ],
+  },
+  {
+    id: "spa-junior-suite",
+    tag: "Spa Suite",
+    title: "Spa Junior Suite",
+    subtitle: "Relaxation Meets Equestrian Elegance",
+    imgA: ROOM_1A,
+    imgB: BATH_1,
+    beds: "1 King Bed",
+    guests: "Up to 2 Guests",
+    sqft: "~420 sq ft",
+    desc: "The Spa Junior Suite is designed for guests who want to unwind in style. Featuring upgraded spa-inspired bathroom finishes and a relaxing ambiance, this suite is the perfect choice after a long day in the saddle or at the show grounds. Indulge in a little luxury without leaving the property.",
+    features: [
+      "1 King Bed with premium linens",
+      "Spa-inspired bathroom with premium finishes",
+      "Upgraded bath amenities",
+      "Equestrian-themed décor throughout",
+      "Smart TV with streaming",
+      "Fiber optic WiFi",
+      "Coffee maker & mini fridge",
+      "Climate control (A/C & heat)",
+      "Complimentary hot breakfast included",
+    ],
+  },
+  {
+    id: "spa-suite",
+    tag: "Most Luxurious",
+    title: "Spa Suite",
+    subtitle: "The Ultimate Equus Inn Experience",
+    imgA: ROOM_1A,
+    imgB: BATH_1,
+    beds: "1 King Bed",
+    guests: "Up to 2 Guests",
+    sqft: "~520 sq ft",
+    desc: "Our most luxurious accommodation, the Spa Suite offers the full Equus Inn experience elevated to its finest. Expansive spa bathroom, premium finishes throughout, and a spacious layout make this the ideal choice for special occasions, honeymoons, or simply treating yourself to the best Ocala has to offer.",
+    features: [
+      "1 King Bed with premium linens",
+      "Full spa bathroom with premium finishes",
+      "Upgraded bath amenities & robes",
+      "Separate living/sitting area",
+      "Equestrian-themed décor throughout",
+      "Smart TV with streaming",
+      "Fiber optic WiFi",
+      "Coffee maker & mini fridge",
+      "Climate control (A/C & heat)",
       "Complimentary hot breakfast included",
     ],
   },
@@ -165,7 +283,7 @@ export default function Rooms() {
               Every Room Tells a Story
             </h2>
             <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed">
-              Each of our 152 rooms and suites has been recently renovated with equestrian-themed décor, luxury finishes, and modern technology. From our signature king rooms to our extended-stay suites, every accommodation reflects the spirit and heritage of Ocala's horse country.
+              Each of our 152 rooms and suites has been designed with equestrian-themed décor, luxury finishes, and modern technology. From our signature king rooms to our spa suites, every accommodation reflects the spirit and heritage of Ocala's horse country.
             </p>
           </AnimatedSection>
         </div>
@@ -273,7 +391,7 @@ export default function Rooms() {
             <p className="section-label mb-4">Luxury Finishes</p>
             <div className="gold-divider mb-6" />
             <h2 className="font-display text-3xl font-bold text-[#1C2B4A]">Bathrooms & Amenities</h2>
-            <p className="font-body text-[#2A2A2A]/65 text-sm mt-3 max-w-2xl">Every bathroom features a luxury rain showerhead, modern bowl sink, and premium finishes — designed to make every morning feel like a spa retreat.</p>
+            <p className="font-body text-[#2A2A2A]/65 text-sm mt-3 max-w-2xl">Every bathroom features a luxury rain showerhead, modern bowl sink, and premium finishes. Please note that ADA-accessible rooms feature roll-in showers and grab bars — room layouts may vary. Guests requiring ADA accommodations are encouraged to call ahead so we can ensure the right room is reserved for you.</p>
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="h-72 overflow-hidden">
@@ -282,6 +400,11 @@ export default function Rooms() {
             <div className="h-72 overflow-hidden">
               <img src={BATH_2} alt="Equus Inn bathroom" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
+          </div>
+          <div className="mt-4 bg-[#1C2B4A]/5 border-l-4 border-[#D4AF6A] p-4">
+            <p className="font-body text-xs text-[#1C2B4A] leading-relaxed">
+              <strong>ADA Accessible Rooms Available:</strong> ADA rooms feature roll-in showers, grab bars, and accessible layouts. Room configurations differ from standard rooms — please call <a href="tel:+13528543200" className="underline">(352) 854-3200</a> to reserve an ADA room and confirm availability.
+            </p>
           </div>
         </div>
       </section>
@@ -308,10 +431,10 @@ export default function Rooms() {
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { title: "Check-In / Check-Out", body: "Check-in: 3:00 PM\nCheck-out: 11:00 AM\nEarly/late check-in available upon request and subject to availability." },
-              { title: "Pet Policy", body: "All pets welcome at no additional charge. Please notify us at booking. Pets must be kept on leash in common areas." },
+              { title: "Check-In / Check-Out", body: "Check-in: 3:00 PM\nCheck-out: 11:00 AM\nEarly check-in available upon request, subject to availability. Early or late check-in fees may apply." },
+              { title: "Pet Policy", body: "Pets of all sizes welcome. A pet fee of $35 per pet, per night applies. Please notify us at booking. Pets must be kept on leash in common areas." },
               { title: "Cancellation", body: "Free cancellation up to 24 hours before check-in. Please review the cancellation policy at time of booking as it may vary by rate." },
-              { title: "Parking", body: "Free on-site parking for all guests. Extended trailer parking available for equestrian travelers — please call ahead to confirm space." },
+              { title: "Parking", body: "Free on-site parking for all guests. Equestrian trailer parking may be available — please call ahead for availability." },
             ].map((policy, i) => (
               <AnimatedSection key={i}>
                 <div className="bg-white p-6 shadow-sm h-full">

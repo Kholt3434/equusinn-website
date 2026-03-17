@@ -19,7 +19,7 @@ import { toast } from "sonner";
 const MEETING_BOARDROOM = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomBoardroomProjector_400eafd0.png";
 const MEETING_THEATRE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomTheatre_a5915433.png";
 const MEETING_CLASSROOM = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomClassroom_1bea37f5.png";
-const MEETING_EQUINE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomEquine_20f540e2.png";
+const MEETING_EQUINE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/upshapecorporate_0b80dc44.png";
 const MEETING_BIRTHDAY = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomGirlsBirthday_ed47bdfc.png";
 const MEETING_BABY = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomBoysBabyShower_29e078af.png";
 const EXTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomBoardroomProjector_400eafd0.png";
@@ -55,7 +55,7 @@ const meetingSetups = [
   {
     name: "U-Shape",
     capacity: "18 guests",
-    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/Ushape_56433fc1.png",
+    img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/upshapecorporate_0b80dc44.png",
     desc: "Tables arranged in a U-shape for collaborative discussions, training sessions, and interactive workshops where everyone can see each other.",
   },
   {

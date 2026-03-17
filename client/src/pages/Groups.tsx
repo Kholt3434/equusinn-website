@@ -104,8 +104,8 @@ const groupTypes = [
     title: "Equine Events & Rodeos",
     subtitle: "Where Horse People Feel at Home",
     img: GROUP_EQUINE,
-    desc: "Equus Inn was built for the equestrian community. Located 20 minutes from the World Equestrian Center and close to HITS Ocala, the Florida Horse Park, and the Ocala Jockey Club, we are the natural choice for competitors, trainers, owners, and spectators attending equine events and rodeos throughout the year. Our equestrian-themed décor, trailer parking, and deep understanding of horse show culture set us apart.",
-    highlights: ["20 min to World Equestrian Center", "Close to HITS Ocala & Florida Horse Park", "Trailer parking available", "Equestrian-themed rooms & décor", "Group block pricing for show season"],
+    desc: "Equus Inn was built for the equestrian community. Located 20 minutes from the World Equestrian Center and close to HITS Ocala, the Florida Horse Park, and the Ocala Jockey Club, we are the natural choice for competitors, trainers, owners, and spectators attending equine events and rodeos throughout the year. Our equestrian-themed décor and deep understanding of horse show culture set us apart.",
+    highlights: ["20 min to World Equestrian Center", "Close to HITS Ocala & Florida Horse Park", "Equestrian-themed rooms & décor", "Group block pricing for show season", "Pet-friendly — $35 per pet, per night"],
   },
 ];
 
@@ -299,9 +299,9 @@ export default function Groups() {
                       <Mail className="w-4 h-4 text-[#1C2B4A]" />
                     </div>
                     <div>
-                      <p className="font-display font-600 text-sm text-[#1C2B4A] mb-1">Email Group Sales</p>
-                      <a href="mailto:OcalaFD@paxproperties.com" className="font-body text-sm text-[#2A2A2A]/65 hover:text-[#1C2B4A] transition-colors">
-                        OcalaFD@paxproperties.com
+                      <p className="font-display font-600 text-sm text-[#1C2B4A] mb-1">Group Sales — Kelli Holt</p>
+                      <a href="mailto:Kholt@paxproperties.com" className="font-body text-sm text-[#2A2A2A]/65 hover:text-[#1C2B4A] transition-colors">
+                        Kholt@paxproperties.com
                       </a>
                     </div>
                   </div>
