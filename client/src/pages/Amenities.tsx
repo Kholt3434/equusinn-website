@@ -24,7 +24,7 @@ const MEETING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/Wf
 const BREAKFAST_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/newbreakfastimage_9961f052.png";
 // Stock for pets and fitness
 const PET_IMG = "https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=900&q=80";
-const GYM_IMG = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80";
+const GYM_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/FitnessCenter_5717ebbb.webp";
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
@@ -112,10 +112,10 @@ const additionalFeatures = [
   { icon: Wifi, label: "Fiber Optic WiFi", desc: "High-speed throughout the property" },
   { icon: Check, label: "Free On-Site Parking", desc: "Ample space for all vehicles" },
   { icon: Check, label: "24/7 Front Desk", desc: "Always available to assist" },
-  { icon: Check, label: "Housekeeping Service", desc: "Daily service available" },
+  { icon: Check, label: "Housekeeping Service", desc: "Available upon request" },
   { icon: Check, label: "Laundry Facilities", desc: "On-site guest laundry" },
   { icon: Check, label: "Ice Machines", desc: "1st & 3rd floors" },
-  { icon: Check, label: "Vending Machines", desc: "Lobby market" },
+  { icon: Check, label: "Onsite Market", desc: "Beverages, snacks, microwavable meals, ice cream & toiletries" },
 ];
 
 export default function Amenities() {

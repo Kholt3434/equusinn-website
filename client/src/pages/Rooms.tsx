@@ -12,19 +12,41 @@ import Footer from "@/components/Footer";
 import { Tv, Wifi, Wind, Coffee, Bath, Check, ArrowRight, BedDouble } from "lucide-react";
 
 // Real hotel images — updated with actual room photos
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/KingRoom_5ae99094.webp";
-const ROOM_1A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/KingRoom_5ae99094.webp";
-const ROOM_1B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/BathroomandVanity_36d4711a.webp";
-const ROOM_2A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/TwoQueenRoom_ecf1b94f.webp";
-const ROOM_2B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/Bathroom(1)_860b652a.webp";
-const ROOM_3A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/SuiteKitchenette_392204ac.webp";
-const ROOM_3B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/BathroomandVanity_36d4711a.webp";
-const ROOM_KING1 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/KingRoom(1)_5ae99094.webp";
-const EXTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/FrontExterior_578913ce.webp";
-const POOL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/outdoorpool_41fd32e0.webp";
-const BATH_1 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/BathroomandVanity_36d4711a.webp";
-const BATH_2 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/Bathroom(1)_860b652a.webp";
-const TWO_QUEEN_SUITE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/TwoQueenSuite_2b9f3a12.webp";
+const CDN = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd";
+const HERO_IMG = `${CDN}/KingRoom_5ae99094.webp`;
+// King Room
+const ROOM_1A = `${CDN}/KingRoom_5ae99094.webp`;
+const ROOM_1B = `${CDN}/BathroomandVanity_36d4711a.webp`;
+// King Junior
+const KING_JR_A = `${CDN}/CopyofCopyofKJA-KingJunior(2)_33c0fb91.webp`;
+const KING_JR_B = `${CDN}/CopyofCopyofKJA-KingJunior(9)_03d2a1f0.webp`;
+// Double Queen
+const ROOM_2A = `${CDN}/TwoQueenRoom_ecf1b94f.webp`;
+const ROOM_2B = `${CDN}/Bathroom(1)_860b652a.webp`;
+// Two Queen Suite
+const TWO_QUEEN_SUITE_A = `${CDN}/TwoQueenSuite_72c25328.webp`;
+const TWO_QUEEN_SUITE_B = `${CDN}/BathroomandVanity_36d4711a.webp`;
+// King Suite
+const KING_SUITE_A = `${CDN}/KingRoom(1)_5ae99094.webp`;
+const KING_SUITE_B = `${CDN}/BathroomandVanity_36d4711a.webp`;
+// Suite with Kitchenette
+const ROOM_3A = `${CDN}/SuiteKitchenette_392204ac.webp`;
+const ROOM_3B = `${CDN}/BathroomandVanity_36d4711a.webp`;
+// Spa Junior Suite
+const SPA_JR_A = `${CDN}/spasuitejrbedroom_42d10bdb.jpg`;
+const SPA_JR_B = `${CDN}/SpaSuiteJrLivingArea_d53b4a8c.webp`;
+// Spa Suite
+const SPA_SUITE_A = `${CDN}/spasuitebedroom_a29eb507.jpg`;
+const SPA_SUITE_B = `${CDN}/SpaSuiteBathroom_172a9e7d.webp`;
+// ADA
+const ADA_A = `${CDN}/KingADAbedroomUSE_67b4766e.jpg`;
+const ADA_B = `${CDN}/KingADAbathroom_d6f92cf5.jpg`;
+// Shared
+const EXTERIOR_IMG = `${CDN}/FrontExterior_578913ce.webp`;
+const POOL_IMG = `${CDN}/outdoorpool_41fd32e0.webp`;
+const BATH_1 = `${CDN}/BathroomandVanity_36d4711a.webp`;
+const BATH_2 = `${CDN}/ADABathroom_1530368b.webp`;
+const BATH_3 = `${CDN}/ADAbathroom2_68f52347.webp`;
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
@@ -81,8 +103,8 @@ const rooms = [
     tag: "Comfortable & Cozy",
     title: "King Junior Room",
     subtitle: "Relaxed Comfort for Solo Travelers & Couples",
-    imgA: ROOM_KING1,
-    imgB: ROOM_1B,
+    imgA: KING_JR_A,
+    imgB: KING_JR_B,
     beds: "1 King Bed",
     guests: "Up to 2 Guests",
     sqft: "~300 sq ft",
@@ -129,8 +151,8 @@ const rooms = [
     tag: "Suite",
     title: "Two Queen Suite",
     subtitle: "Extra Space for Families & Groups",
-    imgA: TWO_QUEEN_SUITE,
-    imgB: ROOM_2B,
+    imgA: TWO_QUEEN_SUITE_A,
+    imgB: TWO_QUEEN_SUITE_B,
     beds: "2 Queen Beds",
     guests: "Up to 4 Guests",
     sqft: "~440 sq ft",
@@ -152,8 +174,8 @@ const rooms = [
     tag: "Suite",
     title: "King Suite",
     subtitle: "Elevated Comfort with Extra Living Space",
-    imgA: ROOM_1A,
-    imgB: ROOM_3B,
+    imgA: KING_SUITE_A,
+    imgB: KING_SUITE_B,
     beds: "1 King Bed",
     guests: "Up to 2 Guests",
     sqft: "~460 sq ft",
@@ -199,8 +221,8 @@ const rooms = [
     tag: "Spa Suite",
     title: "Spa Junior Suite",
     subtitle: "Relaxation Meets Equestrian Elegance",
-    imgA: ROOM_1A,
-    imgB: BATH_1,
+    imgA: SPA_JR_A,
+    imgB: SPA_JR_B,
     beds: "1 King Bed",
     guests: "Up to 2 Guests",
     sqft: "~420 sq ft",
@@ -222,8 +244,8 @@ const rooms = [
     tag: "Most Luxurious",
     title: "Spa Suite",
     subtitle: "The Ultimate Equus Inn Experience",
-    imgA: ROOM_1A,
-    imgB: BATH_1,
+    imgA: SPA_SUITE_A,
+    imgB: SPA_SUITE_B,
     beds: "1 King Bed",
     guests: "Up to 2 Guests",
     sqft: "~520 sq ft",

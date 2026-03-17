@@ -80,6 +80,42 @@ const photos: GalleryPhoto[] = [
     category: ["all", "rooms"],
     caption: "Suite with Kitchenette — Full-size refrigerator and dining area for extended stays",
   },
+  {
+    id: 24,
+    src: `${CDN}/spasuitebedroom_a29eb507.jpg`,
+    alt: "Equus Inn Spa Suite bedroom",
+    category: ["all", "rooms"],
+    caption: "Spa Suite — Luxurious bedroom with spa-inspired finishes",
+    span: "wide",
+  },
+  {
+    id: 25,
+    src: `${CDN}/SpaSuiteJrLivingArea_d53b4a8c.webp`,
+    alt: "Equus Inn Spa Junior Suite living area",
+    category: ["all", "rooms"],
+    caption: "Spa Junior Suite — Separate living area for added comfort",
+  },
+  {
+    id: 26,
+    src: `${CDN}/spasuitelivingroom_a29eb507.jpg`,
+    alt: "Equus Inn Spa Suite living room",
+    category: ["all", "rooms"],
+    caption: "Spa Suite Living Room — Spacious seating area with premium furnishings",
+  },
+  {
+    id: 27,
+    src: `${CDN}/CopyofCopyofKJA-KingJunior(2)_33c0fb91.webp`,
+    alt: "Equus Inn King Junior room",
+    category: ["all", "rooms"],
+    caption: "King Junior — Cozy king bed with comfortable lounge chair",
+  },
+  {
+    id: 28,
+    src: `${CDN}/KingADAbedroomUSE_67b4766e.jpg`,
+    alt: "Equus Inn ADA accessible king room",
+    category: ["all", "rooms"],
+    caption: "ADA Accessible King Room — Thoughtfully designed for all guests",
+  },
   // Bathrooms
   {
     id: 8,
@@ -168,7 +204,7 @@ const photos: GalleryPhoto[] = [
   },
   {
     id: 19,
-    src: `${CDN}/MeetingRoomTheatre_a5915433.png`,
+    src: `${CDN}/TheaterStyle_b9e6e5a5.webp`,
     alt: "Equus Inn meeting room theater setup",
     category: ["all", "meetings"],
     caption: "Theater Setup — Up to 35 guests for presentations and lectures",

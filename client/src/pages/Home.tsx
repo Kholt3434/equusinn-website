@@ -544,6 +544,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* TripAdvisor Award Strip */}
+      <section className="py-8 bg-[#FAF7F2] border-t border-[#1C2B4A]/10">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
+          <div id="TA_certificateOfExcellence586" className="TA_certificateOfExcellence">
+            <ul id="svZXhbNzz6F" className="TA_links R3E9zHluokWy" style={{listStyle: "none", padding: 0, margin: 0}}>
+              <li id="QnI9zo6h0Zkm" className="zDBi3f">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.tripadvisor.com/Hotel_Review-g34496-d86798-Reviews-Equus_Inn-Ocala_Florida.html">
+                  <img src="https://static.tacdn.com/img2/travelers_choice/widgets/tchotel_2025_L.png" alt="TripAdvisor Travelers Choice 2025" className="h-20 w-auto" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p className="font-display text-xl font-bold text-[#1C2B4A] mb-1">TripAdvisor Travelers' Choice 2025</p>
+            <p className="font-body text-sm text-[#2A2A2A]/60">Award-winning hospitality in the heart of Ocala's horse country</p>
+          </div>
+          <a
+            href="/reviews"
+            className="font-body text-xs font-700 tracking-widest uppercase text-[#8B5E3C] border border-[#8B5E3C] px-6 py-3 hover:bg-[#8B5E3C] hover:text-white transition-colors whitespace-nowrap"
+          >
+            Read Guest Reviews
+          </a>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

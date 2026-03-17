@@ -21,7 +21,7 @@ const GROUP_GOLF = "https://images.unsplash.com/photo-1535131749006-b7f58c99034b
 const GROUP_BASEBALL = "https://images.unsplash.com/photo-1508344928928-7165b67de128?w=900&q=80";
 const GROUP_SOFTBALL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/softball_3cc68f8b.jpg";
 const GROUP_VOLLEYBALL = "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=900&q=80";
-const GROUP_RELIGIOUS = "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=900&q=80";
+const GROUP_RELIGIOUS = "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=900&q=80";
 const GROUP_SOCIAL = "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=900&q=80";
 const GROUP_EQUINE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomEquine_20f540e2.png";
 const GROUP_RODEO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/rodeo_8eb9fc69.webp";
@@ -64,7 +64,7 @@ const groupTypes = [
     title: "Baseball Tournaments",
     subtitle: "Play Ball in Ocala",
     img: GROUP_BASEBALL,
-    desc: "Ocala is home to some of Florida's most competitive youth and adult baseball tournaments, and Equus Inn is the team hotel of choice for coaches and players alike. Our spacious rooms accommodate families and team members, our breakfast fuels early game days, and our outdoor areas provide space to unwind after a long day on the diamond.",
+    desc: "Ocala is home to some of Florida's most competitive youth and adult baseball tournaments, and Equus Inn is the team hotel of choice for coaches and players alike. Our spacious rooms accommodate families and team members, our breakfast fuels early game days, and our pool is the perfect place to cool off and recharge after a long day on the diamond.",
     highlights: ["Family-friendly rooms", "Complimentary hot breakfast", "Outdoor pool for recovery", "Group block pricing", "Pet-friendly for traveling families"],
   },
   {
@@ -73,7 +73,7 @@ const groupTypes = [
     subtitle: "Your Home Base in Ocala",
     img: GROUP_SOFTBALL,
     desc: "From youth travel ball to adult recreational leagues, Equus Inn welcomes softball teams and their families throughout the tournament season. Our convenient location off I-75 makes us easy to reach from anywhere in Florida, and our group amenities — from breakfast to the beer and wine bar — make us the ideal home base for your team's Ocala visit.",
-    highlights: ["Convenient I-75 access", "Group room block pricing", "Complimentary breakfast for all guests", "Outdoor pool & lounge area", "Spacious parking for team vehicles"],
+    highlights: ["Convenient I-75 access", "Group room block pricing", "Complimentary breakfast for all guests", "Outdoor pool for recovery", "Ample on-site parking"],
   },
   {
     id: "volleyball",
@@ -115,9 +115,10 @@ const groupBenefits = [
   "Complimentary hot breakfast for all guests",
   "Flexible meeting room configurations",
   "Outside catering welcome",
-  "Pet-friendly policy — no extra fees",
-  "Free on-site parking",
+  "Pet-friendly — $35 per pet, per night",
+  "Your area expert — restaurant, shopping & activity recommendations",
   "24/7 front desk assistance",
+  "Free on-site parking",
 ];
 
 export default function Groups() {

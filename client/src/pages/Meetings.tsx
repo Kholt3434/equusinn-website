@@ -17,7 +17,7 @@ import { toast } from "sonner";
 
 // Real meeting room photos
 const MEETING_BOARDROOM = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomBoardroomProjector_400eafd0.png";
-const MEETING_THEATRE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomTheatre_a5915433.png";
+const MEETING_THEATRE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/TheaterStyle_b9e6e5a5.webp";
 const MEETING_CLASSROOM = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomClassroom_1bea37f5.png";
 const MEETING_EQUINE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/upshapecorporate_0b80dc44.png";
 const MEETING_BIRTHDAY = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomGirlsBirthday_ed47bdfc.png";
@@ -167,7 +167,7 @@ export default function Meetings() {
                   <img src={MEETING_BOARDROOM} alt="Equus Inn boardroom meeting setup" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="h-64 overflow-hidden">
-                  <img src={MEETING_THEATRE} alt="Equus Inn theatre meeting setup" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                  <img src={MEETING_CLASSROOM} alt="Equus Inn classroom meeting setup" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="h-48 overflow-hidden col-span-2">
                   <img src={MEETING_BABY} alt="Equus Inn meeting room event setup" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
@@ -310,7 +310,7 @@ export default function Meetings() {
                 <span className="italic text-[#D4AF6A]">Always Welcome</span>
               </h2>
               <p className="font-body text-[#FAF7F2]/75 text-base leading-relaxed mb-6">
-                At Equus Inn, we believe life is better with your animals by your side. That's why we proudly welcome pets of all sizes — from small dogs to large breeds — with absolutely no additional pet fees.
+                At Equus Inn, we believe life is better with your animals by your side. That's why we proudly welcome pets of all sizes — from small dogs to large breeds. A pet fee of $35 per pet, per night applies.
               </p>
               <p className="font-body text-[#FAF7F2]/75 text-base leading-relaxed mb-8">
                 We understand that for equestrian travelers, animals are family. Whether you're bringing your dog along for a show season trip or simply can't imagine a vacation without your furry companion, you'll find a warm welcome here.
@@ -318,7 +318,7 @@ export default function Meetings() {
               <div className="space-y-3 mb-8">
                 {[
                   { icon: Heart, text: "All pet sizes welcome — no restrictions" },
-                  { icon: Shield, text: "No additional pet fees or deposits" },
+                  { icon: Shield, text: "Pet fee: $35 per pet, per night" },
                   { icon: Star, text: "Pet-friendly rooms available on request" },
                   { icon: PawPrint, text: "Spacious grounds for walks and exercise" },
                 ].map((item, i) => (
@@ -375,8 +375,8 @@ export default function Meetings() {
                     </div>
                     <div>
                       <p className="font-display font-600 text-sm text-[#1C2B4A] mb-1">Email</p>
-                      <a href="mailto:OcalaFD@paxproperties.com" className="font-body text-sm text-[#2A2A2A]/65 hover:text-[#1C2B4A] transition-colors">
-                        OcalaFD@paxproperties.com
+                      <a href="mailto:Kholt@paxproperties.com" className="font-body text-sm text-[#2A2A2A]/65 hover:text-[#1C2B4A] transition-colors">
+                        Kholt@paxproperties.com
                       </a>
                     </div>
                   </div>
@@ -467,6 +467,102 @@ export default function Meetings() {
               </AnimatedSection>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Group Room Block Inquiry Form */}
+      <section className="py-20 px-6 lg:px-8 bg-[#F2EDE4]" id="group-inquiry">
+        <div className="max-w-5xl mx-auto">
+          <AnimatedSection className="text-center mb-12">
+            <p className="section-label mb-4">Group Reservations</p>
+            <div className="gold-divider mx-auto mb-6" />
+            <h2 className="font-display text-3xl font-bold text-[#1C2B4A] mb-4">
+              Reserve a Room Block
+            </h2>
+            <p className="font-body text-[#2A2A2A]/65 text-sm max-w-xl mx-auto">
+              Bringing a group to Ocala? Fill out the form below and our group sales team will contact you with availability and group rate options.
+            </p>
+          </AnimatedSection>
+          <AnimatedSection>
+            <div className="bg-white shadow-sm p-8 lg:p-12">
+              <form
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  const fd = new FormData(e.target as HTMLFormElement);
+                  const groupName = fd.get("groupName") as string;
+                  const contactName = fd.get("contactName") as string;
+                  const contactEmail = fd.get("contactEmail") as string;
+                  const contactPhone = fd.get("contactPhone") as string;
+                  const checkIn = fd.get("checkIn") as string;
+                  const checkOut = fd.get("checkOut") as string;
+                  const numRooms = fd.get("numRooms") as string;
+                  const comments = fd.get("comments") as string;
+                  if (!groupName || !contactName || !contactEmail) {
+                    toast.error("Please fill in all required fields.");
+                    return;
+                  }
+                  await new Promise((r) => setTimeout(r, 1000));
+                  toast.success("Group inquiry submitted! Kelli Holt will be in touch within one business day.");
+                  (e.target as HTMLFormElement).reset();
+                }}
+                className="space-y-5"
+              >
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="block font-body text-xs font-700 tracking-widest uppercase text-[#1C2B4A] mb-2">Group / Company Name *</label>
+                    <input type="text" name="groupName" required placeholder="Your group or company name"
+                      className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]" />
+                  </div>
+                  <div>
+                    <label className="block font-body text-xs font-700 tracking-widest uppercase text-[#1C2B4A] mb-2">Contact Name *</label>
+                    <input type="text" name="contactName" required placeholder="Your full name"
+                      className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]" />
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="block font-body text-xs font-700 tracking-widest uppercase text-[#1C2B4A] mb-2">Email Address *</label>
+                    <input type="email" name="contactEmail" required placeholder="your@email.com"
+                      className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]" />
+                  </div>
+                  <div>
+                    <label className="block font-body text-xs font-700 tracking-widest uppercase text-[#1C2B4A] mb-2">Phone Number</label>
+                    <input type="tel" name="contactPhone" placeholder="(555) 000-0000"
+                      className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]" />
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                  <div>
+                    <label className="block font-body text-xs font-700 tracking-widest uppercase text-[#1C2B4A] mb-2">Check-In Date</label>
+                    <input type="date" name="checkIn"
+                      className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]" />
+                  </div>
+                  <div>
+                    <label className="block font-body text-xs font-700 tracking-widest uppercase text-[#1C2B4A] mb-2">Check-Out Date</label>
+                    <input type="date" name="checkOut"
+                      className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]" />
+                  </div>
+                  <div>
+                    <label className="block font-body text-xs font-700 tracking-widest uppercase text-[#1C2B4A] mb-2">Number of Rooms Needed</label>
+                    <input type="number" name="numRooms" min="1" placeholder="e.g. 10"
+                      className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]" />
+                  </div>
+                </div>
+                <div>
+                  <label className="block font-body text-xs font-700 tracking-widest uppercase text-[#1C2B4A] mb-2">Comments / Special Requests</label>
+                  <textarea name="comments" rows={4}
+                    placeholder="Tell us about your group, any special requirements, or questions..."
+                    className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2] resize-none" />
+                </div>
+                <div className="flex items-center justify-between flex-wrap gap-4">
+                  <p className="font-body text-xs text-[#2A2A2A]/45">Inquiries are sent to Kelli Holt, Group Sales — <a href="mailto:Kholt@paxproperties.com" className="underline hover:text-[#1C2B4A]">Kholt@paxproperties.com</a></p>
+                  <button type="submit" className="btn-primary text-xs px-8 py-4 inline-flex items-center gap-2">
+                    <Send className="w-4 h-4" /> Submit Group Inquiry
+                  </button>
+                </div>
+              </form>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
