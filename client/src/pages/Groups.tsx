@@ -9,6 +9,7 @@ import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
+import { SchemaMarkup } from "@/components/SchemaMarkup";
 import Footer from "@/components/Footer";
 import { ArrowRight, Users, Phone, Mail, Check } from "lucide-react";
 

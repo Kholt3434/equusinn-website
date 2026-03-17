@@ -9,6 +9,7 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
+import { SchemaMarkup } from "@/components/SchemaMarkup";
 import Footer from "@/components/Footer";
 
 const LOBBY_IMG = "https://d2ey4v8lmxjl3t.cloudfront.net/equusinn/LobbyLoungeAre.webp";
@@ -195,6 +196,22 @@ function SourceBadge({ source }: { source: string }) {
 export default function Reviews() {
   return (
     <div className="min-h-screen bg-[#FDFBF7]">
+      <SchemaMarkup id="reviews-page" schema={{
+        "@context": "https://schema.org",
+        "@type": "Hotel",
+        "name": "Equus Inn",
+        "url": "https://www.equusinn.com",
+        "telephone": "+13528543200",
+        "address": { "@type": "PostalAddress", "streetAddress": "3334 SW College Road", "addressLocality": "Ocala", "addressRegion": "FL", "postalCode": "34474", "addressCountry": "US" },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "9.0",
+          "bestRating": "10",
+          "worstRating": "1",
+          "ratingCount": "507",
+          "reviewCount": "507"
+        }
+      }} />
       <Navigation />
 
       {/* Hero */}

@@ -10,6 +10,27 @@ import { motion, useInView } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Tv, Wifi, Wind, Coffee, Bath, Check, ArrowRight, BedDouble } from "lucide-react";
+import { SchemaMarkup } from "@/components/SchemaMarkup";
+
+const roomsSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Equus Inn Room Types",
+  "description": "All room types available at Equus Inn, Ocala's premier equestrian boutique hotel.",
+  "url": "https://www.equusinn.com/rooms",
+  "numberOfItems": 9,
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "King Room", "url": "https://www.equusinn.com/rooms#king" },
+    { "@type": "ListItem", "position": 2, "name": "King Junior Suite", "url": "https://www.equusinn.com/rooms#king-junior" },
+    { "@type": "ListItem", "position": 3, "name": "Double Queen Room", "url": "https://www.equusinn.com/rooms#double-queen" },
+    { "@type": "ListItem", "position": 4, "name": "Two Queen Suite", "url": "https://www.equusinn.com/rooms#two-queen-suite" },
+    { "@type": "ListItem", "position": 5, "name": "Suite with Kitchenette", "url": "https://www.equusinn.com/rooms#kitchenette" },
+    { "@type": "ListItem", "position": 6, "name": "King Suite", "url": "https://www.equusinn.com/rooms#king-suite" },
+    { "@type": "ListItem", "position": 7, "name": "Spa Junior Suite", "url": "https://www.equusinn.com/rooms#spa-junior" },
+    { "@type": "ListItem", "position": 8, "name": "Spa Suite", "url": "https://www.equusinn.com/rooms#spa-suite" },
+    { "@type": "ListItem", "position": 9, "name": "ADA Accessible King Room", "url": "https://www.equusinn.com/rooms#ada" }
+  ]
+};
 
 // Real hotel images — updated with actual room photos
 const CDN = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd";
@@ -272,6 +293,7 @@ export default function Rooms() {
 
   return (
     <div className="min-h-screen bg-[#FAF7F2]">
+      <SchemaMarkup id="rooms-page" schema={roomsSchema} />
       <Navigation />
 
       {/* Page Hero */}

@@ -7,6 +7,7 @@
 import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Navigation from "@/components/Navigation";
+import { SchemaMarkup } from "@/components/SchemaMarkup";
 import Footer from "@/components/Footer";
 import { MapPin, Clock, Car, Phone, ExternalLink, Compass } from "lucide-react";
 

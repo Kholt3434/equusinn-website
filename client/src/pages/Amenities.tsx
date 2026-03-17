@@ -8,6 +8,7 @@
 import { useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Navigation from "@/components/Navigation";
+import { SchemaMarkup } from "@/components/SchemaMarkup";
 import Footer from "@/components/Footer";
 import {
   Coffee, Waves, Wine, Dumbbell, PawPrint,
@@ -125,6 +126,17 @@ export default function Amenities() {
 
   return (
     <div className="min-h-screen bg-[#FAF7F2]">
+      <SchemaMarkup id="amenities-page" schema={{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Does Equus Inn serve breakfast?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Equus Inn offers a complimentary hot breakfast daily. Weekdays 6am–9am, weekends 6am–10am." } },
+          { "@type": "Question", "name": "Is Equus Inn pet friendly?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Equus Inn welcomes pets. A pet fee of $35 per pet, per night applies." } },
+          { "@type": "Question", "name": "Does Equus Inn have a pool?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Equus Inn features a seasonally heated outdoor pool." } },
+          { "@type": "Question", "name": "Does Equus Inn have a fitness center?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Equus Inn has a fully equipped fitness center available to all guests." } },
+          { "@type": "Question", "name": "Does Equus Inn serve beer and wine?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Equus Inn has a self-serve beer and wine station available daily from 11am to 11pm." } }
+        ]
+      }} />
       <Navigation />
 
       {/* Page Hero */}

@@ -8,6 +8,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Navigation from "@/components/Navigation";
+import { SchemaMarkup } from "@/components/SchemaMarkup";
 import Footer from "@/components/Footer";
 import {
   Users, Wifi, Coffee, Tv, Projector, Check, Phone, Mail,
@@ -114,6 +115,16 @@ export default function Meetings() {
 
   return (
     <div className="min-h-screen bg-[#FAF7F2]">
+      <SchemaMarkup id="meetings-page" schema={{
+        "@context": "https://schema.org",
+        "@type": "EventVenue",
+        "name": "Equus Inn Meeting & Event Room",
+        "description": "Versatile meeting and event space in Ocala, Florida. Accommodates up to 45 guests in theater, classroom, U-shape, boardroom, or banquet configurations. AV equipment, high-speed WiFi, and coffee service included.",
+        "address": { "@type": "PostalAddress", "streetAddress": "3334 SW College Road", "addressLocality": "Ocala", "addressRegion": "FL", "postalCode": "34474", "addressCountry": "US" },
+        "telephone": "+13528543200",
+        "url": "https://www.equusinn.com/meetings",
+        "maximumAttendeeCapacity": 45
+      }} />
       <Navigation />
 
       {/* Page Hero */}
