@@ -127,13 +127,14 @@ export default function AwardsStrip() {
   return (
     <section
       className="bg-[#1C2B4A] overflow-hidden border-y border-white/10"
+      style={{ isolation: "isolate" }}
       onMouseEnter={() => { pausedRef.current = true; }}
       onMouseLeave={() => { pausedRef.current = false; }}
       aria-label="Awards and Recognition"
     >
       <div
         ref={trackRef}
-        className="flex will-change-transform"
+        className="flex"
         style={{ width: "max-content" }}
       >
         {/* Two identical sets — second one creates the seamless loop */}
