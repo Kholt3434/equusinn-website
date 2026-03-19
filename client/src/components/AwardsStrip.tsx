@@ -8,6 +8,7 @@ import { useEffect, useRef } from "react";
 // ── CDN URLs ──────────────────────────────────────────────────────────────────
 const BOOKING_2026     = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/Digital-Award_RA-2026_0d8cfb4d.png";
 const BOOKING_TRA_2026 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/Instagram-Stickers-White_TRA-2026-us_d3e3d1a4.png";
+// TripAdvisor images use mix-blend-mode:screen — grey becomes transparent on dark backgrounds
 const TRIP_2020        = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/202Trip_edfad488.png";
 const TRIP_2021        = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/2021Trip_d3a58585.png";
 const TRIP_2022        = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/2022Trip_e027b2a8.png";
@@ -29,13 +30,18 @@ const Divider = () => (
 );
 
 // ── Single award image item ───────────────────────────────────────────────────
-function AwardImg({ src, alt, height = 100 }: { src: string; alt: string; height?: number }) {
+function AwardImg({ src, alt, height = 100, blendScreen = false }: { src: string; alt: string; height?: number; blendScreen?: boolean }) {
   return (
     <div className="shrink-0 flex items-center justify-center px-6">
       <img
         src={src}
         alt={alt}
-        style={{ height: `${height}px`, width: "auto", objectFit: "contain" }}
+        style={{
+          height: `${height}px`,
+          width: "auto",
+          objectFit: "contain",
+          ...(blendScreen ? { mixBlendMode: "screen" as const } : {})
+        }}
         draggable={false}
       />
     </div>
@@ -51,13 +57,13 @@ function ItemSet() {
       <Divider />
       <AwardImg src={BOOKING_TRA_2026} alt="Booking.com Traveler Review Awards 2026 sticker"  height={80}  />
       <Divider />
-      <AwardImg src={TRIP_2020}        alt="TripAdvisor Travelers' Choice 2020"                height={110} />
+      <AwardImg src={TRIP_2020}        alt="TripAdvisor Travelers' Choice 2020"                height={110} blendScreen />
       <Divider />
-      <AwardImg src={TRIP_2021}        alt="TripAdvisor Travelers' Choice 2021"                height={110} />
+      <AwardImg src={TRIP_2021}        alt="TripAdvisor Travelers' Choice 2021"                height={110} blendScreen />
       <Divider />
-      <AwardImg src={TRIP_2022}        alt="TripAdvisor Travelers' Choice 2022"                height={110} />
+      <AwardImg src={TRIP_2022}        alt="TripAdvisor Travelers' Choice 2022"                height={110} blendScreen />
       <Divider />
-      <AwardImg src={TRIP_2025}        alt="TripAdvisor Travelers' Choice Awards 2025"         height={110} />
+      <AwardImg src={TRIP_2025}        alt="TripAdvisor Travelers' Choice Awards 2025"         height={110} blendScreen />
       <Divider />
 
       {/* Expedia Verified Reviews widget */}
