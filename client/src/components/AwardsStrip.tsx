@@ -109,12 +109,12 @@ export default function AwardsStrip() {
       {/* Divider */}
       <div className="w-px h-16 bg-white/20 shrink-0" />
 
-      {/* Awards collage 2020–2022 */}
+      {/* Awards collage 2020–2022 — invert to white so logos pop on dark navy */}
       <div className="flex items-center justify-center shrink-0">
         <img
           src={AWARD_IMAGES[1].src}
           alt={AWARD_IMAGES[1].alt}
-          style={{ height: `${AWARD_IMAGES[1].height}px`, width: "auto", objectFit: "contain" }}
+          style={{ height: `${AWARD_IMAGES[1].height}px`, width: "auto", objectFit: "contain", filter: "brightness(0) invert(1)" }}
           className="drop-shadow-lg"
         />
       </div>
