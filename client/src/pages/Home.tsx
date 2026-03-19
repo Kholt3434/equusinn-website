@@ -9,6 +9,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { motion, useInView } from "framer-motion";
 import Navigation from "@/components/Navigation";
+import AwardsStrip from "@/components/AwardsStrip";
 import Footer from "@/components/Footer";
 import {
   Coffee, Waves, Dumbbell, PawPrint, Wifi, Wine, Flame,
@@ -159,6 +160,9 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </section>
+
+      {/* ─── AWARDS SCROLLING STRIP ─── */}
+      <AwardsStrip />
 
       {/* ─── QUICK STATS BAR ─── */}
       <div className="bg-[#1C2B4A] py-5">

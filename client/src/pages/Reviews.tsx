@@ -11,6 +11,7 @@ import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import { SchemaMarkup } from "@/components/SchemaMarkup";
 import Footer from "@/components/Footer";
+import AwardsStrip from "@/components/AwardsStrip";
 
 const LOBBY_IMG = "https://d2ey4v8lmxjl3t.cloudfront.net/equusinn/LobbyLoungeAre.webp";
 
@@ -280,6 +281,9 @@ export default function Reviews() {
           </div>
         </div>
       </section>
+
+      {/* Awards Scrolling Strip */}
+      <AwardsStrip />
 
       {/* Overall Rating Banner */}
       <section className="bg-[#1C2B4A] py-12">

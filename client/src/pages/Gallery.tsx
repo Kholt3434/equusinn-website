@@ -186,13 +186,6 @@ const photos: GalleryPhoto[] = [
     caption: "Lobby Lounge — The dramatic horse racing mural sets the equestrian tone",
     span: "wide",
   },
-  {
-    id: 17,
-    src: `${CDN}/LobbyLoungeAre_ff1e71f3.webp`,
-    alt: "Equus Inn lobby lounge seating area",
-    category: ["all", "lounge"],
-    caption: "Lounge Seating — Comfortable chairs and sofas for relaxing between adventures",
-  },
   // Meetings
   {
     id: 18,

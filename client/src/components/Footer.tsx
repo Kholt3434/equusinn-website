@@ -137,13 +137,7 @@ export default function Footer() {
             >
               Book Now
             </a>
-            <div className="mt-4 pt-4 border-t border-white/10">
-              <p className="font-body text-[0.6rem] tracking-[0.15em] uppercase text-[#FAF7F2]/30 mb-2">Also on</p>
-              <div className="flex flex-col gap-1.5">
-                <a href="https://www.tripadvisor.com/Hotel_Review-g34496-d86798-Reviews-Equus_Inn-Ocala_Florida.html" target="_blank" rel="noopener noreferrer" className="font-body text-xs text-[#FAF7F2]/40 hover:text-[#D4AF6A] transition-colors flex items-center gap-1">TripAdvisor <ExternalLink className="w-2.5 h-2.5" /></a>
-                <a href="https://www.expedia.com" target="_blank" rel="noopener noreferrer" className="font-body text-xs text-[#FAF7F2]/40 hover:text-[#D4AF6A] transition-colors flex items-center gap-1">Expedia <ExternalLink className="w-2.5 h-2.5" /></a>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>

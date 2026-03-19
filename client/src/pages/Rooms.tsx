@@ -47,9 +47,9 @@ const ROOM_2B = `${CDN}/Bathroom(1)_860b652a.webp`;
 // Two Queen Suite
 const TWO_QUEEN_SUITE_A = `${CDN}/TwoQueenSuite_72c25328.webp`;
 const TWO_QUEEN_SUITE_B = `${CDN}/BathroomandVanity_36d4711a.webp`;
-// King Suite — bedroom + living room
-const KING_SUITE_A = `${CDN}/KingRoom(1)_5ae99094.webp`;
-const KING_SUITE_B = `${CDN}/king-suite-living-room_bb20b25f.jpg`;
+// King Suite — bedroom + living room (updated photos)
+const KING_SUITE_A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/KingSuiteBedroom_c7c75828.jpg";
+const KING_SUITE_B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/KingSuiteLivingRoom_5896f9ed.jpg";
 // Spa Junior Suite
 const SPA_JR_A = `${CDN}/spasuitejrbedroom_42d10bdb.jpg`;
 const SPA_JR_B = `${CDN}/SpaSuiteJrLivingArea_d53b4a8c.webp`;
