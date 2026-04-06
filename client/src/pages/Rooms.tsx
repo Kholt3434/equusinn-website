@@ -491,7 +491,7 @@ export default function Rooms() {
       </section>
 
       {/* Policies */}
-      <section className="py-16 px-6 lg:px-8 bg-[#FAF7F2] border-t border-[#DCB7C8]/30">
+      <section className="py-16 px-6 lg:px-8 bg-[#FAF7F2] border-t border-[#DCD7C9]/30">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="mb-10">
             <p className="section-label mb-4">Good to Know</p>

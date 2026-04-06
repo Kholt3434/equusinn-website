@@ -8,8 +8,8 @@
  *   Champagne    #D4AF6A  — dividers, gold highlights
  *   Dark Teal    #2C3639  — equestrian section background
  *   Forest Teal  #3F4E4F  — outdoor section background
- *   Warm Tan     #A27B5C  — restaurant card accents
- *   Blush Rose   #DCB7C8  — shopping/spa section accents
+ *   Warm Tan     #A27B5B  — restaurant card accents
+ *   Blush Rose   #DCD7C9  — shopping/spa section accents
  *   Ivory        #FAF7F2  — light section backgrounds
  */
 
@@ -130,7 +130,7 @@ const equestrian = [
     desc: "Home to the legendary Gypsy Vanner horse breed in America. Tour the farm, meet the horses, and learn the history of this stunning Irish draft breed. A must for any horse lover visiting Ocala.",
     tip: "Tours by appointment — book in advance as spots fill quickly during show season.",
     icon: Award,
-    tagColor: "#A27B5C",
+    tagColor: "#A27B5B",
     tagText: "#FAF7F2",
   },
 ];
@@ -174,7 +174,7 @@ const restaurants = [
     vibe: "Authentic Italian cuisine in an elegant setting. House-made pastas, wood-fired dishes, and an impressive wine cellar make this a perennial favorite.",
     distance: "11 min",
     priceRange: "$$$",
-    tagColor: "#A27B5C",
+    tagColor: "#A27B5B",
   },
   {
     name: "La Cuisine",
@@ -208,7 +208,7 @@ const shopping = [
     category: "Shopping District",
     desc: "Ocala's charming downtown square is lined with independent boutiques, art galleries, gift shops, and cafés. Browse local artisan goods, equestrian-themed gifts, and Florida-made products in a walkable, historic setting.",
     highlight: "Don't miss the monthly Art Walk — local artists showcase their work around the square.",
-    color: "#DCB7C8",
+    color: "#DCD7C9",
     textColor: "#1C2B4A",
   },
   {
@@ -216,7 +216,7 @@ const shopping = [
     category: "Antiques & Collectibles",
     desc: "Ocala's antique district stretches along North Pine Avenue and features several large multi-dealer malls including Ole Cracker House, Diggers Antique Mall, and Florida Marion Antiques. A treasure hunter's paradise with over 50,000 sq ft of inventory.",
     highlight: "Arrive early on weekends — the best finds go quickly.",
-    color: "#A27B5C",
+    color: "#A27B5B",
     textColor: "#FAF7F2",
   },
   {
@@ -276,7 +276,7 @@ const outdoor = [
     desc: "A serene 60-acre botanical garden and walking park in the heart of Ocala. Beautifully maintained paths wind through themed gardens, koi ponds, and peaceful meditation areas. Free admission — a perfect morning stroll.",
     distance: "10 min",
     icon: TreePine,
-    accentColor: "#A27B5C",
+    accentColor: "#A27B5B",
   },
   {
     name: "Lake Weir",
@@ -303,7 +303,7 @@ const itinerary = [
   {
     day: "Midday",
     icon: Utensils,
-    color: "#A27B5C",
+    color: "#A27B5B",
     title: "Explore & Dine",
     activities: [
       "Browse the equestrian boutiques at WEC or drive downtown to the Historic Square",
@@ -387,9 +387,9 @@ export default function ThingsToDo() {
               <div className="mt-8 flex flex-wrap gap-3">
                 {[
                   { label: "Equestrian Venues", color: "#2C3639", text: "#FAF7F2" },
-                  { label: "Top Restaurants", color: "#A27B5C", text: "#FAF7F2" },
+                  { label: "Top Restaurants", color: "#A27B5B", text: "#FAF7F2" },
                   { label: "Outdoor Adventures", color: "#3F4E4F", text: "#FAF7F2" },
-                  { label: "Shopping & Antiques", color: "#DCB7C8", text: "#1C2B4A" },
+                  { label: "Shopping & Antiques", color: "#DCD7C9", text: "#1C2B4A" },
                   { label: "Day Trip Itineraries", color: "#D4AF6A", text: "#1C2B4A" },
                 ].map(tag => (
                   <CategoryPill key={tag.label} label={tag.label} color={tag.color} textColor={tag.text} />
@@ -401,7 +401,7 @@ export default function ThingsToDo() {
                 {[
                   { stat: "20 min", label: "to World Equestrian Center", color: "#2C3639" },
                   { stat: "25 min", label: "to Silver Springs State Park", color: "#3F4E4F" },
-                  { stat: "15 min", label: "to Historic Downtown Ocala", color: "#A27B5C" },
+                  { stat: "15 min", label: "to Historic Downtown Ocala", color: "#A27B5B" },
                   { stat: "35 min", label: "to Ocala National Forest", color: "#1C2B4A" },
                 ].map(item => (
                   <div key={item.label} className="p-6 text-white" style={{ backgroundColor: item.color }}>
@@ -487,7 +487,7 @@ export default function ThingsToDo() {
       </section>
 
       {/* ─── SHOPPING ─── */}
-      <section className="py-20 px-6 lg:px-16" style={{ backgroundColor: "#FAF7F2", borderTop: "1px solid #DCB7C8" }}>
+      <section className="py-20 px-6 lg:px-16" style={{ backgroundColor: "#FAF7F2", borderTop: "1px solid #DCD7C9" }}>
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-12 items-start">
             <div className="lg:col-span-1">
@@ -495,10 +495,10 @@ export default function ThingsToDo() {
                 label="Shopping"
                 title="Browse, Discover & Take Home a Piece of Ocala"
                 subtitle="From equestrian boutiques and antique malls to a charming downtown square — Ocala has a shopping experience for every taste."
-                labelColor="#DCB7C8"
-                dividerColor="#DCB7C8"
+                labelColor="#DCD7C9"
+                dividerColor="#DCD7C9"
               />
-              <div className="mt-8 p-6" style={{ backgroundColor: "#DCB7C8" }}>
+              <div className="mt-8 p-6" style={{ backgroundColor: "#DCD7C9" }}>
                 <p className="font-body font-700 text-[0.6rem] tracking-widest uppercase text-[#1C2B4A] mb-2">Staff Pick</p>
                 <p className="font-display font-600 text-lg text-[#1C2B4A] mb-2">Downtown Art Walk</p>
                 <p className="font-body text-xs text-[#1C2B4A]/75 leading-relaxed">

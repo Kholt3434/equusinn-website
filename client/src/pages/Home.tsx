@@ -263,7 +263,7 @@ export default function Home() {
                 <span className="italic text-[#D4AF6A]">of the Horse</span><br />
                 Lives On
               </h2>
-              <div className="w-full h-px bg-[#DCB7C8]/20 mb-6" />
+              <div className="w-full h-px bg-[#DCD7C9]/20 mb-6" />
               <p className="font-body text-[#FAF7F2]/70 text-base leading-relaxed mb-6">
                 Ocala is the Horse Capital of the World — and Equus Inn is its most fitting retreat. Our hotel is a living tribute to the bond between horse and rider, from our equestrian-themed rooms to our location minutes from the world's greatest show venues.
               </p>
@@ -298,7 +298,7 @@ export default function Home() {
             {amenities.map((item, i) => (
               <AnimatedSection key={i}>
                 <div className="text-center p-6 border border-[#D4AF6A]/20 hover:border-[#D4AF6A]/60 hover:bg-white/5 transition-all duration-300 group">
-                  <div className="w-12 h-12 mx-auto mb-4 bg-[#DCB7C8]/10 flex items-center justify-center group-hover:bg-[#DCB7C8]/20 transition-colors duration-300">
+                  <div className="w-12 h-12 mx-auto mb-4 bg-[#DCD7C9]/10 flex items-center justify-center group-hover:bg-[#DCD7C9]/20 transition-colors duration-300">
                     <item.icon className="w-5 h-5 text-[#D4AF6A]" />
                   </div>
                   <h3 className="font-display font-600 text-sm text-[#FAF7F2] mb-1">{item.label}</h3>

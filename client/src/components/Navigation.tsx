@@ -1,7 +1,7 @@
 /**
  * EQUUS INN NAVIGATION
  * Deep Navy #1C2B4A | Inkwell #2C3639 | Lunar Eclipse #3F4E4F
- * Champagne #D4AF6A | Creme Brulee #A27B5B | Au Lait #DCB7C8 | Ivory #FAF7F2
+ * Champagne #D4AF6A | Creme Brulee #A27B5B | Au Lait #DCD7C9 | Ivory #FAF7F2
  * Cormorant Garamond (display) + Lato (body)
  */
 
@@ -129,7 +129,7 @@ export default function Navigation() {
                                 }`}>
                                   {child.label}
                                 </div>
-                                <div className="text-[#DCB7C8]/70 text-[0.6rem] font-body">
+                                <div className="text-[#DCD7C9]/70 text-[0.6rem] font-body">
                                   {child.description}
                                 </div>
                               </div>
@@ -193,7 +193,7 @@ export default function Navigation() {
                 if (link.dropdown) {
                   return (
                     <div key={link.label}>
-                      <div className="py-2 font-body font-700 text-xs tracking-widest uppercase text-[#DCB7C8]/60">
+                      <div className="py-2 font-body font-700 text-xs tracking-widest uppercase text-[#DCD7C9]/60">
                         {link.label}
                       </div>
                       {link.dropdown.map((child) => (

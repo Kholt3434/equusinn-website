@@ -1,7 +1,7 @@
 /**
  * EQUUS INN LOCATION PAGE
  * Design: Southern Equestrian Heritage
- * Colors: Hunter Green #2C4C3B, Gold #C9A84C, Ivory #FDFBF7, Charcoal #2A2A2A
+ * Colors: Hunter Green #2C3639, Gold #C9A84C, Ivory #FDFBF7, Charcoal #2A2A2A
  */
 
 import { useEffect, useRef } from "react";
@@ -83,7 +83,7 @@ const nearbyAttractions = [
 ];
 
 const categoryColors: Record<string, string> = {
-  Equestrian: "#2C4C3B",
+  Equestrian: "#2C3639",
   Nature: "#4A7C59",
   City: "#8B7355",
 };
@@ -103,7 +103,7 @@ export default function Location() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${HERO_IMG})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1E3328]/90 via-[#1E3328]/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#2C3639]/90 via-[#2C3639]/40 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-12 w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -119,7 +119,7 @@ export default function Location() {
       </section>
 
       {/* Address & Contact */}
-      <section className="py-16 px-6 lg:px-8 bg-[#2C4C3B]">
+      <section className="py-16 px-6 lg:px-8 bg-[#2C3639]">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <AnimatedSection>
@@ -189,7 +189,7 @@ export default function Location() {
           <AnimatedSection className="mb-10">
             <p className="section-label mb-4">Find Us</p>
             <div className="gold-divider mb-6" />
-            <h2 className="font-display text-3xl font-bold text-[#2C4C3B]">
+            <h2 className="font-display text-3xl font-bold text-[#2C3639]">
               Perfectly Positioned in<br />
               <span className="italic">Florida's Horse Country</span>
             </h2>
@@ -222,7 +222,7 @@ export default function Location() {
                   href="https://maps.google.com/?q=3434+SW+College+Road+Ocala+FL+34474"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-body font-600 text-xs tracking-widest uppercase text-[#2C4C3B] border-b border-[#2C4C3B] pb-0.5 hover:text-[#C9A84C] hover:border-[#C9A84C] transition-colors duration-200"
+                  className="inline-flex items-center gap-2 font-body font-600 text-xs tracking-widest uppercase text-[#2C3639] border-b border-[#2C3639] pb-0.5 hover:text-[#C9A84C] hover:border-[#C9A84C] transition-colors duration-200"
                 >
                   View on Google Maps <ExternalLink className="w-3 h-3" />
                 </a>
@@ -234,8 +234,8 @@ export default function Location() {
               <div className="space-y-6">
                 <div className="p-6 bg-[#F5F0E8] border-l-4 border-[#C9A84C]">
                   <div className="flex items-center gap-2 mb-3">
-                    <Car className="w-4 h-4 text-[#2C4C3B]" />
-                    <h3 className="font-display font-600 text-base text-[#2C4C3B]">From I-75 Northbound</h3>
+                    <Car className="w-4 h-4 text-[#2C3639]" />
+                    <h3 className="font-display font-600 text-base text-[#2C3639]">From I-75 Northbound</h3>
                   </div>
                   <p className="font-body text-sm text-[#2A2A2A]/70 leading-relaxed">
                     Take Exit 350 (SR-200/SW College Road). Turn left onto SW College Road heading west. Equus Inn will be on your right approximately 0.5 miles from the exit.
@@ -243,17 +243,17 @@ export default function Location() {
                 </div>
                 <div className="p-6 bg-[#F5F0E8] border-l-4 border-[#C9A84C]">
                   <div className="flex items-center gap-2 mb-3">
-                    <Car className="w-4 h-4 text-[#2C4C3B]" />
-                    <h3 className="font-display font-600 text-base text-[#2C4C3B]">From I-75 Southbound</h3>
+                    <Car className="w-4 h-4 text-[#2C3639]" />
+                    <h3 className="font-display font-600 text-base text-[#2C3639]">From I-75 Southbound</h3>
                   </div>
                   <p className="font-body text-sm text-[#2A2A2A]/70 leading-relaxed">
                     Take Exit 350 (SR-200/SW College Road). Turn right onto SW College Road heading west. Equus Inn will be on your right approximately 0.5 miles from the exit.
                   </p>
                 </div>
-                <div className="p-6 bg-[#F5F0E8] border-l-4 border-[#2C4C3B]">
+                <div className="p-6 bg-[#F5F0E8] border-l-4 border-[#2C3639]">
                   <div className="flex items-center gap-2 mb-3">
-                    <Compass className="w-4 h-4 text-[#2C4C3B]" />
-                    <h3 className="font-display font-600 text-base text-[#2C4C3B]">From World Equestrian Center</h3>
+                    <Compass className="w-4 h-4 text-[#2C3639]" />
+                    <h3 className="font-display font-600 text-base text-[#2C3639]">From World Equestrian Center</h3>
                   </div>
                   <p className="font-body text-sm text-[#2A2A2A]/70 leading-relaxed">
                     Head east on NW 80th Avenue, then south on NW Gainesville Road. Continue to SW College Road and head east. Equus Inn is approximately 20 minutes from the WEC main entrance.
@@ -261,8 +261,8 @@ export default function Location() {
                 </div>
                 <div className="p-6 bg-[#F5F0E8] border-l-4 border-[#C9A84C]">
                   <div className="flex items-center gap-2 mb-3">
-                    <Car className="w-4 h-4 text-[#2C4C3B]" />
-                    <h3 className="font-display font-600 text-base text-[#2C4C3B]">From SR-301 (US-301)</h3>
+                    <Car className="w-4 h-4 text-[#2C3639]" />
+                    <h3 className="font-display font-600 text-base text-[#2C3639]">From SR-301 (US-301)</h3>
                   </div>
                   <p className="font-body text-sm text-[#2A2A2A]/70 leading-relaxed">
                     Head west on SW College Road (SR-200). Equus Inn will be on your right approximately 0.5 miles west of the I-75 interchange. The hotel is easily accessible from SR-301 via SW College Road.
@@ -292,7 +292,7 @@ export default function Location() {
           <AnimatedSection className="mb-14">
             <p className="section-label mb-4">Explore Ocala</p>
             <div className="gold-divider mb-6" />
-            <h2 className="font-display text-4xl font-bold text-[#2C4C3B]">
+            <h2 className="font-display text-4xl font-bold text-[#2C3639]">
               Nearby Attractions &<br />
               <span className="italic">Points of Interest</span>
             </h2>
@@ -313,7 +313,7 @@ export default function Location() {
               <AnimatedSection key={i}>
                 <div className="p-6 bg-white shadow-sm border-l-4 hover:shadow-md transition-shadow duration-300" style={{ borderColor: categoryColors[place.category] }}>
                   <div className="flex items-start justify-between gap-4 mb-3">
-                    <h3 className="font-display font-600 text-lg text-[#2C4C3B]">{place.name}</h3>
+                    <h3 className="font-display font-600 text-lg text-[#2C3639]">{place.name}</h3>
                     <span
                       className="font-body font-600 text-xs tracking-widest uppercase px-2 py-1 flex-shrink-0 text-white"
                       style={{ backgroundColor: categoryColors[place.category] }}
@@ -330,7 +330,7 @@ export default function Location() {
       </section>
 
       {/* About Ocala */}
-      <section className="py-20 px-6 lg:px-8 bg-[#1E3328]">
+      <section className="py-20 px-6 lg:px-8 bg-[#2C3639]">
         <div className="max-w-5xl mx-auto">
           <AnimatedSection className="text-center">
             <p className="section-label text-[#C9A84C] mb-4">The Horse Capital of the World</p>
@@ -352,7 +352,7 @@ export default function Location() {
       <section className="py-16 px-6 lg:px-8 bg-[#FDFBF7]">
         <div className="max-w-3xl mx-auto text-center">
           <AnimatedSection>
-            <h2 className="font-display text-3xl font-bold text-[#2C4C3B] mb-4">
+            <h2 className="font-display text-3xl font-bold text-[#2C3639] mb-4">
               Ready to Visit Ocala?
             </h2>
             <p className="font-body text-[#2A2A2A]/65 text-base mb-8 leading-relaxed">
@@ -369,7 +369,7 @@ export default function Location() {
               </a>
               <a
                 href="tel:+13528543200"
-                className="inline-flex items-center justify-center gap-2 font-body font-600 text-sm tracking-widest uppercase text-[#2C4C3B] border border-[#2C4C3B] px-10 py-4 hover:bg-[#2C4C3B] hover:text-white transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 font-body font-600 text-sm tracking-widest uppercase text-[#2C3639] border border-[#2C3639] px-10 py-4 hover:bg-[#2C3639] hover:text-white transition-all duration-300"
               >
                 <Phone className="w-4 h-4" /> Call Us
               </a>

@@ -232,8 +232,8 @@ export default function Amenities() {
             {additionalFeatures.map((f, i) => (
               <AnimatedSection key={i}>
                 <div className="text-center p-6 border border-[#D4AF6A]/20 hover:border-[#D4AF6A]/50 hover:bg-white/5 transition-all duration-300">
-                  <div className="w-10 h-10 mx-auto mb-3 bg-[#DCB7C8]/15 flex items-center justify-center">
-                    <f.icon className="w-4 h-4 text-[#DCB7C8]" />
+                  <div className="w-10 h-10 mx-auto mb-3 bg-[#DCD7C9]/15 flex items-center justify-center">
+                    <f.icon className="w-4 h-4 text-[#DCD7C9]" />
                   </div>
                   <p className="font-display font-600 text-sm text-[#FAF7F2] mb-1">{f.label}</p>
                   <p className="font-body text-xs text-[#FAF7F2]/45">{f.desc}</p>

@@ -63,10 +63,17 @@
   --slate:       #4A5568;
 
   /* === EXTENDED BRAND PALETTE === */
-  --teal-dark:   #2C3639;   /* dark teal — grounded, earthy */
-  --teal-mid:    #3F4E4F;   /* forest teal — natural, calm */
-  --tan:         #A27B5C;   /* warm tan — sand, warmth */
-  --blush:       #DCB7C8;   /* blush rose — elegance, femininity */
+  --inkwell:     #2C3639;   /* Inkwell — deep blue-teal charcoal (RGB 44/54/57) */
+  --inkwell-dark:#1E2729;   /* Inkwell dark — deeper shade for hover */
+  --lunar:       #3F4E4F;   /* Lunar Eclipse — mid blue-teal (RGB 63/78/79) */
+  --lunar-light: #4F6162;   /* Lunar Eclipse light — lighter teal for accents */
+  --creme:       #A27B5B;   /* Creme Brulee — warm tan (RGB 162/123/91) */
+  --aulait:      #DCD7C9;   /* Au Lait — warm cream (RGB 220/215/201) */
+  /* Legacy aliases kept for backward compat */
+  --teal-dark:   #2C3639;
+  --teal-mid:    #3F4E4F;
+  --tan:         #A27B5B;
+  --blush:       #DCD7C9;
 
   /* === TAILWIND SEMANTIC TOKENS === */
   --background:          oklch(0.98 0.008 75);
@@ -262,6 +269,46 @@
   }
 
   /* === EXTENDED PALETTE BUTTONS === */
+  /* Inkwell (#2C3639) — deep blue-teal charcoal */
+  .btn-inkwell {
+    display: inline-block;
+    background-color: var(--inkwell);
+    color: #FAF7F2;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.875rem 2.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    border: 2px solid transparent;
+  }
+  .btn-inkwell:hover {
+    background-color: var(--inkwell-dark);
+    transform: translateY(-1px);
+  }
+
+  /* Lunar Eclipse (#3F4E4F) — mid blue-teal */
+  .btn-lunar {
+    display: inline-block;
+    background-color: var(--lunar);
+    color: #FAF7F2;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.875rem 2.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    border: 2px solid transparent;
+  }
+  .btn-lunar:hover {
+    background-color: var(--inkwell);
+    transform: translateY(-1px);
+  }
+
   .btn-teal {
     display: inline-block;
     background-color: var(--teal-dark);
@@ -282,10 +329,21 @@
   }
 
   /* === SECTION BACKGROUNDS (extended palette) === */
-  .bg-teal-dark  { background-color: var(--teal-dark); }
-  .bg-teal-mid   { background-color: var(--teal-mid); }
-  .bg-tan        { background-color: var(--tan); }
-  .bg-blush      { background-color: var(--blush); }
+  .bg-inkwell    { background-color: var(--inkwell); }    /* #2C3639 Inkwell */
+  .bg-lunar      { background-color: var(--lunar); }     /* #3F4E4F Lunar Eclipse */
+  .bg-creme      { background-color: var(--creme); }     /* #A27B5B Creme Brulee */
+  .bg-aulait     { background-color: var(--aulait); }    /* #DCD7C9 Au Lait */
+  /* Legacy aliases */
+  .bg-teal-dark  { background-color: var(--inkwell); }
+  .bg-teal-mid   { background-color: var(--lunar); }
+  .bg-tan        { background-color: var(--creme); }
+  .bg-blush      { background-color: var(--aulait); }
+
+  /* === TEXT COLOR UTILITIES === */
+  .text-inkwell  { color: var(--inkwell); }
+  .text-lunar    { color: var(--lunar); }
+  .text-creme    { color: var(--creme); }
+  .text-aulait   { color: var(--aulait); }
 
   /* === DIVIDER VARIANTS === */
   .teal-divider {

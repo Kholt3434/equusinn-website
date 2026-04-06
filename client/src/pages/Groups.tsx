@@ -179,7 +179,7 @@ export default function Groups() {
               </div>
             </AnimatedSection>
             <AnimatedSection>
-              <div className="bg-[#2C3639] p-8 border-l-4 border-[#DCB7C8]/40">
+              <div className="bg-[#2C3639] p-8 border-l-4 border-[#DCD7C9]/40">
                 <p className="section-label text-[#D4AF6A] mb-4">Group Benefits</p>
                 <div className="gold-divider mb-6" />
                 <div className="space-y-3">
