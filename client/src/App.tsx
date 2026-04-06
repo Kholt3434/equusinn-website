@@ -13,6 +13,7 @@ import Meetings from "./pages/Meetings";
 import Groups from "./pages/Groups";
 import Gallery from "./pages/Gallery";
 import Reviews from "./pages/Reviews";
+import ThingsToDo from "./pages/ThingsToDo";
 
 function Router() {
   return (
@@ -26,6 +27,7 @@ function Router() {
       <Route path={"/groups"} component={Groups} />
       <Route path={"/gallery"} component={Gallery} />
       <Route path={"/reviews"} component={Reviews} />
+      <Route path={"/things-to-do"} component={ThingsToDo} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

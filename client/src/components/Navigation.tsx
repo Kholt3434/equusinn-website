@@ -18,6 +18,7 @@ const navLinks = [
   { href: "/groups", label: "Groups" },
   { href: "/gallery", label: "Gallery" },
   { href: "/reviews", label: "Reviews" },
+  { href: "/things-to-do", label: "Things to Do" },
   { href: "/location", label: "Location" },
   { href: "/contact", label: "Contact" },
 ];
