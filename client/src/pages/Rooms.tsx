@@ -359,7 +359,7 @@ export default function Rooms() {
       </section>
 
       {/* Standard Features Bar */}
-      <section className="py-10 px-6 lg:px-8 bg-[#1C2B4A]">
+      <section className="py-10 px-6 lg:px-8 bg-[#2C3639]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-8">
             {standardFeatures.map((f, i) => (
@@ -434,7 +434,7 @@ export default function Rooms() {
 
                   <div className="flex flex-wrap gap-4">
                     <a
-                      href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
+                      href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-gold text-xs px-8 py-4 inline-flex items-center gap-2"
@@ -517,7 +517,7 @@ export default function Rooms() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-6 lg:px-8 bg-[#1C2B4A]">
+      <section className="py-16 px-6 lg:px-8 bg-[#3F4E4F]">
         <div className="max-w-5xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="font-display text-4xl font-bold text-[#FAF7F2] mb-4">
@@ -528,7 +528,7 @@ export default function Rooms() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
+                href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold text-xs px-10 py-4 inline-block"

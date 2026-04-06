@@ -132,7 +132,7 @@ export default function Home() {
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a
-              href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
+              href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold text-sm px-8 py-4 inline-block"
@@ -165,7 +165,7 @@ export default function Home() {
       <AwardsStrip />
 
       {/* ─── QUICK STATS BAR ─── */}
-      <div className="bg-[#1C2B4A] py-5">
+      <div className="bg-[#2C3639] py-5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
             {[
@@ -270,7 +270,7 @@ export default function Home() {
                 Whether you're a competitor, a trainer, a devoted spectator, or simply someone who appreciates the grace and power of the horse, you'll feel at home here.
               </p>
               <a
-                href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
+                href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold text-xs px-7 py-3.5 inline-block"
@@ -408,7 +408,7 @@ export default function Home() {
                 Mon–Fri: 6:00am–9:00am &nbsp;·&nbsp; Sat–Sun: 6:00am–10:00am
               </p>
               <a
-                href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
+                href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-xs px-7 py-3.5 inline-block"
@@ -477,7 +477,7 @@ export default function Home() {
       </section>
 
       {/* ─── LOCATION TEASER ─── */}
-      <section className="py-20 px-6 lg:px-8 bg-[#1C2B4A]">
+      <section className="py-20 px-6 lg:px-8 bg-[#3F4E4F]">
         <div className="max-w-5xl mx-auto text-center">
           <AnimatedSection>
             <p className="section-label text-[#D4AF6A] mb-4">Prime Location</p>
@@ -530,7 +530,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
+                href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold text-sm px-10 py-4 inline-block"

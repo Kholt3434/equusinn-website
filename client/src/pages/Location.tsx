@@ -360,7 +360,7 @@ export default function Location() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
+                href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-sm px-10 py-4 font-body font-600 tracking-widest uppercase inline-block"

@@ -8,6 +8,10 @@
  *   Ivory:       #FAF7F2  (background — clean, airy)
  *   Charcoal:    #2A2A2A  (text)
  *   Slate:       #4A5568  (muted text)
+ *   Dark Teal:   #2C3639  (deep accent — grounded, earthy)
+ *   Forest Teal: #3F4E4F  (mid accent — natural, calm)
+ *   Warm Tan:    #A27B5C  (tertiary — sand, warmth)
+ *   Blush Rose:  #DCB7C8  (soft accent — elegance, femininity)
  * Typography: Cormorant Garamond (display) + Lato (body)
  */
 
@@ -57,6 +61,12 @@
   --ivory-warm:  #F2EDE4;
   --charcoal:    #2A2A2A;
   --slate:       #4A5568;
+
+  /* === EXTENDED BRAND PALETTE === */
+  --teal-dark:   #2C3639;   /* dark teal — grounded, earthy */
+  --teal-mid:    #3F4E4F;   /* forest teal — natural, calm */
+  --tan:         #A27B5C;   /* warm tan — sand, warmth */
+  --blush:       #DCB7C8;   /* blush rose — elegance, femininity */
 
   /* === TAILWIND SEMANTIC TOKENS === */
   --background:          oklch(0.98 0.008 75);
@@ -249,5 +259,43 @@
   .btn-outline-dark:hover {
     background-color: var(--navy);
     color: #FAF7F2;
+  }
+
+  /* === EXTENDED PALETTE BUTTONS === */
+  .btn-teal {
+    display: inline-block;
+    background-color: var(--teal-dark);
+    color: #FAF7F2;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.875rem 2.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    border: 2px solid transparent;
+  }
+  .btn-teal:hover {
+    background-color: var(--teal-mid);
+    transform: translateY(-1px);
+  }
+
+  /* === SECTION BACKGROUNDS (extended palette) === */
+  .bg-teal-dark  { background-color: var(--teal-dark); }
+  .bg-teal-mid   { background-color: var(--teal-mid); }
+  .bg-tan        { background-color: var(--tan); }
+  .bg-blush      { background-color: var(--blush); }
+
+  /* === DIVIDER VARIANTS === */
+  .teal-divider {
+    width: 3rem;
+    height: 2px;
+    background: var(--teal-mid);
+  }
+  .blush-divider {
+    width: 3rem;
+    height: 2px;
+    background: var(--blush);
   }
 }

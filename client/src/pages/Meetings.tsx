@@ -190,7 +190,7 @@ export default function Meetings() {
       </section>
 
       {/* Meeting Features */}
-      <section className="py-16 px-6 lg:px-8 bg-[#1C2B4A]">
+      <section className="py-16 px-6 lg:px-8 bg-[#2C3639]">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center mb-12">
             <p className="section-label text-[#D4AF6A] mb-4">What's Included</p>
@@ -340,7 +340,7 @@ export default function Meetings() {
                 ))}
               </div>
               <a
-                href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
+                href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold text-xs px-8 py-4 inline-block"

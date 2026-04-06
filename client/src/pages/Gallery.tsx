@@ -425,7 +425,7 @@ export default function Gallery() {
       </section>
 
       {/* CTA Strip */}
-      <section className="py-16 px-6 lg:px-8 bg-[#1C2B4A]">
+      <section className="py-16 px-6 lg:px-8 bg-[#2C3639]">
         <div className="max-w-5xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#FAF7F2] mb-4">
@@ -436,7 +436,7 @@ export default function Gallery() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
+                href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold text-xs px-10 py-4 inline-block"

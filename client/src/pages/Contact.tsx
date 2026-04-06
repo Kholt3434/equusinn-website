@@ -349,7 +349,7 @@ export default function Contact() {
       </section>
 
       {/* Book Direct CTA */}
-      <section className="py-16 px-6 lg:px-8 bg-[#1C2B4A]">
+      <section className="py-16 px-6 lg:px-8 bg-[#2C3639]">
         <div className="max-w-5xl mx-auto">
           <AnimatedSection>
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
@@ -363,7 +363,7 @@ export default function Contact() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 flex-shrink-0">
                 <a
-                  href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
+                  href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-gold text-xs px-8 py-4 font-body font-600 tracking-widest uppercase inline-flex items-center gap-2"

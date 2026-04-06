@@ -179,7 +179,7 @@ export default function Groups() {
               </div>
             </AnimatedSection>
             <AnimatedSection>
-              <div className="bg-[#1C2B4A] p-8">
+              <div className="bg-[#2C3639] p-8">
                 <p className="section-label text-[#D4AF6A] mb-4">Group Benefits</p>
                 <div className="gold-divider mb-6" />
                 <div className="space-y-3">
@@ -389,7 +389,7 @@ export default function Groups() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-6 lg:px-8 bg-[#1C2B4A]">
+      <section className="py-16 px-6 lg:px-8 bg-[#3F4E4F]">
         <div className="max-w-5xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="font-display text-4xl font-bold text-[#FAF7F2] mb-4">

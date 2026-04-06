@@ -12,7 +12,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#111B30] text-[#FAF7F2]">
+    <footer className="bg-[#2C3639] text-[#FAF7F2]">
       {/* Champagne top strip */}
       <div className="bg-[#D4AF6A] py-3 px-6">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
@@ -20,7 +20,7 @@ export default function Footer() {
             Ocala's Premier Equestrian Boutique Hotel
           </p>
           <a
-            href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
+            href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
             target="_blank"
             rel="noopener noreferrer"
             className="font-body font-700 text-[0.6rem] tracking-[0.2em] uppercase text-[#111B30] hover:underline flex items-center gap-1"
@@ -130,7 +130,7 @@ export default function Footer() {
               Rooms fill quickly during WEC and HITS show seasons. Book early to secure your preferred dates.
             </p>
             <a
-              href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
+              href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold text-[0.6rem] px-6 py-3 inline-block"

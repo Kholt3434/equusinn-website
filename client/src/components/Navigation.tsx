@@ -89,7 +89,7 @@ export default function Navigation() {
                 (352) 854-3200
               </a>
               <a
-                href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
+                href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden md:block btn-gold whitespace-nowrap text-[0.68rem] px-5 py-2.5"
@@ -133,7 +133,7 @@ export default function Navigation() {
                   (352) 854-3200
                 </a>
                 <a
-                  href="https://www.booking.com/hotel/us/hotel-sw-college-road-ocala.html"
+                  href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block btn-gold text-center text-xs px-5 py-3"
