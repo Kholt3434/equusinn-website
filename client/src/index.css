@@ -63,15 +63,15 @@
   --slate:       #4A5568;
 
   /* === EXTENDED BRAND PALETTE === */
-  --inkwell:     #2C3639;   /* Inkwell — deep blue-teal charcoal (RGB 44/54/57) */
-  --inkwell-dark:#1E2729;   /* Inkwell dark — deeper shade for hover */
-  --lunar:       #3F4E4F;   /* Lunar Eclipse — mid blue-teal (RGB 63/78/79) */
-  --lunar-light: #4F6162;   /* Lunar Eclipse light — lighter teal for accents */
+  --inkwell:     #2B3F4E;   /* Inkwell — deep slate-teal blue (RGB 43/63/78) */
+  --inkwell-dark:#1C2D3A;   /* Inkwell dark — deeper shade for hover */
+  --lunar:       #3D5A6B;   /* Lunar Eclipse — mid teal-blue (RGB 61/90/107) */
+  --lunar-light: #4E6E80;   /* Lunar Eclipse light — lighter teal-blue for accents */
   --creme:       #A27B5B;   /* Creme Brulee — warm tan (RGB 162/123/91) */
   --aulait:      #DCD7C9;   /* Au Lait — warm cream (RGB 220/215/201) */
   /* Legacy aliases kept for backward compat */
-  --teal-dark:   #2C3639;
-  --teal-mid:    #3F4E4F;
+  --teal-dark:   #2B3F4E;
+  --teal-mid:    #3D5A6B;
   --tan:         #A27B5B;
   --blush:       #DCD7C9;
 

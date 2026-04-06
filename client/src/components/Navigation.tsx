@@ -1,6 +1,6 @@
 /**
  * EQUUS INN NAVIGATION
- * Deep Navy #1C2B4A | Inkwell #2C3639 | Lunar Eclipse #3F4E4F
+ * Deep Navy #1C2B4A | Inkwell #2B3F4E | Lunar Eclipse #3D5A6B
  * Champagne #D4AF6A | Creme Brulee #A27B5B | Au Lait #DCD7C9 | Ivory #FAF7F2
  * Cormorant Garamond (display) + Lato (body)
  */
@@ -115,13 +115,13 @@ export default function Navigation() {
 
                       {/* Dropdown Panel */}
                       {isOpen && (
-                        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 bg-[#2C3639] border border-[#A27B5B]/30 rounded-sm shadow-2xl overflow-hidden">
-                          <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-[#2C3639] border-l border-t border-[#A27B5B]/30 rotate-45" />
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 bg-[#2B3F4E] border border-[#A27B5B]/30 rounded-sm shadow-2xl overflow-hidden">
+                          <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-[#2B3F4E] border-l border-t border-[#A27B5B]/30 rotate-45" />
                           {link.dropdown.map((child) => (
                             <Link key={child.href} href={child.href}>
                               <div
-                                className={`px-5 py-4 border-b border-[#A27B5B]/20 last:border-0 hover:bg-[#3F4E4F] transition-colors duration-150 cursor-pointer ${
-                                  location === child.href ? "bg-[#3F4E4F]" : ""
+                                className={`px-5 py-4 border-b border-[#A27B5B]/20 last:border-0 hover:bg-[#3D5A6B] transition-colors duration-150 cursor-pointer ${
+                                  location === child.href ? "bg-[#3D5A6B]" : ""
                                 }`}
                               >
                                 <div className={`font-body font-700 text-[0.65rem] tracking-[0.14em] uppercase mb-0.5 ${
@@ -187,7 +187,7 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileOpen && (
-          <div className="lg:hidden bg-[#2C3639] border-t border-[#A27B5B]/30">
+          <div className="lg:hidden bg-[#2B3F4E] border-t border-[#A27B5B]/30">
             <div className="px-6 py-6 space-y-1">
               {navLinks.map((link) => {
                 if (link.dropdown) {

@@ -179,7 +179,7 @@ function StarRating({ rating, max = 5 }: { rating: number; max?: number }) {
 
 function SourceBadge({ source }: { source: string }) {
   const colors: Record<string, string> = {
-    Agoda: "bg-[#2C3639] text-white",
+    Agoda: "bg-[#2B3F4E] text-white",
     Google: "bg-[#4285F4] text-white",
     TripAdvisor: "bg-[#34E0A1] text-[#1C2B4A]",
   };
@@ -286,7 +286,7 @@ export default function Reviews() {
       <AwardsStrip />
 
       {/* Overall Rating Banner */}
-      <section className="bg-[#2C3639] py-12">
+      <section className="bg-[#2B3F4E] py-12">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             {/* Score */}
@@ -421,7 +421,7 @@ export default function Reviews() {
       </section>
 
       {/* Review Summary Quote */}
-      <section className="py-16 bg-[#3F4E4F]">
+      <section className="py-16 bg-[#3D5A6B]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <svg className="w-10 h-10 text-[#D4AF6A] mx-auto mb-6 opacity-60" fill="currentColor" viewBox="0 0 24 24">
             <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />

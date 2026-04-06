@@ -12,7 +12,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#2C3639] text-[#FAF7F2]">
+    <footer className="bg-[#2B3F4E] text-[#FAF7F2]">
       {/* Champagne top strip */}
       <div className="bg-[#D4AF6A] py-3 px-6">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">

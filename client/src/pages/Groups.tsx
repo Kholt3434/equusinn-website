@@ -179,7 +179,7 @@ export default function Groups() {
               </div>
             </AnimatedSection>
             <AnimatedSection>
-              <div className="bg-[#2C3639] p-8 border-l-4 border-[#DCD7C9]/40">
+              <div className="bg-[#2B3F4E] p-8 border-l-4 border-[#DCD7C9]/40">
                 <p className="section-label text-[#D4AF6A] mb-4">Group Benefits</p>
                 <div className="gold-divider mb-6" />
                 <div className="space-y-3">
@@ -237,7 +237,7 @@ export default function Groups() {
                         </div>
                       ))}
                     </div>
-                    <a href="#group-inquiry" className="inline-flex items-center gap-2 font-body font-700 text-xs tracking-widest uppercase text-[#2C3639] border-b border-[#A27B5B] pb-0.5 hover:text-[#A27B5B] hover:border-[#A27B5B] transition-colors duration-200">
+                    <a href="#group-inquiry" className="inline-flex items-center gap-2 font-body font-700 text-xs tracking-widest uppercase text-[#2B3F4E] border-b border-[#A27B5B] pb-0.5 hover:text-[#A27B5B] hover:border-[#A27B5B] transition-colors duration-200">
                       Request Group Rates <ArrowRight className="w-3.5 h-3.5" />
                     </a>
                   </div>
@@ -250,7 +250,7 @@ export default function Groups() {
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-[#2C3639] py-14 px-6 lg:px-8">
+      <section className="bg-[#2B3F4E] py-14 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
             {[
@@ -389,7 +389,7 @@ export default function Groups() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-6 lg:px-8 bg-[#3F4E4F]">
+      <section className="py-16 px-6 lg:px-8 bg-[#3D5A6B]">
         <div className="max-w-5xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="font-display text-4xl font-bold text-[#FAF7F2] mb-4">

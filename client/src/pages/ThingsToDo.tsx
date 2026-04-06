@@ -6,8 +6,8 @@
  *   Deep Navy    #1C2B4A  — hero overlay, primary headings
  *   Saddle Brown #8B5E3C  — section labels, accents
  *   Champagne    #D4AF6A  — dividers, gold highlights
- *   Dark Teal    #2C3639  — equestrian section background
- *   Forest Teal  #3F4E4F  — outdoor section background
+ *   Dark Teal    #2B3F4E  — equestrian section background
+ *   Forest Teal  #3D5A6B  — outdoor section background
  *   Warm Tan     #A27B5B  — restaurant card accents
  *   Blush Rose   #DCD7C9  — shopping/spa section accents
  *   Ivory        #FAF7F2  — light section backgrounds
@@ -110,7 +110,7 @@ const equestrian = [
     desc: "A 500-acre multi-discipline venue hosting eventing, trail rides, and endurance competitions. The park's cross-country course is one of the finest in the Southeast and draws competitors from across the country.",
     tip: "Open to the public on non-event days — great for a morning walk along the course.",
     icon: Award,
-    tagColor: "#2C3639",
+    tagColor: "#2B3F4E",
     tagText: "#FAF7F2",
   },
   {
@@ -120,7 +120,7 @@ const equestrian = [
     desc: "One of the most prestigious hunter/jumper circuits in the country, running January through April. The Ocala Winter Circuit draws Olympic-caliber riders and thousands of horses to the Sunshine State each season.",
     tip: "General admission is free for most classes — a fantastic way to spend a morning.",
     icon: Award,
-    tagColor: "#3F4E4F",
+    tagColor: "#3D5A6B",
     tagText: "#FAF7F2",
   },
   {
@@ -150,7 +150,7 @@ const restaurants = [
     vibe: "Ocala's most beloved restaurant — New Orleans-inspired seafood in a lively downtown setting. The shrimp and grits are legendary.",
     distance: "15 min",
     priceRange: "$$$",
-    tagColor: "#2C3639",
+    tagColor: "#2B3F4E",
   },
   {
     name: "Braised Onion",
@@ -158,7 +158,7 @@ const restaurants = [
     vibe: "Locally sourced ingredients, creative seasonal menus, and a warm, intimate atmosphere. One of Ocala's most celebrated culinary destinations.",
     distance: "14 min",
     priceRange: "$$$",
-    tagColor: "#3F4E4F",
+    tagColor: "#3D5A6B",
   },
   {
     name: "Salted Brick",
@@ -190,7 +190,7 @@ const restaurants = [
     vibe: "Modern American cuisine with a Florida twist. Seasonal menus, craft cocktails, and a beautiful patio make this a go-to for special occasions.",
     distance: "13 min",
     priceRange: "$$$",
-    tagColor: "#2C3639",
+    tagColor: "#2B3F4E",
   },
   {
     name: "District Bar & Kitchen",
@@ -198,7 +198,7 @@ const restaurants = [
     vibe: "Lively downtown spot with creative burgers, local craft beers, and a great happy hour. The rooftop patio is one of Ocala's best people-watching perches.",
     distance: "16 min",
     priceRange: "$$",
-    tagColor: "#3F4E4F",
+    tagColor: "#3D5A6B",
   },
 ];
 
@@ -224,7 +224,7 @@ const shopping = [
     category: "Shopping Mall",
     desc: "Ocala's primary retail destination with over 100 stores including major department stores, specialty retailers, and a full food court. Conveniently located near I-75 and just minutes from Equus Inn.",
     highlight: "Includes a 16-screen AMC Theatre — great for a rainy afternoon.",
-    color: "#3F4E4F",
+    color: "#3D5A6B",
     textColor: "#FAF7F2",
   },
   {
@@ -232,7 +232,7 @@ const shopping = [
     category: "Equestrian Retail",
     desc: "The World Equestrian Center campus features a collection of high-end equestrian boutiques carrying everything from custom saddles and bespoke riding attire to equestrian art and gifts. A must-visit for horse enthusiasts.",
     highlight: "Several vendors set up during major show weeks — check the WEC event calendar.",
-    color: "#2C3639",
+    color: "#2B3F4E",
     textColor: "#FAF7F2",
   },
 ];
@@ -244,7 +244,7 @@ const outdoor = [
     desc: "Florida's oldest tourist attraction and one of the world's largest artesian spring formations. The famous glass-bottom boat tours reveal an underwater world of crystal-clear springs, ancient fossils, and abundant wildlife. Kayaking, paddleboarding, and wildlife viewing are also available.",
     distance: "25 min",
     icon: TreePine,
-    accentColor: "#3F4E4F",
+    accentColor: "#3D5A6B",
   },
   {
     name: "Ocala National Forest",
@@ -252,7 +252,7 @@ const outdoor = [
     desc: "Over 600 square miles of longleaf pine forest, freshwater springs, and diverse wildlife. The forest offers hundreds of miles of hiking and biking trails, swimming at Alexander Springs and Juniper Springs, and some of the best bass fishing in Florida.",
     distance: "35 min",
     icon: TreePine,
-    accentColor: "#2C3639",
+    accentColor: "#2B3F4E",
   },
   {
     name: "Santos Trailhead",
@@ -260,7 +260,7 @@ const outdoor = [
     desc: "One of Florida's premier mountain biking destinations with over 80 miles of singletrack trails ranging from beginner-friendly loops to technical expert routes. The Santos Trail system is part of the Florida Greenways and Trails network.",
     distance: "20 min",
     icon: Compass,
-    accentColor: "#3F4E4F",
+    accentColor: "#3D5A6B",
   },
   {
     name: "Rainbow Springs State Park",
@@ -268,7 +268,7 @@ const outdoor = [
     desc: "A stunning natural spring with a 40-foot waterfall — one of Florida's most beautiful. Swim in the crystal-clear 68°F water, kayak the Rainbow River, or simply relax on the manicured grounds. A perfect half-day escape.",
     distance: "40 min",
     icon: TreePine,
-    accentColor: "#2C3639",
+    accentColor: "#2B3F4E",
   },
   {
     name: "Sholom Park",
@@ -284,7 +284,7 @@ const outdoor = [
     desc: "A 5,685-acre natural lake offering excellent bass fishing, boating, and swimming. The lake's clear water and sandy shores make it a favorite local escape. Boat rentals are available at the marina.",
     distance: "30 min",
     icon: Compass,
-    accentColor: "#3F4E4F",
+    accentColor: "#3D5A6B",
   },
 ];
 
@@ -314,7 +314,7 @@ const itinerary = [
   {
     day: "Evening",
     icon: Star,
-    color: "#2C3639",
+    color: "#2B3F4E",
     title: "Dine & Unwind",
     activities: [
       "Pre-dinner drinks at District Bar & Kitchen's rooftop patio",
@@ -386,9 +386,9 @@ export default function ThingsToDo() {
               />
               <div className="mt-8 flex flex-wrap gap-3">
                 {[
-                  { label: "Equestrian Venues", color: "#2C3639", text: "#FAF7F2" },
+                  { label: "Equestrian Venues", color: "#2B3F4E", text: "#FAF7F2" },
                   { label: "Top Restaurants", color: "#A27B5B", text: "#FAF7F2" },
-                  { label: "Outdoor Adventures", color: "#3F4E4F", text: "#FAF7F2" },
+                  { label: "Outdoor Adventures", color: "#3D5A6B", text: "#FAF7F2" },
                   { label: "Shopping & Antiques", color: "#DCD7C9", text: "#1C2B4A" },
                   { label: "Day Trip Itineraries", color: "#D4AF6A", text: "#1C2B4A" },
                 ].map(tag => (
@@ -399,8 +399,8 @@ export default function ThingsToDo() {
             <AnimatedSection>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { stat: "20 min", label: "to World Equestrian Center", color: "#2C3639" },
-                  { stat: "25 min", label: "to Silver Springs State Park", color: "#3F4E4F" },
+                  { stat: "20 min", label: "to World Equestrian Center", color: "#2B3F4E" },
+                  { stat: "25 min", label: "to Silver Springs State Park", color: "#3D5A6B" },
                   { stat: "15 min", label: "to Historic Downtown Ocala", color: "#A27B5B" },
                   { stat: "35 min", label: "to Ocala National Forest", color: "#1C2B4A" },
                 ].map(item => (
@@ -416,7 +416,7 @@ export default function ThingsToDo() {
       </section>
 
       {/* ─── EQUESTRIAN VENUES ─── */}
-      <section className="py-20 px-6 lg:px-16" style={{ backgroundColor: "#2C3639" }}>
+      <section className="py-20 px-6 lg:px-16" style={{ backgroundColor: "#2B3F4E" }}>
         <div className="max-w-7xl mx-auto">
           <SectionHeader
             label="Equestrian Venues"
@@ -529,7 +529,7 @@ export default function ThingsToDo() {
       </section>
 
       {/* ─── OUTDOOR ADVENTURES ─── */}
-      <section className="py-20 px-6 lg:px-16" style={{ backgroundColor: "#3F4E4F" }}>
+      <section className="py-20 px-6 lg:px-16" style={{ backgroundColor: "#3D5A6B" }}>
         <div className="max-w-7xl mx-auto">
           <SectionHeader
             label="Outdoor Adventures"
@@ -645,7 +645,7 @@ export default function ThingsToDo() {
       </section>
 
       {/* ─── CTA ─── */}
-      <section className="py-20 px-6 lg:px-16" style={{ backgroundColor: "#2C3639" }}>
+      <section className="py-20 px-6 lg:px-16" style={{ backgroundColor: "#2B3F4E" }}>
         <div className="max-w-3xl mx-auto text-center">
           <AnimatedSection>
             <p className="font-body font-700 text-[0.65rem] tracking-[0.22em] uppercase mb-3" style={{ color: "#D4AF6A" }}>

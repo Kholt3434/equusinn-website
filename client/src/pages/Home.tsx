@@ -165,7 +165,7 @@ export default function Home() {
       <AwardsStrip />
 
       {/* ─── QUICK STATS BAR ─── */}
-      <div className="bg-[#2C3639] py-5">
+      <div className="bg-[#2B3F4E] py-5">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
             {[
@@ -254,7 +254,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#1C2B4A]/20" />
           </div>
           {/* Text */}
-          <div className="bg-[#2C3639] flex items-center px-10 lg:px-16 py-20 border-l-4 border-[#A27B5B]/40">
+          <div className="bg-[#2B3F4E] flex items-center px-10 lg:px-16 py-20 border-l-4 border-[#A27B5B]/40">
             <AnimatedSection>
               <p className="section-label text-[#D4AF6A] mb-4">The Equus Inn Spirit</p>
               <div className="gold-divider mb-6" />
@@ -284,7 +284,7 @@ export default function Home() {
       </section>
 
       {/* ─── AMENITIES STRIP ─── */}
-      <section className="bg-[#3F4E4F] py-20 px-6 lg:px-8">
+      <section className="bg-[#3D5A6B] py-20 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center mb-14">
             <p className="section-label text-[#D4AF6A] mb-4">Everything You Need</p>
@@ -478,7 +478,7 @@ export default function Home() {
       </section>
 
       {/* ─── LOCATION TEASER ─── */}
-      <section className="py-20 px-6 lg:px-8 bg-[#3F4E4F]">
+      <section className="py-20 px-6 lg:px-8 bg-[#3D5A6B]">
         <div className="max-w-5xl mx-auto text-center">
           <AnimatedSection>
             <p className="section-label text-[#D4AF6A] mb-4">Prime Location</p>

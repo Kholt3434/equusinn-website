@@ -219,7 +219,7 @@ export default function Amenities() {
       </section>
 
       {/* Additional Features */}
-      <section className="py-16 px-6 lg:px-8 bg-[#2C3639]">
+      <section className="py-16 px-6 lg:px-8 bg-[#2B3F4E]">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="mb-12 text-center">
             <p className="section-label text-[#D4AF6A] mb-4">Also Included</p>
@@ -250,7 +250,7 @@ export default function Amenities() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${EXTERIOR_IMG})` }}
         />
-        <div className="absolute inset-0 bg-[#2C3639]/85" />
+        <div className="absolute inset-0 bg-[#2B3F4E]/85" />
         <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
           <AnimatedSection>
             <p className="section-label text-[#D4AF6A] mb-4">Experience It All</p>

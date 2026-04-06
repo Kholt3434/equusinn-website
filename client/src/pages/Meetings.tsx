@@ -190,7 +190,7 @@ export default function Meetings() {
       </section>
 
       {/* Meeting Features */}
-      <section className="py-16 px-6 lg:px-8 bg-[#2C3639]">
+      <section className="py-16 px-6 lg:px-8 bg-[#2B3F4E]">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center mb-12">
             <p className="section-label text-[#D4AF6A] mb-4">What's Included</p>
@@ -235,7 +235,7 @@ export default function Meetings() {
                   <div className="p-6 border-t-4 border-[#D4AF6A]">
                     <div className="flex items-start justify-between gap-4 mb-3">
                       <h3 className="font-display text-xl font-600 text-[#1C2B4A]">{setup.name}</h3>
-                      <span className="font-body font-700 text-[0.6rem] tracking-widest uppercase px-3 py-1 bg-[#2C3639] text-[#DCD7C9] flex-shrink-0">
+                      <span className="font-body font-700 text-[0.6rem] tracking-widest uppercase px-3 py-1 bg-[#2B3F4E] text-[#DCD7C9] flex-shrink-0">
                         {setup.capacity}
                       </span>
                     </div>

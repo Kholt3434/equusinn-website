@@ -202,7 +202,7 @@ export default function Contact() {
             <div className="lg:col-span-3">
               <AnimatedSection>
                 <div className="bg-white shadow-sm p-8 lg:p-12">
-                  <h3 className="font-display text-2xl font-bold text-[#2C3639] mb-2">Send Us a Message</h3>
+                  <h3 className="font-display text-2xl font-bold text-[#2B3F4E] mb-2">Send Us a Message</h3>
                   <p className="font-body text-sm text-[#2A2A2A]/55 mb-8">
                     Fill out the form below and we'll get back to you within 24 hours. For immediate assistance, please call us directly.
                   </p>
@@ -259,7 +259,7 @@ export default function Contact() {
                           name="roomType"
                           value={form.roomType}
                           onChange={handleChange}
-                          className="w-full border border-[#2C3639]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]"
+                          className="w-full border border-[#2B3F4E]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]"
                         >
                           <option value="">Select room type</option>
                           <option value="king">King Room</option>
@@ -279,7 +279,7 @@ export default function Contact() {
                           name="checkIn"
                           value={form.checkIn}
                           onChange={handleChange}
-                          className="w-full border border-[#2C3639]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]"
+                          className="w-full border border-[#2B3F4E]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]"
                         />
                       </div>
                       <div>
@@ -291,7 +291,7 @@ export default function Contact() {
                           name="checkOut"
                           value={form.checkOut}
                           onChange={handleChange}
-                          className="w-full border border-[#2C3639]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]"
+                          className="w-full border border-[#2B3F4E]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]"
                         />
                       </div>
                       <div>
@@ -302,7 +302,7 @@ export default function Contact() {
                           name="guests"
                           value={form.guests}
                           onChange={handleChange}
-                          className="w-full border border-[#2C3639]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]"
+                          className="w-full border border-[#2B3F4E]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FAF7F2]"
                         >
                           <option value="">Guests</option>
                           <option value="1">1 Guest</option>
@@ -349,7 +349,7 @@ export default function Contact() {
       </section>
 
       {/* Book Direct CTA */}
-      <section className="py-16 px-6 lg:px-8 bg-[#2C3639]">
+      <section className="py-16 px-6 lg:px-8 bg-[#2B3F4E]">
         <div className="max-w-5xl mx-auto">
           <AnimatedSection>
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">

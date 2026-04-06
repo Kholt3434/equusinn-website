@@ -359,7 +359,7 @@ export default function Rooms() {
       </section>
 
       {/* Standard Features Bar */}
-      <section className="py-10 px-6 lg:px-8 bg-[#2C3639]">
+      <section className="py-10 px-6 lg:px-8 bg-[#2B3F4E]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-8">
             {standardFeatures.map((f, i) => (
@@ -517,7 +517,7 @@ export default function Rooms() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-6 lg:px-8 bg-[#3F4E4F]">
+      <section className="py-16 px-6 lg:px-8 bg-[#3D5A6B]">
         <div className="max-w-5xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="font-display text-4xl font-bold text-[#FAF7F2] mb-4">
