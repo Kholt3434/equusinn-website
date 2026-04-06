@@ -354,7 +354,7 @@ export default function ThingsToDo() {
       <section className="relative h-[55vh] min-h-[420px] flex items-end overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80')" }}
+          style={{ backgroundImage: "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/ocala-horse-country_50258fde.jpg')" }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to top, #1C2B4A 0%, #1C2B4A80 50%, transparent 100%)" }} />
         <div className="relative z-10 w-full px-6 lg:px-16 pb-14 max-w-7xl mx-auto">
