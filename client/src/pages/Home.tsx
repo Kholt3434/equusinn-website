@@ -254,7 +254,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#1C2B4A]/20" />
           </div>
           {/* Text */}
-          <div className="bg-[#1C2B4A] flex items-center px-10 lg:px-16 py-20">
+          <div className="bg-[#2C3639] flex items-center px-10 lg:px-16 py-20 border-l-4 border-[#A27B5B]/40">
             <AnimatedSection>
               <p className="section-label text-[#D4AF6A] mb-4">The Equus Inn Spirit</p>
               <div className="gold-divider mb-6" />
@@ -263,6 +263,7 @@ export default function Home() {
                 <span className="italic text-[#D4AF6A]">of the Horse</span><br />
                 Lives On
               </h2>
+              <div className="w-full h-px bg-[#DCB7C8]/20 mb-6" />
               <p className="font-body text-[#FAF7F2]/70 text-base leading-relaxed mb-6">
                 Ocala is the Horse Capital of the World — and Equus Inn is its most fitting retreat. Our hotel is a living tribute to the bond between horse and rider, from our equestrian-themed rooms to our location minutes from the world's greatest show venues.
               </p>
@@ -283,7 +284,7 @@ export default function Home() {
       </section>
 
       {/* ─── AMENITIES STRIP ─── */}
-      <section className="bg-[#8B5E3C] py-20 px-6 lg:px-8">
+      <section className="bg-[#3F4E4F] py-20 px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="text-center mb-14">
             <p className="section-label text-[#D4AF6A] mb-4">Everything You Need</p>
@@ -297,7 +298,7 @@ export default function Home() {
             {amenities.map((item, i) => (
               <AnimatedSection key={i}>
                 <div className="text-center p-6 border border-[#D4AF6A]/20 hover:border-[#D4AF6A]/60 hover:bg-white/5 transition-all duration-300 group">
-                  <div className="w-12 h-12 mx-auto mb-4 bg-[#D4AF6A]/10 flex items-center justify-center group-hover:bg-[#D4AF6A]/20 transition-colors duration-300">
+                  <div className="w-12 h-12 mx-auto mb-4 bg-[#DCB7C8]/10 flex items-center justify-center group-hover:bg-[#DCB7C8]/20 transition-colors duration-300">
                     <item.icon className="w-5 h-5 text-[#D4AF6A]" />
                   </div>
                   <h3 className="font-display font-600 text-sm text-[#FAF7F2] mb-1">{item.label}</h3>

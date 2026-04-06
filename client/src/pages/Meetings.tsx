@@ -203,8 +203,8 @@ export default function Meetings() {
             {meetingFeatures.map((f, i) => (
               <AnimatedSection key={i}>
                 <div className="text-center p-6 border border-[#D4AF6A]/20 hover:border-[#D4AF6A]/50 hover:bg-white/5 transition-all duration-300">
-                  <div className="w-12 h-12 mx-auto mb-4 bg-[#D4AF6A]/10 flex items-center justify-center">
-                    <f.icon className="w-5 h-5 text-[#D4AF6A]" />
+                  <div className="w-12 h-12 mx-auto mb-4 bg-[#DCB7C8]/15 flex items-center justify-center">
+                    <f.icon className="w-5 h-5 text-[#DCB7C8]" />
                   </div>
                   <p className="font-display font-600 text-sm text-[#FAF7F2] mb-1">{f.label}</p>
                   <p className="font-body text-xs text-[#FAF7F2]/45">{f.desc}</p>
@@ -235,7 +235,7 @@ export default function Meetings() {
                   <div className="p-6 border-t-4 border-[#D4AF6A]">
                     <div className="flex items-start justify-between gap-4 mb-3">
                       <h3 className="font-display text-xl font-600 text-[#1C2B4A]">{setup.name}</h3>
-                      <span className="font-body font-700 text-[0.6rem] tracking-widest uppercase px-3 py-1 bg-[#1C2B4A] text-[#FAF7F2] flex-shrink-0">
+                      <span className="font-body font-700 text-[0.6rem] tracking-widest uppercase px-3 py-1 bg-[#2C3639] text-[#DCB7C8] flex-shrink-0">
                         {setup.capacity}
                       </span>
                     </div>
@@ -249,7 +249,7 @@ export default function Meetings() {
       </section>
 
       {/* Additional Amenities for Groups */}
-      <section className="py-16 px-6 lg:px-8 bg-[#F2EDE4]">
+      <section className="py-16 px-6 lg:px-8 bg-[#FAF7F2] border-t border-[#DCB7C8]/30">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="mb-10">
             <p className="section-label mb-4">For Your Group</p>
@@ -261,8 +261,8 @@ export default function Meetings() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <AnimatedSection>
               <div className="bg-white p-8 shadow-sm">
-                <div className="w-12 h-12 bg-[#1C2B4A]/10 flex items-center justify-center mb-5">
-                  <Coffee className="w-5 h-5 text-[#1C2B4A]" />
+                <div className="w-12 h-12 bg-[#A27B5B]/15 flex items-center justify-center mb-5">
+                  <Coffee className="w-5 h-5 text-[#A27B5B]" />
                 </div>
                 <h3 className="font-display font-600 text-lg text-[#1C2B4A] mb-3">Group Catering</h3>
                 <p className="font-body text-sm text-[#2A2A2A]/65 leading-relaxed">
@@ -272,8 +272,8 @@ export default function Meetings() {
             </AnimatedSection>
             <AnimatedSection>
               <div className="bg-white p-8 shadow-sm">
-                <div className="w-12 h-12 bg-[#1C2B4A]/10 flex items-center justify-center mb-5">
-                  <Users className="w-5 h-5 text-[#1C2B4A]" />
+                <div className="w-12 h-12 bg-[#A27B5B]/15 flex items-center justify-center mb-5">
+                  <Users className="w-5 h-5 text-[#A27B5B]" />
                 </div>
                 <h3 className="font-display font-600 text-lg text-[#1C2B4A] mb-3">Group Room Blocks</h3>
                 <p className="font-body text-sm text-[#2A2A2A]/65 leading-relaxed">

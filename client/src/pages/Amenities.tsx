@@ -194,8 +194,8 @@ export default function Amenities() {
                 {/* Content */}
                 <div className={`p-10 lg:p-14 flex flex-col justify-center ${i % 2 === 1 ? "bg-[#FAF7F2] lg:order-1" : "bg-white"}`}>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-[#1C2B4A]/10 flex items-center justify-center flex-shrink-0">
-                      <amenity.icon className="w-4 h-4 text-[#1C2B4A]" />
+                    <div className="w-10 h-10 bg-[#A27B5B]/15 flex items-center justify-center flex-shrink-0">
+                      <amenity.icon className="w-4 h-4 text-[#A27B5B]" />
                     </div>
                     <p className="section-label">{amenity.subtitle}</p>
                   </div>
@@ -232,8 +232,8 @@ export default function Amenities() {
             {additionalFeatures.map((f, i) => (
               <AnimatedSection key={i}>
                 <div className="text-center p-6 border border-[#D4AF6A]/20 hover:border-[#D4AF6A]/50 hover:bg-white/5 transition-all duration-300">
-                  <div className="w-10 h-10 mx-auto mb-3 bg-[#D4AF6A]/10 flex items-center justify-center">
-                    <f.icon className="w-4 h-4 text-[#D4AF6A]" />
+                  <div className="w-10 h-10 mx-auto mb-3 bg-[#DCB7C8]/15 flex items-center justify-center">
+                    <f.icon className="w-4 h-4 text-[#DCB7C8]" />
                   </div>
                   <p className="font-display font-600 text-sm text-[#FAF7F2] mb-1">{f.label}</p>
                   <p className="font-body text-xs text-[#FAF7F2]/45">{f.desc}</p>
@@ -250,7 +250,7 @@ export default function Amenities() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${EXTERIOR_IMG})` }}
         />
-        <div className="absolute inset-0 bg-[#1C2B4A]/80" />
+        <div className="absolute inset-0 bg-[#2C3639]/85" />
         <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
           <AnimatedSection>
             <p className="section-label text-[#D4AF6A] mb-4">Experience It All</p>

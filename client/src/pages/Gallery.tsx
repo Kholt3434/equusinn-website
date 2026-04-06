@@ -425,7 +425,7 @@ export default function Gallery() {
       </section>
 
       {/* CTA Strip */}
-      <section className="py-16 px-6 lg:px-8 bg-[#2C3639]">
+      <section className="py-16 px-6 lg:px-8 bg-[#3F4E4F]">
         <div className="max-w-5xl mx-auto text-center">
           <AnimatedSection>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#FAF7F2] mb-4">

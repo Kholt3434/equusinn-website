@@ -179,7 +179,7 @@ function StarRating({ rating, max = 5 }: { rating: number; max?: number }) {
 
 function SourceBadge({ source }: { source: string }) {
   const colors: Record<string, string> = {
-    Agoda: "bg-[#1C2B4A] text-white",
+    Agoda: "bg-[#2C3639] text-white",
     Google: "bg-[#4285F4] text-white",
     TripAdvisor: "bg-[#34E0A1] text-[#1C2B4A]",
   };

@@ -470,7 +470,7 @@ export default function Rooms() {
               <img src={BATH_2} alt="Equus Inn ADA accessible bathroom" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
             </div>
           </div>
-          <div className="mt-4 bg-[#1C2B4A]/5 border-l-4 border-[#D4AF6A] p-4">
+          <div className="mt-4 bg-[#A27B5B]/8 border-l-4 border-[#A27B5B] p-4">
             <p className="font-body text-xs text-[#1C2B4A] leading-relaxed">
               <strong>ADA Accessible Rooms Available:</strong> Both King ADA and Two Queen ADA rooms feature roll-in showers, grab bars, and accessible layouts. Room configurations differ from standard rooms — please call <a href="tel:+13528543200" className="underline">(352) 854-3200</a> to reserve an ADA room and confirm availability.
             </p>
@@ -491,7 +491,7 @@ export default function Rooms() {
       </section>
 
       {/* Policies */}
-      <section className="py-16 px-6 lg:px-8 bg-[#F2EDE4]">
+      <section className="py-16 px-6 lg:px-8 bg-[#FAF7F2] border-t border-[#DCB7C8]/30">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection className="mb-10">
             <p className="section-label mb-4">Good to Know</p>
