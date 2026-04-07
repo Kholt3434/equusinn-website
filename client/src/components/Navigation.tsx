@@ -30,6 +30,7 @@ const navLinks: NavItem[] = [
     dropdown: [
       { href: "/location", label: "Location & Directions", description: "Find us in Ocala, FL" },
       { href: "/things-to-do", label: "Things to Do", description: "Restaurants, shopping & activities" },
+      { href: "/faq", label: "FAQ", description: "Frequently asked questions" },
     ],
   },
   { href: "/contact", label: "Contact" },
