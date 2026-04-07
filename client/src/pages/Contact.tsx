@@ -58,11 +58,31 @@ export default function Contact() {
       return;
     }
     setSubmitting(true);
-    // Simulate form submission
-    await new Promise((r) => setTimeout(r, 1200));
-    setSubmitting(false);
-    toast.success("Thank you! Your message has been sent. We'll be in touch within 24 hours.");
-    setForm({ name: "", email: "", phone: "", checkIn: "", checkOut: "", guests: "", roomType: "", message: "" });
+    try {
+      const response = await fetch("https://formspree.io/f/xdapjnzg", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone || "Not provided",
+          message: form.message,
+          _subject: "New General Inquiry from Equus Inn",
+          _replyto: form.email,
+        }),
+      });
+      if (response.ok) {
+        toast.success("Thank you! Your message has been sent. We'll be in touch within 24 hours.");
+        setForm({ name: "", email: "", phone: "", checkIn: "", checkOut: "", guests: "", roomType: "", message: "" });
+      } else {
+        toast.error("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Failed to send message. Please try again.");
+      console.error(error);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (

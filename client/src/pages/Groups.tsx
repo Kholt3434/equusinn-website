@@ -330,7 +330,7 @@ export default function Groups() {
                   <p className="font-body text-sm text-[#2A2A2A]/55 mb-8">
                     Fill out the form below and our group sales coordinator will respond with availability and pricing.
                   </p>
-                  <form className="space-y-5" onSubmit={(e) => { e.preventDefault(); }}>
+                  <form className="space-y-5" action="https://formspree.io/f/xykbvgwn" method="POST">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div>
                         <label className="font-body font-700 text-[0.6rem] tracking-widest uppercase text-[#1C2B4A] block mb-2">Name *</label>

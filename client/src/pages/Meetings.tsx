@@ -107,10 +107,35 @@ export default function Meetings() {
       return;
     }
     setSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setSubmitting(false);
-    toast.success("Thank you! Your meeting inquiry has been received. We'll respond within one business day.");
-    setForm({ name: "", email: "", phone: "", company: "", eventDate: "", attendees: "", eventType: "", message: "" });
+    try {
+      const response = await fetch("https://formspree.io/f/xykbvgwn", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone || "Not provided",
+          company: form.company || "Not provided",
+          eventDate: form.eventDate || "Not provided",
+          attendees: form.attendees || "Not provided",
+          eventType: form.eventType || "Not provided",
+          message: form.message,
+          _subject: "New Meeting Inquiry from Equus Inn",
+          _replyto: form.email,
+        }),
+      });
+      if (response.ok) {
+        toast.success("Thank you! Your meeting inquiry has been received. We'll respond within one business day.");
+        setForm({ name: "", email: "", phone: "", company: "", eventDate: "", attendees: "", eventType: "", message: "" });
+      } else {
+        toast.error("Failed to send inquiry. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Failed to send inquiry. Please try again.");
+      console.error(error);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
