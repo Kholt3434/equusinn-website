@@ -68,7 +68,7 @@ const KING_SUITE_ADA_C = "https://d2xsxph8kpxj0f.cloudfront.net/3105196634357148
 const ONE_QUEEN_ADA_A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/OneQueenADABed_a8043aa6.jpg";
 const ONE_QUEEN_ADA_B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/iQueenADAShower_eed77279.jpg";
 // One Queen Suite ADA
-const ONE_QUEEN_SUITE_ADA_A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/OneQueenSuiteADABed_a8043aa6.jpg";
+const ONE_QUEEN_SUITE_ADA_A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/OneQueenSuiteADABed_ffda7c38.jpg";
 const ONE_QUEEN_SUITE_ADA_B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/OneQueenSuiteADAShower_595e0256.jpg";
 const ONE_QUEEN_SUITE_ADA_C = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/OneQueenSuiteADALivingArea_1257cf40.jpg";
 // Two Queen Suite ADA
@@ -84,7 +84,7 @@ const ADA_TQ_B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi
 // Shared
 const EXTERIOR_IMG = `${CDN}/FrontExterior_578913ce.webp`;
 const POOL_IMG = `${CDN}/outdoorpool_41fd32e0.webp`;
-const BATH_1 = `${CDN}/BathroomandVanity_36d4711a.webp`;
+const BATH_1 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/OneQueenADABed_a8043aa6.jpg";
 const BATH_2 = `${CDN}/ADABathroom_fa553d74.webp`;
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
