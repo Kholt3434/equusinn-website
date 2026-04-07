@@ -185,12 +185,28 @@ const restaurants = [
     tagColor: "#D4AF6A",
   },
   {
-    name: "Juniper",
-    category: "Contemporary",
-    vibe: "Modern American cuisine with a Florida twist. Seasonal menus, craft cocktails, and a beautiful patio make this a go-to for special occasions.",
-    distance: "13 min",
-    priceRange: "$$$",
-    tagColor: "#2B3F4E",
+    name: "Stella's Modern Pantry",
+    category: "Cafe & Bistro",
+    vibe: "Quaint downtown cafe offering gourmet sandwiches, fresh salads, artisan desserts, and a curated selection of boutique wines. Perfect for a casual lunch or coffee break.",
+    distance: "12 min",
+    priceRange: "$$",
+    tagColor: "#A27B5B",
+  },
+  {
+    name: "Tony's Sushi",
+    category: "Japanese & Hibachi",
+    vibe: "Authentic sushi and hibachi dining with entertaining chef-prepared meals right at your table. The hibachi experience is fun, delicious, and perfect for groups.",
+    distance: "5 min",
+    priceRange: "$$",
+    tagColor: "#3D5A6B",
+  },
+  {
+    name: "Bagelicious Deli & Bakery",
+    category: "Breakfast & Lunch",
+    vibe: "Famous for authentic hand-made bagels, generous cream cheese, and fresh deli sandwiches. Open early for breakfast — a local favorite since opening.",
+    distance: "8 min",
+    priceRange: "$",
+    tagColor: "#8B5E3C",
   },
   {
     name: "District Bar & Kitchen",
@@ -295,7 +311,7 @@ const itinerary = [
     color: "#D4AF6A",
     title: "Equestrian Sunrise",
     activities: [
-      "Start with breakfast at Equus Inn — our complimentary continental spread is ready by 7am",
+      "Start with breakfast at Equus Inn — our complimentary hot breakfast buffet is ready by 6am",
       "Head to WEC or HITS for morning warm-ups (free rail viewing)",
       "Grab a coffee at The Polo Pony on the WEC campus",
     ]
@@ -623,8 +639,8 @@ export default function ThingsToDo() {
                 a: "Ocala's peak equestrian season runs from January through April (Winter Circuit) and again September through November. The World Equestrian Center and HITS host major competitions throughout the year, so there is almost always something happening. We recommend checking the WEC and HITS event calendars when planning your trip.",
               },
               {
-                q: "Are there good restaurants near the World Equestrian Center?",
-                a: "Yes — Ocala has an excellent and growing dining scene. Closest to WEC are the on-property restaurants at the Equestrian Hotel (Stirrups, The Polo Pony, The White Willow). Within 10–15 minutes you'll find Remington's Prime Steakhouse, Salted Brick, Braised Onion, Harry's Seafood, and Bella Cosa Italian — all highly rated and popular with equestrian visitors.",
+                q: "What are some good restaurants near Equus Inn?",
+                a: "Ocala has an excellent and growing dining scene with restaurants right near us. Just 5 minutes away is Tony's Sushi for authentic sushi and fun hibachi dining. Bagelicious Deli & Bakery (8 min) is famous for hand-made bagels and fresh sandwiches — perfect for breakfast or lunch. For dinner, Stella's Modern Pantry (12 min) offers gourmet sandwiches and wine, while Remington's Prime Steakhouse (12 min), Salted Brick (10 min), Braised Onion (14 min), Harry's Seafood (15 min), and Bella Cosa Italian (11 min) are all highly rated and popular with our guests.",
               },
               {
                 q: "What outdoor activities are available near Ocala?",

@@ -57,7 +57,7 @@ const amenities = [
     icon: Waves,
     title: "Seasonally Heated Outdoor Pool",
     subtitle: "Outdoor Retreat",
-    desc: "Our outdoor pool is the perfect place to unwind after a day at the World Equestrian Center or exploring Ocala's natural wonders. Seasonally heated and surrounded by comfortable lounge seating, it's a peaceful retreat that makes our property feel like a true resort.",
+    desc: "Our outdoor pool is the perfect place to relax and unwind. Seasonally heated and surrounded by comfortable lounge seating, it's a peaceful retreat that makes our property feel like a true resort.",
     img: POOL_AREA_IMG,
     alt: "Equus Inn seasonally heated outdoor pool",
     items: ["Seasonally heated", "Comfortable lounge seating", "Open daily", "Towels provided", "Adjacent to outdoor lounge area"],
@@ -87,7 +87,7 @@ const amenities = [
     desc: "Maintain your training routine with access to our fully equipped fitness center, available 24 hours a day, 7 days a week. Whether you're an early-morning runner or a late-night lifter, our gym is always open for you.",
     img: GYM_IMG,
     alt: "Equus Inn 24/7 fitness center",
-    items: ["Open 24 hours, 7 days a week", "Cardio equipment", "Free weights", "Strength machines", "No additional charge"],
+    items: ["Open 24 hours, 7 days a week", "Cardio equipment", "Free weights", "Strength equipment", "No additional charge"],
   },
   {
     icon: PawPrint,
@@ -105,7 +105,7 @@ const amenities = [
     desc: "Equus Inn offers a versatile, fully equipped meeting room ideal for corporate events, team retreats, training sessions, and private celebrations. Our space accommodates up to 45 guests with flexible configurations and full AV support.",
     img: MEETING_IMG,
     alt: "Equus Inn meeting room and event space",
-    items: ["Theater: 35 guests", "Classroom: 24 guests", "U-Shape: 18 guests", "AV equipment & projector included", "Fiber optic WiFi", "Multiple room configurations"],
+    items: ["Theater: 35 guests", "Classroom: 24 guests", "U-Shape: 18 guests", "AV equipment & projector available", "Fiber optic WiFi", "Multiple room configurations"],
   },
 ];
 
