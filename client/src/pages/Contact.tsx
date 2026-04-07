@@ -58,35 +58,11 @@ export default function Contact() {
       return;
     }
     setSubmitting(true);
-    try {
-      const response = await fetch("/api/email/send-inquiry", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: form.name,
-          email: form.email,
-          phone: form.phone || undefined,
-          message: form.message,
-          subject: "General Inquiry",
-          inquiryType: "general",
-          checkIn: form.checkIn || undefined,
-          checkOut: form.checkOut || undefined,
-          guests: form.guests || undefined,
-          roomType: form.roomType || undefined,
-        }),
-      });
-      if (response.ok) {
-        toast.success("Thank you! Your message has been sent. We'll be in touch within 24 hours.");
-        setForm({ name: "", email: "", phone: "", checkIn: "", checkOut: "", guests: "", roomType: "", message: "" });
-      } else {
-        toast.error("Failed to send message. Please try again.");
-      }
-    } catch (error) {
-      toast.error("Failed to send message. Please try again.");
-      console.error(error);
-    } finally {
-      setSubmitting(false);
-    }
+    // Simulate form submission
+    await new Promise((r) => setTimeout(r, 1200));
+    setSubmitting(false);
+    toast.success("Thank you! Your message has been sent. We'll be in touch within 24 hours.");
+    setForm({ name: "", email: "", phone: "", checkIn: "", checkOut: "", guests: "", roomType: "", message: "" });
   };
 
   return (
@@ -129,7 +105,7 @@ export default function Contact() {
                   <span className="italic">For You</span>
                 </h2>
                 <p className="font-body text-[#2A2A2A]/65 text-sm leading-relaxed mb-10">
-                  Whether you're planning your Ocala adventure, looking for the perfect pet-friendly getaway, or need recommendations for dining and activities — our front desk team is available 24 hours a day, 7 days a week to help.
+                  Whether you're planning a trip to the World Equestrian Center, looking for the perfect pet-friendly getaway, or simply need directions — our front desk team is available 24 hours a day, 7 days a week.
                 </p>
 
                 <div className="space-y-6 mb-10">

@@ -68,7 +68,7 @@ const KING_SUITE_ADA_C = "https://d2xsxph8kpxj0f.cloudfront.net/3105196634357148
 const ONE_QUEEN_ADA_A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/OneQueenADABed_a8043aa6.jpg";
 const ONE_QUEEN_ADA_B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/iQueenADAShower_eed77279.jpg";
 // One Queen Suite ADA
-const ONE_QUEEN_SUITE_ADA_A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/OneQueenSuiteADABed_a8043aa6.jpg";
+const ONE_QUEEN_SUITE_ADA_A = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/OneQueenSuiteADABed_ffda7c38.jpg";
 const ONE_QUEEN_SUITE_ADA_B = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/OneQueenSuiteADAShower_595e0256.jpg";
 const ONE_QUEEN_SUITE_ADA_C = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/OneQueenSuiteADALivingArea_1257cf40.jpg";
 // Two Queen Suite ADA
@@ -617,7 +617,7 @@ export default function Rooms() {
               { title: "Check-In / Check-Out", body: "Check-in: 3:00 PM\nCheck-out: 11:00 AM\nEarly check-in available upon request, subject to availability. Early or late check-in fees may apply." },
               { title: "Pet Policy", body: "Pets of all sizes welcome. A pet fee of $35 per pet, per night applies. Please notify us at booking. Pets must be kept on leash in common areas." },
               { title: "Cancellation", body: "Free cancellation up to 24 hours before check-in. Please review the cancellation policy at time of booking as it may vary by rate." },
-              { title: "Parking", body: "Free on-site parking for all guests. Ample parking available for vehicles of all sizes." },
+              { title: "Parking", body: "Free on-site parking for all guests. Please call ahead for trailer parking availability." },
             ].map((policy, i) => (
               <AnimatedSection key={i}>
                 <div className="bg-white p-6 shadow-sm h-full">

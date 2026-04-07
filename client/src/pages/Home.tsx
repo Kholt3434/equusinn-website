@@ -11,7 +11,6 @@ import { motion, useInView } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import AwardsStrip from "@/components/AwardsStrip";
 import Footer from "@/components/Footer";
-import SchemaMarkup, { hotelSchema, organizationSchema } from "@/components/SchemaMarkup";
 import {
   Coffee, Waves, Dumbbell, PawPrint, Wifi, Wine, Flame,
   Star, MapPin, ChevronDown, ArrowRight, Users, Phone,
@@ -82,18 +81,12 @@ const testimonials = [
 ];
 
 export default function Home() {
-  // The userAuth hooks provides authentication state
-  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
-  let { user, loading, error, isAuthenticated, logout } = useAuth();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen bg-[#FAF7F2]">
-      <SchemaMarkup id="hotel" schema={hotelSchema} />
-      <SchemaMarkup id="organization" schema={organizationSchema} />
       <Navigation />
 
       {/* ─── HERO SECTION ─── */}
