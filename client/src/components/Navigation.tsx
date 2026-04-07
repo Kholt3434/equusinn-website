@@ -33,6 +33,7 @@ const navLinks: NavItem[] = [
     ],
   },
   { href: "/contact", label: "Contact" },
+  { href: "/faq", label: "FAQ" },
 ];
 
 export default function Navigation() {
