@@ -87,13 +87,8 @@ const faqItems: FAQItem[] = [
   },
   {
     category: "Breakfast & Dining",
-    question: "Are there good restaurants near Equus Inn?",
-    answer: "Yes! Local favorites include The Yearling (classic Florida cuisine), Tony's Sushi (Japanese), and Bagelicious Deli & Bakery (breakfast and lunch). We can provide recommendations at check-in.",
-  },
-  {
-    category: "Breakfast & Dining",
-    question: "Does the hotel have a restaurant or bar?",
-    answer: "We have a self-service beer and wine bar available for guests. For dining, we recommend the excellent restaurants within walking distance or a short drive from the hotel.",
+    question: "Are there restaurants and dining options at or near Equus Inn?",
+    answer: "We have a self-service beer and wine bar available for guests. For dining, excellent local favorites are within walking distance or a short drive, including The Yearling (classic Florida cuisine), Tony's Sushi (Japanese), and Bagelicious Deli & Bakery (breakfast and lunch). We can provide recommendations at check-in.",
   },
   {
     category: "Breakfast & Dining",
@@ -183,11 +178,7 @@ const faqItems: FAQItem[] = [
     question: "How far is the World Equestrian Center?",
     answer: "The World Equestrian Center is just a short drive from Equus Inn, making us the ideal choice for equestrian event attendees.",
   },
-  {
-    category: "Location & Attractions",
-    question: "Are there good restaurants near Equus Inn?",
-    answer: "Yes! Local favorites include The Yearling, Tony's Sushi, and Bagelicious Deli & Bakery. Many are within walking distance or a short drive.",
-  },
+
   {
     category: "Location & Attractions",
     question: "What activities are available in Ocala?",
