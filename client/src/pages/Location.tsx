@@ -130,11 +130,11 @@ export default function Location() {
                 <div>
                   <h3 className="font-display font-600 text-lg text-[#FDFBF7] mb-2">Address</h3>
                   <p className="font-body text-[#FDFBF7]/70 text-sm leading-relaxed">
-                    3434 SW College Road<br />
+                    3434 SW College Rd<br />
                     Ocala, FL 34474
                   </p>
                   <a
-                    href="https://maps.google.com/?q=3434+SW+College+Road+Ocala+FL+34474"
+                    href="https://maps.google.com/?q=3434+SW+College+Rd+Ocala+FL+34474"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-[#C9A84C] font-body text-xs tracking-wide mt-3 hover:underline"

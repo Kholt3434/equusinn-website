@@ -164,14 +164,14 @@ const faqItems: FAQItem[] = [
   {
     category: "Parking",
     question: "Is the parking lot well-lit and secure?",
-    answer: "Yes, our parking lot is well-lit and monitored for guest safety and security.",
+    answer: "Yes, our parking lot is well-lit. Please note that the parking lot is not monitored. We recommend locking your vehicle and keeping valuables out of sight.",
   },
 
   // Location & Attractions
   {
     category: "Location & Attractions",
     question: "Where is Equus Inn located?",
-    answer: "We're located at 3334 SW College Road, Ocala, Florida 34474, conveniently off I-75 and close to the World Equestrian Center.",
+    answer: "We're located at 3434 SW College Rd, Ocala, FL 34474, conveniently off I-75 and close to the World Equestrian Center.",
   },
   {
     category: "Location & Attractions",
@@ -186,7 +186,7 @@ const faqItems: FAQItem[] = [
   {
     category: "Location & Attractions",
     question: "Are there good restaurants near Equus Inn?",
-    answer: "Yes! Local favorites include Stella's Modern Pantry, Tony's Sushi, and Bagelicious Deli & Bakery. Many are within walking distance or a short drive.",
+    answer: "Yes! Local favorites include The Yearling, Tony's Sushi, and Bagelicious Deli & Bakery. Many are within walking distance or a short drive.",
   },
   {
     category: "Location & Attractions",

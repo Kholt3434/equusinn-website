@@ -203,7 +203,7 @@ export default function Reviews() {
         "name": "Equus Inn",
         "url": "https://www.equusinn.com",
         "telephone": "+13528543200",
-        "address": { "@type": "PostalAddress", "streetAddress": "3334 SW College Road", "addressLocality": "Ocala", "addressRegion": "FL", "postalCode": "34474", "addressCountry": "US" },
+        "address": { "@type": "PostalAddress", "streetAddress": "3434 SW College Rd", "addressLocality": "Ocala", "addressRegion": "FL", "postalCode": "34474", "addressCountry": "US" },
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "9.0",

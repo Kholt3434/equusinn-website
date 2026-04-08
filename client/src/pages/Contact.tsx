@@ -136,7 +136,7 @@ export default function Contact() {
                     <div>
                       <p className="font-display font-600 text-sm text-[#1C2B4A] mb-1">Address</p>
                       <p className="font-body text-sm text-[#2A2A2A]/65 leading-relaxed">
-                        3434 SW College Road<br />
+                        3434 SW College Rd<br />
                         Ocala, FL 34474
                       </p>
                     </div>
