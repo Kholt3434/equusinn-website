@@ -24,7 +24,7 @@ const faqItems: FAQItem[] = [
   {
     category: "Booking & Reservations",
     question: "How do I make a reservation at Equus Inn?",
-    answer: "You can book directly through our website, call us at (352) 854-3200, or use major booking platforms like Booking.com, Expedia, and Hotels.com. We also offer group rates for 10+ rooms.",
+    answer: "Book directly through our website at newequusinn.manus.space or call us at (352) 854-3200. We offer group rates for 10+ rooms.",
   },
   {
     category: "Booking & Reservations",
@@ -44,7 +44,7 @@ const faqItems: FAQItem[] = [
   {
     category: "Booking & Reservations",
     question: "Do you accept late check-in?",
-    answer: "We accommodate late check-in based on availability. Please notify us in advance if you'll be arriving after 10 PM. Contact the front desk at (352) 854-3200.",
+    answer: "Yes! We have an agent available at the front desk 24 hours a day to assist you with late check-in or any other needs.",
   },
 
   // Room Types & Features
@@ -56,7 +56,7 @@ const faqItems: FAQItem[] = [
   {
     category: "Room Types & Features",
     question: "What are your ADA-accessible rooms?",
-    answer: "We have four ADA-accessible room types: King Suite ADA, Two Queen Suite ADA, One Queen ADA, and One Queen Suite ADA. All feature accessible bathrooms with grab bars and spacious layouts for wheelchair access.",
+    answer: "We offer ADA-accessible rooms including our King Standard ADA and Two Queen Suite ADA options. All feature accessible bathrooms with grab bars and spacious layouts for wheelchair access.",
   },
   {
     category: "Room Types & Features",
@@ -78,17 +78,17 @@ const faqItems: FAQItem[] = [
   {
     category: "Breakfast & Dining",
     question: "Is breakfast included?",
-    answer: "Yes! A complimentary hot breakfast buffet is included with every room reservation. Breakfast is served daily from 6:00 AM to 9:00 AM in our dining area.",
+    answer: "Yes! A complimentary hot breakfast buffet is included with every room reservation. Breakfast is served daily from 6:00 AM to 9:00 AM. Our amazing breakfast team ensures we have a variety of rotating items to choose from.",
   },
   {
     category: "Breakfast & Dining",
     question: "What is served at breakfast?",
-    answer: "Our hot breakfast buffet includes eggs, bacon, sausage, fresh fruit, yogurt, cereal, toast, pastries, juice, and coffee. We accommodate dietary restrictions—please inform us when booking.",
+    answer: "Our hot breakfast buffet features a rotating selection of items including eggs, fresh fruit, yogurt, cereal, toast, pastries, juice, and coffee. Our amazing breakfast team ensures we have a variety of options to choose from. We accommodate dietary restrictions—please inform us when booking.",
   },
   {
     category: "Breakfast & Dining",
-    question: "Are there restaurants near the hotel?",
-    answer: "Yes! Ocala has excellent dining options nearby. Popular choices include Stella's Modern Pantry (contemporary American), Tony's Sushi (Japanese), and Bagelicious Deli & Bakery (breakfast and lunch). We can provide recommendations at check-in.",
+    question: "Are there good restaurants near Equus Inn?",
+    answer: "Yes! Local favorites include The Yearling (classic Florida cuisine), Tony's Sushi (Japanese), and Bagelicious Deli & Bakery (breakfast and lunch). We can provide recommendations at check-in.",
   },
   {
     category: "Breakfast & Dining",
@@ -115,7 +115,7 @@ const faqItems: FAQItem[] = [
   {
     category: "Facilities & Amenities",
     question: "Can I use the pool year-round?",
-    answer: "Our outdoor pool is heated and available seasonally. It's typically open March through November. Please check with us for exact seasonal dates.",
+    answer: "Yes! Our heated outdoor pool is open year-round for all guests to enjoy."
   },
   {
     category: "Facilities & Amenities",
@@ -137,12 +137,12 @@ const faqItems: FAQItem[] = [
   {
     category: "Meetings & Events",
     question: "What meeting room equipment is available?",
-    answer: "Our meeting room includes high-speed WiFi, projector, screen, sound system, and AV equipment. We can arrange catering and coffee service.",
+    answer: "Our meeting room includes high-speed WiFi, projector, screen, sound system, and AV equipment.",
   },
   {
     category: "Meetings & Events",
     question: "Do you offer catering?",
-    answer: "Yes, we offer in-house catering for meetings and events. Outside catering is also welcome. Contact our sales team for menu options and pricing.",
+    answer: "We're currently working on developing catering options for our guests. Please contact our sales team at kholt@paxproperties.com for more information."
   },
   {
     category: "Meetings & Events",
@@ -163,23 +163,8 @@ const faqItems: FAQItem[] = [
   },
   {
     category: "Parking",
-    question: "Is there covered parking?",
-    answer: "We offer both covered and open parking options. Covered parking is available on a first-come, first-served basis.",
-  },
-  {
-    category: "Parking",
-    question: "Can I park an RV or large vehicle?",
-    answer: "Yes, we accommodate RVs and large vehicles in our spacious parking area. Please inform us when booking if you'll have an oversized vehicle.",
-  },
-  {
-    category: "Parking",
     question: "Is the parking lot well-lit and secure?",
     answer: "Yes, our parking lot is well-lit and monitored for guest safety and security.",
-  },
-  {
-    category: "Parking",
-    question: "Do you have EV charging stations?",
-    answer: "Please contact us for information about electric vehicle charging availability.",
   },
 
   // Location & Attractions
