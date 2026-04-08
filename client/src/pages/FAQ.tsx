@@ -66,7 +66,7 @@ const faqItems: FAQItem[] = [
   {
     category: "Room Types & Features",
     question: "Are rooms pet-friendly?",
-    answer: "Yes! We welcome pets at Equus Inn. There is a pet fee per stay. Please mention your pet when booking and let us know the size and type.",
+    answer: "Yes! We welcome pets at Equus Inn. Pet fees are $35 per pet, per night. Please mention your pet when booking and let us know the size and type.",
   },
   {
     category: "Room Types & Features",
@@ -208,7 +208,7 @@ const faqItems: FAQItem[] = [
   {
     category: "Policies & House Rules",
     question: "Are there any additional fees?",
-    answer: "Room rates include breakfast and WiFi. Pet fees and parking are complimentary. Some services (catering, events) may have additional charges.",
+    answer: "Room rates include breakfast and WiFi. Pet fees are $35 per pet, per night. Parking is complimentary. A $150 security deposit may be required for cash-paying guests, OTA prepaid reservations, or Marion County residents. The deposit can be provided in cash or as a credit/debit card authorization hold, which will be released upon departure following room inspection (allow 3–7 business days for funds to reflect back in your account).",
   },
   {
     category: "Policies & House Rules",
