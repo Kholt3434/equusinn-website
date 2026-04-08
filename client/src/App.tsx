@@ -15,6 +15,7 @@ import Gallery from "./pages/Gallery";
 import Reviews from "./pages/Reviews";
 import ThingsToDo from "./pages/ThingsToDo";
 import FAQ from "./pages/FAQ";
+import AIChat from "./components/AIChat";
 
 function Router() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <AIChat />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
