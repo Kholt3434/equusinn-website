@@ -32,7 +32,7 @@ const roomsSchema = {
     { "@type": "ListItem", "position": 10, "name": "One Queen Suite ADA", "url": "https://www.equusinn.com/rooms#one-queen-suite-ada" },
     { "@type": "ListItem", "position": 11, "name": "Two Queen Suite ADA", "url": "https://www.equusinn.com/rooms#two-queen-suite-ada" },
     { "@type": "ListItem", "position": 12, "name": "King ADA Room", "url": "https://www.equusinn.com/rooms#ada-king" },
-    { "@type": "ListItem", "position": 13, "name": "Two Queen ADA Room", "url": "https://www.equusinn.com/rooms#ada-two-queen" }
+
   ]
 };
 
@@ -399,30 +399,6 @@ const rooms = [
       "Complimentary hot breakfast included",
     ],
   },
-  {
-    id: "ada-two-queen",
-    tag: "ADA Accessible",
-    title: "Two Queen ADA Room",
-    subtitle: "Accessible Space for Families & Groups",
-    imgA: ADA_TQ_A,
-    imgB: ADA_TQ_B,
-    beds: "2 Queen Beds",
-    guests: "Up to 4 Guests",
-    sqft: "~400 sq ft",
-    desc: "The Two Queen ADA Room offers full accessibility for families and groups traveling with guests who require ADA accommodations. Two queen beds, a spacious accessible bathroom with grab bars and wide doorways make this room an ideal choice for those who need accessible features without giving up sleeping capacity.",
-    features: [
-      "2 Queen Beds with premium linens",
-      "Accessible bathroom with grab bars",
-      "Accessible bathroom with wide clearances",
-      "Wide doorways throughout",
-      "Equestrian-themed décor",
-      "Smart TV with streaming",
-      "Fiber optic WiFi",
-      "Coffee maker & mini fridge",
-      "Climate control (A/C & heat)",
-      "Complimentary hot breakfast included",
-    ],
-  },
 ];
 
 export default function Rooms() {
@@ -574,7 +550,7 @@ export default function Rooms() {
             <p className="section-label mb-4">Luxury Finishes</p>
             <div className="gold-divider mb-6" />
             <h2 className="font-display text-3xl font-bold text-[#1C2B4A]">Bathrooms & Amenities</h2>
-            <p className="font-body text-[#2A2A2A]/65 text-sm mt-3 max-w-2xl">Every bathroom features a luxury rain showerhead, modern bowl sink, and premium finishes. ADA-accessible rooms feature roll-in showers and grab bars — room layouts may vary. Guests requiring ADA accommodations are encouraged to call ahead so we can ensure the right room is reserved for you.</p>
+            <p className="font-body text-[#2A2A2A]/65 text-sm mt-3 max-w-2xl">Every bathroom features a luxury rain showerhead, modern bowl sink, and premium finishes. ADA-accessible rooms feature accessible tubs with safety grab bars and spacious layouts — room configurations may vary. Guests requiring ADA accommodations are encouraged to call ahead so we can ensure the right room is reserved for you.</p>
           </AnimatedSection>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="h-72 overflow-hidden">
@@ -586,7 +562,7 @@ export default function Rooms() {
           </div>
           <div className="mt-4 bg-[#A27B5B]/8 border-l-4 border-[#A27B5B] p-4">
             <p className="font-body text-xs text-[#1C2B4A] leading-relaxed">
-              <strong>ADA Accessible Rooms Available:</strong> Both King ADA and Two Queen ADA rooms feature roll-in showers, grab bars, and accessible layouts. Room configurations differ from standard rooms — please call <a href="tel:+13528543200" className="underline">(352) 854-3200</a> to reserve an ADA room and confirm availability.
+              <strong>ADA Accessible Rooms Available:</strong> Our King Standard ADA and Two Queen Suite ADA rooms feature accessible tubs with safety grab bars and spacious layouts. Room configurations differ from standard rooms — please call <a href="tel:+13528543200" className="underline">(352) 854-3200</a> to reserve an ADA room and confirm availability.
             </p>
           </div>
         </div>

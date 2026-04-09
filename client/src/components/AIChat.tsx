@@ -85,7 +85,7 @@ const FAQ_KNOWLEDGE_BASE = [
   {
     keywords: ["location", "where", "address", "directions"],
     response:
-      "We're located at 3334 SW College Road, Ocala, Florida 34474, conveniently off I-75 and close to the World Equestrian Center. Would you like directions or information about nearby attractions?",
+      "We're located at 3434 SW College Road, Ocala, Florida 34474, conveniently off I-75 and close to the World Equestrian Center. Would you like directions or information about nearby attractions?",
   },
   {
     keywords: ["equestrian", "horse", "wec", "world equestrian center", "event"],

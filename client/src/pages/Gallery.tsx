@@ -116,6 +116,58 @@ const photos: GalleryPhoto[] = [
     category: ["all", "rooms"],
     caption: "ADA Accessible King Room — Thoughtfully designed for all guests",
   },
+  {
+    id: 29,
+    src: `${CDN}/OneQueenSuiteADAShower_c8d9e5f2.jpg`,
+    alt: "Equus Inn One Queen Suite ADA accessible bathroom",
+    category: ["all", "bathrooms"],
+    caption: "ADA Accessible Bathroom — Spacious tub with safety grab bars and accessible fixtures",
+  },
+  {
+    id: 30,
+    src: `${CDN}/TwoQueenSuiteADABed_d4e2f1a3.jpg`,
+    alt: "Equus Inn Two Queen Suite ADA bedroom",
+    category: ["all", "rooms"],
+    caption: "Two Queen Suite ADA — Spacious bedroom with accessible features",
+    span: "wide",
+  },
+  {
+    id: 31,
+    src: `${CDN}/_14KingSuiteADAShower_e9f3g2b4.jpg`,
+    alt: "Equus Inn King Suite ADA accessible shower",
+    category: ["all", "bathrooms"],
+    caption: "King Suite ADA Bathroom — Accessible tub with premium safety features",
+  },
+  {
+    id: 32,
+    src: `${CDN}/KingSuiteADABed_f5a4h3c5.jpg`,
+    alt: "Equus Inn King Suite ADA bedroom",
+    category: ["all", "rooms"],
+    caption: "King Suite ADA — Luxurious king bed with accessible amenities",
+  },
+  {
+    id: 33,
+    src: `${CDN}/TwoQueenSuiteADALivingArea_g6b5i4d6.jpg`,
+    alt: "Equus Inn Two Queen Suite ADA living area",
+    category: ["all", "rooms"],
+    caption: "Two Queen Suite ADA Living Area — Spacious seating and entertainment space",
+    span: "wide",
+  },
+  {
+    id: 34,
+    src: `${CDN}/TwoQueenRoomNoCHair_h7c6j5e7.webp`,
+    alt: "Equus Inn Two Queen room",
+    category: ["all", "rooms"],
+    caption: "Two Queen Room — Comfortable accommodations for families and groups",
+  },
+  {
+    id: 35,
+    src: `${CDN}/beerandwinearea(2)_9f5e21c1.jpg`,
+    alt: "Equus Inn beer and wine lounge area",
+    category: ["all", "dining"],
+    caption: "Evening Bar Area — Unwind with a cold beer or glass of wine after a long day",
+    span: "wide",
+  },
   // Bathrooms
   {
     id: 8,
@@ -170,13 +222,7 @@ const photos: GalleryPhoto[] = [
     category: ["all", "dining"],
     caption: "Beer & Wine Bar — Self-serve craft beer and wine available every evening",
   },
-  {
-    id: 15,
-    src: `${CDN}/beerandwinearea(2)_9f5e21c1.jpg`,
-    alt: "Equus Inn beer and wine lounge area",
-    category: ["all", "dining"],
-    caption: "Evening Bar Area — Unwind with a cold beer or glass of wine after a long day",
-  },
+
   // Lobby & Lounge
   {
     id: 16,

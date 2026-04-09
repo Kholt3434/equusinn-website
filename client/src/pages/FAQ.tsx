@@ -24,12 +24,12 @@ const faqItems: FAQItem[] = [
   {
     category: "Booking & Reservations",
     question: "How do I make a reservation at Equus Inn?",
-    answer: "Book directly through our website at newequusinn.manus.space or call us at (352) 854-3200. We offer group rates for 10+ rooms.",
+    answer: "Book directly through our website at www.equusinn.com or call us at (352) 854-3200. We offer group rates for 10+ rooms.",
   },
   {
     category: "Booking & Reservations",
     question: "What is your cancellation policy?",
-    answer: "Cancellations made 48 hours before arrival receive a full refund. Cancellations within 48 hours are subject to one night's room charge. Group bookings have specific terms—contact our sales team for details.",
+    answer: "Cancellations made 24 hours before arrival receive a full refund. Cancellations within 24 hours are subject to one night's room charge. Group bookings have specific terms—contact our sales team for details.",
   },
   {
     category: "Booking & Reservations",
@@ -51,7 +51,7 @@ const faqItems: FAQItem[] = [
   {
     category: "Room Types & Features",
     question: "What room types are available?",
-    answer: "We offer One Queen, Two Queen, King Suite, One Queen Suite, Two Queen Suite, King Suite ADA, Two Queen Suite ADA, One Queen ADA, and One Queen Suite ADA rooms. Each features modern amenities and equestrian-inspired décor.",
+    answer: "We offer One Queen, Two Queen, King Suite, One Queen Suite, Two Queen Suite, King Standard ADA, Two Queen Suite ADA, One Queen ADA, and One Queen Suite ADA rooms. Each features modern amenities and equestrian-inspired décor.",
   },
   {
     category: "Room Types & Features",
@@ -159,7 +159,7 @@ const faqItems: FAQItem[] = [
   {
     category: "Parking",
     question: "Is the parking lot well-lit and secure?",
-    answer: "Yes, our parking lot is well-lit. Please note that the parking lot is not monitored. We recommend locking your vehicle and keeping valuables out of sight.",
+    answer: "Yes, our parking lot is well-lit. Please note that the parking lot is not monitored. We recommend locking your vehicle and keeping valuables out of sight for your security.",
   },
 
   // Location & Attractions
