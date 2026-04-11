@@ -334,6 +334,7 @@ const rooms = [
     subtitle: "Accessible Suite with Living Space",
     imgA: ONE_QUEEN_SUITE_ADA_A,
     imgB: ONE_QUEEN_SUITE_ADA_B,
+    imgC: ONE_QUEEN_SUITE_ADA_C,
     beds: "1 Queen Bed",
     guests: "Up to 2 Guests",
     sqft: "~420 sq ft",
@@ -488,6 +489,15 @@ export default function Rooms() {
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     />
                   </div>
+                  {room.imgC && (
+                    <div className="h-48 overflow-hidden">
+                      <img
+                        src={room.imgC}
+                        alt={`Equus Inn ${room.title} — living area view`}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                  )}
                 </div>
 
                 {/* Content */}
