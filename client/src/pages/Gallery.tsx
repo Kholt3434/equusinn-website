@@ -43,20 +43,6 @@ const photos: GalleryPhoto[] = [
     category: ["all", "exterior"],
     caption: "Hotel Exterior — Nestled in the heart of Ocala's horse country",
   },
-  {
-    id: 3,
-    src: `${CDN}/equusinn_exterior_f60796b2.jpg`,
-    alt: "Equus Inn hotel building exterior",
-    category: ["all", "exterior"],
-    caption: "Property Overview — 152 rooms across a beautifully landscaped campus",
-  },
-  {
-    id: 4,
-    src: `${CDN}/equusinn_entrance_f0d4bc99.jpg`,
-    alt: "Equus Inn hotel entrance driveway",
-    category: ["all", "exterior"],
-    caption: "Arrival Experience — A warm welcome from the moment you pull in",
-  },
   // Rooms
   {
     id: 5,
@@ -65,56 +51,6 @@ const photos: GalleryPhoto[] = [
     category: ["all", "rooms"],
     caption: "King Room — Equestrian-themed décor with premium hardwood-style tile floors",
     span: "wide",
-  },
-  {
-    id: 6,
-    src: `${CDN}/TwoQueenRoom_ecf1b94f.webp`,
-    alt: "Equus Inn two queen room",
-    category: ["all", "rooms"],
-    caption: "Double Queen Room — Perfect for families and groups, sleeps up to 4",
-  },
-  {
-    id: 7,
-    src: `${CDN}/SuiteKitchenette_392204ac.webp`,
-    alt: "Equus Inn suite with kitchenette",
-    category: ["all", "rooms"],
-    caption: "Suite with Kitchenette — Full-size refrigerator and dining area for extended stays",
-  },
-  {
-    id: 24,
-    src: `${CDN}/spasuitebedroom_a29eb507.jpg`,
-    alt: "Equus Inn Spa Suite bedroom",
-    category: ["all", "rooms"],
-    caption: "Spa Suite — Luxurious bedroom with spa-inspired finishes",
-    span: "wide",
-  },
-  {
-    id: 25,
-    src: `${CDN}/SpaSuiteJrLivingArea_d53b4a8c.webp`,
-    alt: "Equus Inn Spa Junior Suite living area",
-    category: ["all", "rooms"],
-    caption: "Spa Junior Suite — Separate living area for added comfort",
-  },
-  {
-    id: 26,
-    src: `${CDN}/spasuitelivingroom_a29eb507.jpg`,
-    alt: "Equus Inn Spa Suite living room",
-    category: ["all", "rooms"],
-    caption: "Spa Suite Living Room — Spacious seating area with premium furnishings",
-  },
-  {
-    id: 27,
-    src: `${CDN}/CopyofCopyofKJA-KingJunior(2)_33c0fb91.webp`,
-    alt: "Equus Inn King Junior room",
-    category: ["all", "rooms"],
-    caption: "King Junior — Cozy king bed with comfortable lounge chair",
-  },
-  {
-    id: 28,
-    src: `${CDN}/KingADAbedroomUSE_67b4766e.jpg`,
-    alt: "Equus Inn ADA accessible king room",
-    category: ["all", "rooms"],
-    caption: "ADA Accessible King Room — Thoughtfully designed for all guests",
   },
   {
     id: 29,
@@ -169,27 +105,6 @@ const photos: GalleryPhoto[] = [
     span: "wide",
   },
   // Bathrooms
-  {
-    id: 8,
-    src: `${CDN}/BathroomandVanity_36d4711a.webp`,
-    alt: "Equus Inn luxury bathroom vanity",
-    category: ["all", "bathrooms"],
-    caption: "Bathroom Vanity — Modern bowl sink and premium finishes throughout",
-  },
-  {
-    id: 9,
-    src: `${CDN}/Bathroom(1)_860b652a.webp`,
-    alt: "Equus Inn bathroom with rain showerhead",
-    category: ["all", "bathrooms"],
-    caption: "Luxury Rain Shower — Every room features a spa-quality rain showerhead",
-  },
-  {
-    id: 10,
-    src: `${CDN}/WaterfallWall_edfd5f66.jpg`,
-    alt: "Equus Inn waterfall wall feature",
-    category: ["all", "bathrooms"],
-    caption: "Waterfall Wall Feature — A distinctive design element in select rooms",
-  },
   // Pool & Outdoors
   {
     id: 11,
@@ -207,14 +122,6 @@ const photos: GalleryPhoto[] = [
     caption: "Outdoor Lounge & Fireplace — Gather around the fire under the Florida sky",
   },
   // Dining
-  {
-    id: 13,
-    src: `${CDN}/diningarea(2)_d0bc3ff8.jpg`,
-    alt: "Equus Inn complimentary breakfast dining area",
-    category: ["all", "dining"],
-    caption: "Breakfast Dining Area — Start every morning with a complimentary hot breakfast",
-    span: "wide",
-  },
   {
     id: 14,
     src: `${CDN}/BeerNWineMachine_93fd1e00.webp`,
