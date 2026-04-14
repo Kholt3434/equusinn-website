@@ -55,39 +55,39 @@ function ItemSet() {
   return (
     <div className="flex items-center shrink-0 py-4">
 
-      <AwardImg src={BOOKING_2026}     alt="Booking.com Traveler Review Award 2026"           height={110} />
+      <AwardImg src={BOOKING_2026}     alt="Booking.com Traveler Review Award 2026"           height={130} />
       <Divider />
-      <AwardImg src={BOOKING_TRA_2026} alt="Booking.com Traveler Review Awards 2026 sticker"  height={80}  />
+      <AwardImg src={BOOKING_TRA_2026} alt="Booking.com Traveler Review Awards 2026 sticker"  height={130}  />
       <Divider />
-      <AwardImg src={TRIP_2021}        alt="TripAdvisor Travelers' Choice 2021"                height={110} />
+      <AwardImg src={TRIP_2021}        alt="TripAdvisor Travelers' Choice 2021"                height={130} />
       <Divider />
-      <AwardImg src={TRIP_2022}        alt="TripAdvisor Travelers' Choice 2022"                height={110} />
+      <AwardImg src={TRIP_2022}        alt="TripAdvisor Travelers' Choice 2022"                height={130} />
       <Divider />
-      <AwardImg src={TRIP_2023}        alt="TripAdvisor Travelers' Choice 2023"                height={110} />
+      <AwardImg src={TRIP_2023}        alt="TripAdvisor Travelers' Choice 2023"                height={130} />
       <Divider />
-      <AwardImg src={TRIP_2025}        alt="TripAdvisor Travelers' Choice 2025"                height={110} />
+      <AwardImg src={TRIP_2025}        alt="TripAdvisor Travelers' Choice 2025"                height={130} />
       <Divider />
-      <AwardImg src={PROUD_PARTNER_2025_2026} alt="Ocala Metro Proud Partner 2025-2026"     height={110} />
+      <AwardImg src={PROUD_PARTNER_2025_2026} alt="Ocala Metro Proud Partner 2025-2026"     height={130} />
       <Divider />
-      <AwardImg src={BEST_OF_352_2022} alt="Best of the 352 2022 Winner"                       height={110} />
+      <AwardImg src={BEST_OF_352_2022} alt="Best of the 352 2022 Winner"                       height={130} />
       <Divider />
-      <AwardImg src={BEST_OF_352_2023} alt="Best of the 352 2023 Winner"                       height={110} />
+      <AwardImg src={BEST_OF_352_2023} alt="Best of the 352 2023 Winner"                       height={130} />
       <Divider />
-      <AwardImg src={BEST_OF_352_2024} alt="Best of the 352 2024 Winner"                       height={110} />
+      <AwardImg src={BEST_OF_352_2024} alt="Best of the 352 2024 Winner"                       height={130} />
       <Divider />
-      <AwardImg src={BEST_OF_352_2025} alt="Best of the 352 2025 Winner"                       height={110} />
+      <AwardImg src={BEST_OF_352_2025} alt="Best of the 352 2025 Winner"                       height={130} />
       <Divider />
-      <AwardImg src={BUSINESSRATE_TOP3_2025} alt="BusinessRate Top 3 Hotel 2025"                height={110} />
+      <AwardImg src={BUSINESSRATE_TOP3_2025} alt="BusinessRate Top 3 Hotel 2025"                height={130} />
       <Divider />
 
       {/* Expedia Verified Reviews widget */}
-      <div className="shrink-0 flex items-center justify-center px-4" style={{ minWidth: 110, minHeight: 110 }}>
+      <div className="shrink-0 flex items-center justify-center px-4" style={{ minWidth: 130, minHeight: 130 }}>
         <div id="expedia-widget-box" data-isaddnofollow="false" />
       </div>
       <Divider />
 
       {/* Hotels.com Loved by Guests 2021 widget */}
-      <div className="shrink-0 flex items-center justify-center px-4" style={{ minWidth: 110, minHeight: 110 }}>
+      <div className="shrink-0 flex items-center justify-center px-4" style={{ minWidth: 130, minHeight: 130 }}>
         <div id="hotels-widget-box" data-isaddnofollow="false" />
       </div>
 
