@@ -18,7 +18,8 @@ const PROUD_PARTNER_2025_2026 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663
 const BEST_OF_352_2022 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/best_of_352_2022_badge_navy-ZPCbbfsCx53vYLLATHHuLR.webp";
 const BEST_OF_352_2023 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/best_of_352_2023_badge_navy-SaftbpsAXmQwKGxkuwhum5.webp";
 const BEST_OF_352_2024 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/best_of_352_2024_badge_navy-CsKDJJH7RLq6nn9YqGAku3.webp";
-const BEST_OF_352_2025 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/best_of_352_2025_badge_navy-3is7UMqkPepkyYurNaxruc.webp";
+const BEST_OF_352_2025 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/best_of_352_2025_badge_clean-cSvfYNAwqbQ95yLGJfG6pa.webp";
+const BUSINESSRATE_TOP3_2025 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/businessrate_top3_hotel_badge-YK3iFPgTAG9Qu5BaMYaCJb.webp";
 
 // ── Third-party widget loader ─────────────────────────────────────────────────
 function loadScript(src: string, id: string) {
@@ -75,6 +76,8 @@ function ItemSet() {
       <AwardImg src={BEST_OF_352_2024} alt="Best of the 352 2024 Winner"                       height={110} />
       <Divider />
       <AwardImg src={BEST_OF_352_2025} alt="Best of the 352 2025 Winner"                       height={110} />
+      <Divider />
+      <AwardImg src={BUSINESSRATE_TOP3_2025} alt="BusinessRate Top 3 Hotel 2025"                height={110} />
       <Divider />
 
       {/* Expedia Verified Reviews widget */}
