@@ -13,6 +13,12 @@ const TRIP_2021        = "https://d2xsxph8kpxj0f.cloudfront.net/3105196634357148
 const TRIP_2022        = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/final_2022Trip_7ba6d629.png";
 const TRIP_2023        = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/final_202Trip_e9ff575d.png";
 const TRIP_2025        = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/final_2025Trip_772c454b.png";
+// Local awards badges
+const PROUD_PARTNER_2025_2026 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/proud_partner_2025_2026_badge-mxhnR8trXrZDRWmJtkDdJG.webp";
+const BEST_OF_352_2022 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/best_of_352_2022_badge-4WQvrYcaYAZHBZNeRJEaTb.webp";
+const BEST_OF_352_2023 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/best_of_352_2023_badge-dvL4WCLN7d4hMvAEDrg7n9.webp";
+const BEST_OF_352_2024 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/best_of_352_2024_badge-8d4CMf2WXH4cdv2vpACHQJ.webp";
+const BEST_OF_352_2025 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/best_of_352_2025_badge-WPydsREHCXDX35P9qtvGai.webp";
 
 // ── Third-party widget loader ─────────────────────────────────────────────────
 function loadScript(src: string, id: string) {
@@ -59,6 +65,16 @@ function ItemSet() {
       <AwardImg src={TRIP_2023}        alt="TripAdvisor Travelers' Choice 2023"                height={110} />
       <Divider />
       <AwardImg src={TRIP_2025}        alt="TripAdvisor Travelers' Choice 2025"                height={110} />
+      <Divider />
+      <AwardImg src={PROUD_PARTNER_2025_2026} alt="Ocala Metro Proud Partner 2025-2026"     height={110} />
+      <Divider />
+      <AwardImg src={BEST_OF_352_2022} alt="Best of the 352 2022 Winner"                       height={110} />
+      <Divider />
+      <AwardImg src={BEST_OF_352_2023} alt="Best of the 352 2023 Winner"                       height={110} />
+      <Divider />
+      <AwardImg src={BEST_OF_352_2024} alt="Best of the 352 2024 Winner"                       height={110} />
+      <Divider />
+      <AwardImg src={BEST_OF_352_2025} alt="Best of the 352 2025 Winner"                       height={110} />
       <Divider />
 
       {/* Expedia Verified Reviews widget */}
