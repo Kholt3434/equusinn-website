@@ -13,12 +13,12 @@ const TRIP_2021        = "https://d2xsxph8kpxj0f.cloudfront.net/3105196634357148
 const TRIP_2022        = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/final_2022Trip_7ba6d629.png";
 const TRIP_2023        = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/final_202Trip_e9ff575d.png";
 const TRIP_2025        = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/final_2025Trip_772c454b.png";
-// Local awards badges
-const PROUD_PARTNER_2025_2026 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/proud_partner_2025_2026_badge-mxhnR8trXrZDRWmJtkDdJG.webp";
-const BEST_OF_352_2022 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/best_of_352_2022_badge-4WQvrYcaYAZHBZNeRJEaTb.webp";
-const BEST_OF_352_2023 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/best_of_352_2023_badge-dvL4WCLN7d4hMvAEDrg7n9.webp";
-const BEST_OF_352_2024 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/best_of_352_2024_badge-8d4CMf2WXH4cdv2vpACHQJ.webp";
-const BEST_OF_352_2025 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/best_of_352_2025_badge-WPydsREHCXDX35P9qtvGai.webp";
+// Local awards badges (with navy background matching awards bar)
+const PROUD_PARTNER_2025_2026 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/proud_partner_2025_2026_badge_navy-m9wvisVfzXY9VDvx38KsSx.webp";
+const BEST_OF_352_2022 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/best_of_352_2022_badge_navy-ZPCbbfsCx53vYLLATHHuLR.webp";
+const BEST_OF_352_2023 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/best_of_352_2023_badge_navy-SaftbpsAXmQwKGxkuwhum5.webp";
+const BEST_OF_352_2024 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/best_of_352_2024_badge_navy-CsKDJJH7RLq6nn9YqGAku3.webp";
+const BEST_OF_352_2025 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/best_of_352_2025_badge_navy-3is7UMqkPepkyYurNaxruc.webp";
 
 // ── Third-party widget loader ─────────────────────────────────────────────────
 function loadScript(src: string, id: string) {

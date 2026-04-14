@@ -123,7 +123,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="font-body text-white/80 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
           >
-            Ocala's premier equestrian-themed boutique hotel. Minutes from the World Equestrian Center, with free hot breakfast, a seasonally heated pool, and pet-friendly accommodations.
+            Ocala's award-winning, premier equestrian-themed boutique hotel. Minutes from the World Equestrian Center, with free hot breakfast, a seasonally heated pool, and pet-friendly accommodations.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
