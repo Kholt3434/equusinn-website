@@ -8,9 +8,11 @@ import { useEffect, useRef } from "react";
 // ── CDN URLs ──────────────────────────────────────────────────────────────────
 const BOOKING_2026     = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/Digital-Award_RA-2026_0d8cfb4d.png";
 const BOOKING_TRA_2026 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/Instagram-Stickers-White_TRA-2026-us_d3e3d1a4.png";
-// TripAdvisor logos — clean transparent-background white PNGs
-const TRIP_2020_2022   = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/TALogos_24e6f70f.png";  // combined 2020/2021/2022
-const TRIP_2025        = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/2025TALogo_afb19d1c.png";
+// TripAdvisor Traveler Choice Awards — clean transparent-background graphics
+const TRIP_2021        = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/final_2021Trip_5bbed523.png";
+const TRIP_2022        = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/final_2022Trip_7ba6d629.png";
+const TRIP_2023        = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/final_202Trip_e9ff575d.png";
+const TRIP_2025        = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/final_2025Trip_772c454b.png";
 
 // ── Third-party widget loader ─────────────────────────────────────────────────
 function loadScript(src: string, id: string) {
@@ -50,9 +52,13 @@ function ItemSet() {
       <Divider />
       <AwardImg src={BOOKING_TRA_2026} alt="Booking.com Traveler Review Awards 2026 sticker"  height={80}  />
       <Divider />
-      <AwardImg src={TRIP_2020_2022}  alt="TripAdvisor Travelers' Choice 2020, 2021 & 2022"   height={110} />
+      <AwardImg src={TRIP_2021}        alt="TripAdvisor Travelers' Choice 2021"                height={110} />
       <Divider />
-      <AwardImg src={TRIP_2025}        alt="TripAdvisor Travelers' Choice Awards 2025"          height={110} />
+      <AwardImg src={TRIP_2022}        alt="TripAdvisor Travelers' Choice 2022"                height={110} />
+      <Divider />
+      <AwardImg src={TRIP_2023}        alt="TripAdvisor Travelers' Choice 2023"                height={110} />
+      <Divider />
+      <AwardImg src={TRIP_2025}        alt="TripAdvisor Travelers' Choice 2025"                height={110} />
       <Divider />
 
       {/* Expedia Verified Reviews widget */}
