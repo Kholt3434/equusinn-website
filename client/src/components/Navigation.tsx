@@ -24,6 +24,7 @@ const navLinks: NavItem[] = [
   { href: "/groups", label: "Groups" },
   { href: "/gallery", label: "Gallery" },
   { href: "/reviews", label: "Reviews" },
+  { href: "/awards", label: "Awards" },
   {
     href: "/location",
     label: "Explore",
