@@ -16,6 +16,7 @@ import Reviews from "./pages/Reviews";
 import ThingsToDo from "./pages/ThingsToDo";
 import FAQ from "./pages/FAQ";
 import Awards from "./pages/Awards";
+import Rewards from "./pages/Rewards";
 import AIChat from "./components/AIChat";
 
 function Router() {
@@ -31,6 +32,7 @@ function Router() {
       <Route path={"/gallery"} component={Gallery} />
       <Route path={"/reviews"} component={Reviews} />
       <Route path={"/awards"} component={Awards} />
+      <Route path={"/rewards"} component={Rewards} />
       <Route path={"/things-to-do"} component={ThingsToDo} />
       <Route path={"/faq"} component={FAQ} />
       <Route path={"/404"} component={NotFound} />
