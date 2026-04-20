@@ -13,11 +13,13 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 
 export default function Rewards() {
   useEffect(() => {
-    // Load The Guestbook rewards script
+    // Load The Guestbook rewards script in the head for early rendering
     const script = document.createElement("script");
     script.src = "https://theguestbook.com/rewards_overview.js?w=equusinn";
     script.async = true;
-    document.body.appendChild(script);
+    script.type = "text/javascript";
+    // Append to head instead of body for earlier loading
+    document.head.appendChild(script);
 
     return () => {
       if (script.parentNode) {
