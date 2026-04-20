@@ -122,10 +122,6 @@ export default function Rewards() {
             </p>
           </motion.div>
         </div>
-      </section>
-
-      {/* The Guestbook Rewards Widget */}
-      <section className="py-16 bg-white">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 xl:px-10">
           <motion.div
             initial={{ opacity: 0 }}
@@ -133,7 +129,7 @@ export default function Rewards() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             id="guestbook-rewards"
-            className="min-h-[600px]"
+            className="min-h-[600px] mb-12"
           >
             {/* The Guestbook script will render content here */}
           </motion.div>
