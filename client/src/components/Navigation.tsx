@@ -18,24 +18,42 @@ type NavItem =
 
 const navLinks: NavItem[] = [
   { href: "/", label: "Home" },
-  { href: "/rooms", label: "Rooms & Suites" },
-  { href: "/amenities", label: "Amenities" },
-  { href: "/meetings", label: "Meetings" },
-  { href: "/groups", label: "Groups" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/reviews", label: "Reviews" },
-  { href: "/awards", label: "Awards" },
-  { href: "/rewards", label: "Rewards" },
+  {
+    href: "/rooms",
+    label: "Accommodations",
+    dropdown: [
+      { href: "/rooms", label: "Rooms & Suites", description: "Browse our room types" },
+      { href: "/amenities", label: "Amenities", description: "Hotel facilities & services" },
+    ],
+  },
+  {
+    href: "/gallery",
+    label: "Experiences",
+    dropdown: [
+      { href: "/meetings", label: "Meetings & Events", description: "Host your event" },
+      { href: "/groups", label: "Groups", description: "Group accommodations" },
+      { href: "/gallery", label: "Gallery", description: "Photo gallery" },
+      { href: "/things-to-do", label: "Things to Do", description: "Local attractions" },
+    ],
+  },
+  {
+    href: "/reviews",
+    label: "Guest Resources",
+    dropdown: [
+      { href: "/reviews", label: "Reviews", description: "Guest testimonials" },
+      { href: "/awards", label: "Awards", description: "Our accolades" },
+      { href: "/rewards", label: "Rewards Program", description: "Loyalty rewards" },
+      { href: "/faq", label: "FAQ", description: "Frequently asked questions" },
+    ],
+  },
   {
     href: "/location",
     label: "Explore",
     dropdown: [
       { href: "/location", label: "Location & Directions", description: "Find us in Ocala, FL" },
-      { href: "/things-to-do", label: "Things to Do", description: "Restaurants, shopping & activities" },
     ],
   },
   { href: "/contact", label: "Contact" },
-  { href: "/faq", label: "FAQ" },
 ];
 
 export default function Navigation() {
