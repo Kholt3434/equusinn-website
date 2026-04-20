@@ -13,19 +13,16 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 
 export default function Rewards() {
   useEffect(() => {
-    // Load The Guestbook rewards script in the head for early rendering
-    const script = document.createElement("script");
-    script.src = "https://theguestbook.com/rewards_overview.js?w=equusinn";
-    script.async = true;
-    script.type = "text/javascript";
-    // Append to head instead of body for earlier loading
-    document.head.appendChild(script);
+    // Load The Guestbook rewards script with delay to ensure DOM is ready
+    const timer = setTimeout(() => {
+      const script = document.createElement("script");
+      script.src = "https://theguestbook.com/rewards_overview.js?w=equusinn";
+      script.async = true;
+      script.type = "text/javascript";
+      document.body.appendChild(script);
+    }, 50);
 
-    return () => {
-      if (script.parentNode) {
-        script.parentNode.removeChild(script);
-      }
-    };
+    return () => clearTimeout(timer);
   }, []);
 
   const containerVariants = {
