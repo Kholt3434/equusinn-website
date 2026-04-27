@@ -5,7 +5,7 @@
  * Typography: Cormorant Garamond (display) + Lato (body)
  */
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import { SchemaMarkup } from "@/components/SchemaMarkup";
@@ -21,8 +21,16 @@ const OUTDOOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/Wf
 const EXTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/FrontExterior_578913ce.webp";
 const BEER_WINE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/BeerNWineMachine_93fd1e00.webp";
 const MEETING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomBoardroomProjector_400eafd0.png";
-// Real branded breakfast photo
-const BREAKFAST_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/newbreakfastimage_9961f052.png";
+// Real branded breakfast photos
+const BREAKFAST_IMG = "/manus-storage/ChatGPTImageApr27,2026,11_58_56AM_d96ea345.png";
+const BREAKFAST_IMG2 = "/manus-storage/ChatGPTImageApr27,2026,11_57_40AM_6d2f3140.png";
+const BREAKFAST_IMG3 = "/manus-storage/ChatGPTImageApr27,2026,11_58_50AM_0ef28bb3.png";
+const BREAKFAST_IMG4 = "/manus-storage/ChatGPTImageApr27,2026,11_58_24AM_5edd2785.png";
+const BREAKFAST_IMG5 = "/manus-storage/ChatGPTImageApr27,2026,11_58_45AM_20b81a78.png";
+const BREAKFAST_IMG6 = "/manus-storage/ChatGPTImageApr27,2026,11_58_41AM_15fd751d.png";
+const BREAKFAST_IMG7 = "/manus-storage/ChatGPTImageApr27,2026,11_58_30AM_82518c94.png";
+const BREAKFAST_IMG8 = "/manus-storage/ChatGPTImageApr27,2026,11_59_50AM_b332ecba.png";
+const BREAKFAST_IMG9 = "/manus-storage/ChatGPTImageApr27,2026,12_03_33PM_8b3699c0.png";
 // Stock for pets and fitness
 const PET_IMG = "https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=900&q=80";
 const GYM_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/FitnessCenter_5717ebbb.webp";
@@ -43,7 +51,9 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
   );
 }
 
-const amenities = [
+  const breakfastImages = [BREAKFAST_IMG, BREAKFAST_IMG2, BREAKFAST_IMG3, BREAKFAST_IMG4, BREAKFAST_IMG5, BREAKFAST_IMG6, BREAKFAST_IMG7, BREAKFAST_IMG8, BREAKFAST_IMG9];
+
+  const amenities = [
   {
     icon: Coffee,
     title: "Complimentary Hot Breakfast",
@@ -52,6 +62,8 @@ const amenities = [
     img: BREAKFAST_IMG,
     alt: "Equus Inn complimentary hot breakfast",
     items: ["Scrambled eggs & sausage", "Biscuits & grits", "Seasonal fresh fruits", "Hot & cold cereals", "Coffee, juice & tea", "Mon–Fri 6–9am · Sat–Sun 6–10am"],
+    isCarousel: true,
+    carouselImages: breakfastImages,
   },
   {
     icon: Waves,
@@ -120,6 +132,8 @@ const additionalFeatures = [
 ];
 
 export default function Amenities() {
+  const [breakfastImageIndex, setBreakfastImageIndex] = useState(0);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -184,11 +198,33 @@ export default function Amenities() {
               <div className={`grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden`}>
                 {/* Image */}
                 <div className={`relative h-72 lg:h-auto overflow-hidden ${i % 2 === 1 ? "lg:order-2" : ""}`}>
-                  <img
-                    src={amenity.img}
-                    alt={amenity.alt}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  />
+                  {amenity.isCarousel ? (
+                    <>
+                      <img
+                        src={amenity.carouselImages[breakfastImageIndex]}
+                        alt={amenity.alt}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+                        {amenity.carouselImages.map((_, idx) => (
+                          <button
+                            key={idx}
+                            onClick={() => setBreakfastImageIndex(idx)}
+                            className={`w-2 h-2 rounded-full transition-all ${
+                              idx === breakfastImageIndex ? "bg-[#D4AF6A] w-6" : "bg-white/50 hover:bg-white"
+                            }`}
+                            aria-label={`View breakfast image ${idx + 1}`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  ) : (
+                    <img
+                      src={amenity.img}
+                      alt={amenity.alt}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#111B30]/30 to-transparent" />
                 </div>
                 {/* Content */}

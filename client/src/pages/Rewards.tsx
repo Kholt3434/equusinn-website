@@ -120,18 +120,16 @@ export default function Rewards() {
               From complimentary upgrades to VIP experiences, our rewards program is designed to thank you for choosing Equus Inn.
             </p>
           </motion.div>
+          <div id="guestbook-rewards" className="mt-12"></div>
         </div>
+      </section>
+
+      {/* The Guestbook Rewards Widget Section */}
+      <section className="py-16 bg-white border-t border-gray-200">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 xl:px-10">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            id="guestbook-rewards"
-            className="min-h-[600px] mb-12"
-          >
-            {/* The Guestbook script will render content here */}
-          </motion.div>
+          <div id="guestbook-rewards-widget" className="min-h-[600px]">
+            {/* The Guestbook script renders here */}
+          </div>
         </div>
       </section>
 
