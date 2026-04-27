@@ -31,6 +31,11 @@ const BREAKFAST_IMG6 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883
 const BREAKFAST_IMG7 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/ChatGPTImageApr27_2026_11_58_30AM_82518c94.png";
 const BREAKFAST_IMG8 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/ChatGPTImageApr27_2026_11_59_50AM_b332ecba.png";
 const BREAKFAST_IMG9 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/ChatGPTImageApr27_2026_12_03_33PM_8b3699c0.png";
+// Beer and wine carousel images
+const BEER_WINE_LADY = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/CopyofEqquss_Hotel_2021-3231_7f8c5d2e.webp";
+const BEER_WINE_MACHINE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/BeerNWineMachine_93fd1e00.webp";
+const BEER_WINE_GLASS = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/CopyofEqquss_Hotel_2021-3218_1_c9f2e1a3.webp";
+const BEER_WINE_TAP = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/CopyofEqquss_Hotel_2021-3209_e4d5f8b1.webp";
 // Stock for pets and fitness
 const PET_IMG = "https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=900&q=80";
 const GYM_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/FitnessCenter_5717ebbb.webp";
@@ -79,9 +84,11 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
     title: "Self-Service Beer & Wine Bar",
     subtitle: "Available 11am–11pm Daily",
     desc: "Unwind after a long day at the show ring with a glass of wine or a cold beer from our self-service bar. Available to guests daily from 11am to 11pm — no waiting for a bartender. Enjoy your drink poolside, at the outdoor fireplace, or in the comfort of your room.",
-    img: BEER_WINE_IMG,
-    alt: "Equus Inn self-service beer and wine machine",
+    img: BEER_WINE_LADY,
+    alt: "Equus Inn self-service beer and wine bar",
     items: ["Selection of wines", "Cold beer selection", "Available 11am–11pm daily", "Serve yourself", "Enjoy poolside or at the fireplace"],
+    isCarousel: true,
+    carouselImages: [BEER_WINE_LADY, BEER_WINE_TAP, BEER_WINE_GLASS, BEER_WINE_MACHINE],
   },
   {
     icon: Flame,
@@ -133,9 +140,26 @@ const additionalFeatures = [
 
 export default function Amenities() {
   const [breakfastImageIndex, setBreakfastImageIndex] = useState(0);
+  const [beerWineImageIndex, setBeerWineImageIndex] = useState(0);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  // Auto-switch breakfast carousel every 5 seconds
+  useEffect(() => {
+    const breakfastTimer = setInterval(() => {
+      setBreakfastImageIndex((prev) => (prev + 1) % 9);
+    }, 5000);
+    return () => clearInterval(breakfastTimer);
+  }, []);
+
+  // Auto-switch beer and wine carousel every 5 seconds
+  useEffect(() => {
+    const beerWineTimer = setInterval(() => {
+      setBeerWineImageIndex((prev) => (prev + 1) % 4);
+    }, 5000);
+    return () => clearInterval(beerWineTimer);
   }, []);
 
   return (
@@ -201,7 +225,7 @@ export default function Amenities() {
                   {amenity.isCarousel ? (
                     <>
                       <img
-                        src={amenity.carouselImages[breakfastImageIndex]}
+                        src={amenity.carouselImages[i === 0 ? breakfastImageIndex : beerWineImageIndex]}
                         alt={amenity.alt}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                       />
@@ -209,11 +233,11 @@ export default function Amenities() {
                         {amenity.carouselImages.map((_, idx) => (
                           <button
                             key={idx}
-                            onClick={() => setBreakfastImageIndex(idx)}
+                            onClick={() => i === 0 ? setBreakfastImageIndex(idx) : setBeerWineImageIndex(idx)}
                             className={`w-2 h-2 rounded-full transition-all ${
-                              idx === breakfastImageIndex ? "bg-[#D4AF6A] w-6" : "bg-white/50 hover:bg-white"
+                              idx === (i === 0 ? breakfastImageIndex : beerWineImageIndex) ? "bg-[#D4AF6A] w-6" : "bg-white/50 hover:bg-white"
                             }`}
-                            aria-label={`View breakfast image ${idx + 1}`}
+                            aria-label={`View image ${idx + 1}`}
                           />
                         ))}
                       </div>
