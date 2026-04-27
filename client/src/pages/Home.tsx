@@ -31,7 +31,7 @@ const PROPERTY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/W
 const ROOM_DETAIL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/BathroomandVanity_36d4711a.webp";
 const MEETING_SECTION_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomBoardroomProjector_400eafd0.png";
 // Real Equus Inn branded breakfast photo
-const BREAKFAST_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/ChatGPTImageApr27_2026_12_03_33PM_8b3699c0.png";
+const BREAKFAST_IMG = "/manus-storage/ChatGPTImageApr27,2026,12_03_33PM_b17ef2ac.png";
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);

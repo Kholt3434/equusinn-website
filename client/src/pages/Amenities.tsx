@@ -22,20 +22,20 @@ const EXTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/W
 const BEER_WINE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/BeerNWineMachine_93fd1e00.webp";
 const MEETING_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/MeetingRoomBoardroomProjector_400eafd0.png";
 // Real branded breakfast photos
-const BREAKFAST_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/ChatGPTImageApr27_2026_11_58_56AM_d96ea345.png";
-const BREAKFAST_IMG2 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/ChatGPTImageApr27_2026_11_57_40AM_6d2f3140.png";
-const BREAKFAST_IMG3 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/ChatGPTImageApr27_2026_11_58_50AM_0ef28bb3.png";
-const BREAKFAST_IMG4 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/ChatGPTImageApr27_2026_11_58_24AM_5edd2785.png";
-const BREAKFAST_IMG5 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/ChatGPTImageApr27_2026_11_58_45AM_20b81a78.png";
-const BREAKFAST_IMG6 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/ChatGPTImageApr27_2026_11_58_41AM_15fd751d.png";
-const BREAKFAST_IMG7 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/ChatGPTImageApr27_2026_11_58_30AM_82518c94.png";
-const BREAKFAST_IMG8 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/ChatGPTImageApr27_2026_11_59_50AM_b332ecba.png";
-const BREAKFAST_IMG9 = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/ChatGPTImageApr27_2026_12_03_33PM_8b3699c0.png";
+const BREAKFAST_IMG = "/manus-storage/ChatGPTImageApr27,2026,11_58_56AM_1ab45688.png";
+const BREAKFAST_IMG2 = "/manus-storage/ChatGPTImageApr27,2026,11_57_40AM_8cefbf2d.png";
+const BREAKFAST_IMG3 = "/manus-storage/ChatGPTImageApr27,2026,11_58_50AM_fdbe7c4d.png";
+const BREAKFAST_IMG4 = "/manus-storage/ChatGPTImageApr27,2026,11_58_24AM_528660ed.png";
+const BREAKFAST_IMG5 = "/manus-storage/ChatGPTImageApr27,2026,11_58_45AM_901add2d.png";
+const BREAKFAST_IMG6 = "/manus-storage/ChatGPTImageApr27,2026,11_58_41AM_7a044b30.png";
+const BREAKFAST_IMG7 = "/manus-storage/ChatGPTImageApr27,2026,11_58_30AM_c3fa75b1.png";
+const BREAKFAST_IMG8 = "/manus-storage/ChatGPTImageApr27,2026,11_59_50AM_2cfcb433.png";
+const BREAKFAST_IMG9 = "/manus-storage/ChatGPTImageApr27,2026,12_03_33PM_b17ef2ac.png";
 // Beer and wine carousel images
-const BEER_WINE_LADY = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/CopyofEqquss_Hotel_2021-3231_7f8c5d2e.webp";
+const BEER_WINE_LADY = "/manus-storage/CopyofEqquss_Hotel_2021-3231_887a8abd.webp";
 const BEER_WINE_MACHINE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/BeerNWineMachine_93fd1e00.webp";
-const BEER_WINE_GLASS = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/CopyofEqquss_Hotel_2021-3218_1_c9f2e1a3.webp";
-const BEER_WINE_TAP = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/CopyofEqquss_Hotel_2021-3209_e4d5f8b1.webp";
+const BEER_WINE_GLASS = "/manus-storage/CopyofEqquss_Hotel_2021-3218(1)_50f2ea5f.webp";
+const BEER_WINE_TAP = "/manus-storage/CopyofEqquss_Hotel_2021-3209_c0ee3edb.webp";
 // Stock for pets and fitness
 const PET_IMG = "https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=900&q=80";
 const GYM_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/FitnessCenter_5717ebbb.webp";
