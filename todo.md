@@ -25,3 +25,6 @@
 - [ ] Virtual room tours (360°)
 - [ ] Room comparison tool
 - [ ] Live booking widget with availability checker
+- [x] Baseball Tournament landing page (hidden, Google Ads)
+- [x] Swim Tournament landing page (hidden, Google Ads)
+- [x] Group inquiry form with email to kholt@paxproperties.com

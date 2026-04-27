@@ -10,6 +10,16 @@ async function startServer() {
   const app = express();
   const server = createServer(app);
 
+  // Middleware
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: true }));
+
+  // Import routes
+  const { default: inquiriesRouter } = await import("./routes/inquiries.js");
+
+  // API routes
+  app.use("/api", inquiriesRouter);
+
   // Serve static files from dist/public in production
   const staticPath =
     process.env.NODE_ENV === "production"
