@@ -13,16 +13,12 @@ import SchemaMarkup from "@/components/SchemaMarkup";
 
 export default function Rewards() {
   useEffect(() => {
-    // Load The Guestbook rewards script with delay to ensure DOM is ready
-    const timer = setTimeout(() => {
-      const script = document.createElement("script");
-      script.src = "https://theguestbook.com/rewards_overview.js?w=equusinn";
-      script.async = true;
-      script.type = "text/javascript";
-      document.body.appendChild(script);
-    }, 50);
-
-    return () => clearTimeout(timer);
+    // Load The Guestbook rewards script
+    const script = document.createElement("script");
+    script.src = "https://theguestbook.com/rewards_overview.js?w=equusinn";
+    script.async = true;
+    script.type = "text/javascript";
+    document.head.appendChild(script);
   }, []);
 
   const containerVariants = {
