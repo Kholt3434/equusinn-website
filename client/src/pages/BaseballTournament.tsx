@@ -118,7 +118,6 @@ export default function BaseballTournament() {
               { icon: '🅿️', title: 'Free Parking', desc: 'Ample space for all vehicles' },
               { icon: '🏋️', title: 'Fitness Center', desc: 'Stay in shape' },
               { icon: '🍷', title: 'Beer & Wine', desc: 'Unwind in the evening' },
-              { icon: '🎮', title: 'Game Room', desc: 'Team bonding' },
               { icon: '🛎️', title: '24/7 Support', desc: 'Always here for you' }
             ].map((amenity, i) => (
               <div key={i} className="text-center p-6 rounded-lg bg-gradient-to-br from-[#2F9D8F]/5 to-[#186F5E]/5 hover:from-[#2F9D8F]/10 hover:to-[#186F5E]/10 transition">
