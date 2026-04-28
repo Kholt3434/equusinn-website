@@ -14,8 +14,8 @@ import {
   CheckCircle, ArrowRight, Phone, Mail
 } from "lucide-react";
 
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/FrontExterior-HorseStatue_c9445e18.webp";
-const POOL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/outdoorpool_41fd32e0.webp";
+const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/kids_baseball_batting-5iQRHhTkSiKqJC9izxjvZ8.webp";
+const POOL_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/kids_baseball_fielding-VLTsevK6DBp4UR4nbtKwVf.webp";
 const ROOM_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/KingRoom_5ae99094.webp";
 const BREAKFAST_IMG = "/manus-storage/ChatGPTImageApr27,2026,12_03_33PM_b17ef2ac.png";
 
@@ -117,7 +117,7 @@ export default function BaseballTournament() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             onClick={() => document.getElementById("inquiry")?.scrollIntoView({ behavior: "smooth" })}
-            className="bg-yellow-500 hover:bg-yellow-600 text-navy px-8 py-3 rounded-lg font-semibold transition"
+            className="bg-[#D4A574] hover:bg-[#C49464] text-[#1C2B4A] px-8 py-3 rounded-lg font-semibold transition"
           >
             Get Group Rates
           </motion.button>
@@ -128,7 +128,7 @@ export default function BaseballTournament() {
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="font-serif text-4xl mb-4 text-navy">Why Tournament Teams Choose Equus Inn</h2>
+            <h2 className="font-serif text-4xl mb-4 text-[#1C2B4A]">Why Tournament Teams Choose Equus Inn</h2>
             <p className="text-lg text-gray-600">Close to all major Ocala baseball venues • Group discounts • Free breakfast • Pet-friendly</p>
           </AnimatedSection>
 
@@ -179,11 +179,11 @@ export default function BaseballTournament() {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="font-serif text-4xl mb-4 text-navy">Ocala Tournament Venues</h2>
+            <h2 className="font-serif text-4xl mb-4 text-[#1C2B4A]">Ocala Tournament Venues</h2>
             <p className="text-lg text-gray-600">All within minutes of Equus Inn</p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 name: "FAST Ocala",
@@ -206,7 +206,7 @@ export default function BaseballTournament() {
                 distance: "7 minutes"
               }
             ].map((venue, i) => (
-              <AnimatedSection key={i} className="bg-gradient-to-r from-navy to-blue-900 text-white p-8 rounded-lg">
+              <AnimatedSection key={i} className="bg-gradient-to-r from-[#1C2B4A] to-[#2D4A7B] text-white p-8 rounded-lg">
                 <h3 className="font-semibold text-xl mb-2">{venue.name}</h3>
                 <p className="mb-4">{venue.desc}</p>
                 <p className="text-yellow-400 font-semibold">{venue.distance} from Equus Inn</p>
@@ -220,23 +220,23 @@ export default function BaseballTournament() {
       <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <AnimatedSection className="text-center mb-16">
-            <h2 className="font-serif text-4xl mb-4 text-navy">Team Amenities</h2>
+            <h2 className="font-serif text-4xl mb-4 text-[#1C2B4A]">Team Amenities</h2>
           </AnimatedSection>
 
           <div className="grid md:grid-cols-3 gap-8">
             <AnimatedSection>
               <img src={BREAKFAST_IMG} alt="Breakfast" className="w-full h-64 object-cover rounded-lg mb-4" />
-              <h3 className="font-semibold text-lg text-navy mb-2">Free Hot Breakfast</h3>
+              <h3 className="font-semibold text-lg text-[#1C2B4A] mb-2">Free Hot Breakfast</h3>
               <p className="text-gray-600">Daily hot breakfast included with every room</p>
             </AnimatedSection>
             <AnimatedSection>
-              <img src={POOL_IMG} alt="Pool" className="w-full h-64 object-cover rounded-lg mb-4" />
-              <h3 className="font-semibold text-lg text-navy mb-2">Heated Pool</h3>
-              <p className="text-gray-600">Relax after tournament games in our seasonal heated pool</p>
+              <img src={POOL_IMG} alt="Tournament Action" className="w-full h-64 object-cover rounded-lg mb-4" />
+              <h3 className="font-semibold text-lg text-[#1C2B4A] mb-2">Tournament Ready</h3>
+              <p className="text-gray-600">Your team will be energized and ready to compete</p>
             </AnimatedSection>
             <AnimatedSection>
               <img src={ROOM_IMG} alt="Room" className="w-full h-64 object-cover rounded-lg mb-4" />
-              <h3 className="font-semibold text-lg text-navy mb-2">Comfortable Rooms</h3>
+              <h3 className="font-semibold text-lg text-[#1C2B4A] mb-2">Comfortable Rooms</h3>
               <p className="text-gray-600">152 rooms with modern amenities and pet-friendly options</p>
             </AnimatedSection>
           </div>
@@ -247,7 +247,7 @@ export default function BaseballTournament() {
       <section id="inquiry" className="py-20 px-4">
         <div className="max-w-2xl mx-auto">
           <AnimatedSection className="text-center mb-12">
-            <h2 className="font-serif text-4xl mb-4 text-navy">Get Your Group Rates</h2>
+            <h2 className="font-serif text-4xl mb-4 text-[#1C2B4A]">Get Your Group Rates</h2>
             <p className="text-lg text-gray-600">Fill out the form below and we'll send you special tournament team pricing</p>
           </AnimatedSection>
 
@@ -262,7 +262,7 @@ export default function BaseballTournament() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-semibold text-navy mb-2">Team Name *</label>
+                  <label className="block text-sm font-semibold text-[#1C2B4A] mb-2">Team Name *</label>
                   <input
                     type="text"
                     name="teamName"

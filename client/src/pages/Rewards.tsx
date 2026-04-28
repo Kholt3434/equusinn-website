@@ -18,7 +18,20 @@ export default function Rewards() {
     script.src = "https://theguestbook.com/rewards_overview.js?w=equusinn";
     script.async = true;
     script.type = "text/javascript";
-    document.head.appendChild(script);
+    
+    // Add to body to ensure proper rendering
+    if (document.body) {
+      document.body.appendChild(script);
+    } else {
+      document.head.appendChild(script);
+    }
+    
+    return () => {
+      // Cleanup if needed
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
   }, []);
 
   const containerVariants = {
@@ -116,7 +129,7 @@ export default function Rewards() {
               From complimentary upgrades to VIP experiences, our rewards program is designed to thank you for choosing Equus Inn.
             </p>
           </motion.div>
-          <div id="guestbook-rewards" className="mt-12"></div>
+          <div id="guestbook-rewards" className="mt-12 w-full"></div>
         </div>
       </section>
 
