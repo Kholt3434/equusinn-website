@@ -83,26 +83,7 @@ const testimonials = [
 export default function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
-
-  // Google Ads conversion tracking for Book Now clicks
-  const handleBookNowClick = () => {
-    if (typeof window !== 'undefined' && typeof (window as any).gtag !== 'undefined') {
-      const callback = () => {
-        window.location.href = 'https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1';
-      };
-      (window as any).gtag('event', 'conversion', {
-        'send_to': 'AW-17150991250/X2U5CPvho6kcEJK3nfI_',
-        'value': 50.0,
-        'currency': 'USD',
-        'event_callback': callback
-      });
-      return false;
-    } else {
-      // Fallback if gtag is not available
-      window.location.href = 'https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1';
-    }
-  };
+  });
 
   return (
     <div className="min-h-screen bg-[#FAF7F2]">
@@ -152,8 +133,9 @@ export default function Home() {
           >
             <a
               href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
-              onClick={handleBookNowClick}
-              className="btn-gold text-sm px-8 py-4 inline-block cursor-pointer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold text-sm px-8 py-4 inline-block"
             >
               Book Your Stay
             </a>
@@ -290,8 +272,9 @@ export default function Home() {
               </p>
               <a
                 href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
-                onClick={handleBookNowClick}
-                className="btn-gold text-xs px-7 py-3.5 inline-block cursor-pointer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold text-xs px-7 py-3.5 inline-block"
               >
                 Book Your Stay
               </a>
@@ -427,8 +410,9 @@ export default function Home() {
               </p>
               <a
                 href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
-                onClick={handleBookNowClick}
-                className="btn-primary text-xs px-7 py-3.5 inline-block cursor-pointer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary text-xs px-7 py-3.5 inline-block"
               >
                 Reserve Your Room
               </a>
@@ -548,8 +532,9 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
-                onClick={handleBookNowClick}
-                className="btn-gold text-sm px-10 py-4 inline-block cursor-pointer"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold text-sm px-10 py-4 inline-block"
               >
                 Book Now
               </a>

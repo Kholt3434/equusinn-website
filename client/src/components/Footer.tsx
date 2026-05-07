@@ -3,6 +3,7 @@
  * Deep Navy #1C2B4A | Champagne #D4AF6A | Ivory #FAF7F2 | Saddle #8B5E3C
  */
 
+import { useEffect } from "react";
 import { Link } from "wouter";
 import { MapPin, Phone, Mail, Instagram, Facebook, ExternalLink } from "lucide-react";
 
@@ -10,6 +11,47 @@ const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+
+  // Global Windsurfer conversion tracking
+  useEffect(() => {
+    const handleWindsurferClick = (event: MouseEvent) => {
+      const link = (event.target as HTMLElement).closest('a') as HTMLAnchorElement;
+
+      if (!link) return;
+
+      const href = link.href || '';
+
+      if (href.includes('windsurfercrs.com')) {
+        event.preventDefault();
+
+        const targetUrl = href;
+        const linkTarget = link.getAttribute('target');
+
+        const sendUserToWindsurfer = () => {
+          if (linkTarget === '_blank') {
+            window.open(targetUrl, '_blank');
+          } else {
+            window.location.href = targetUrl;
+          }
+        };
+
+        if (typeof (window as any).gtag === 'function') {
+          (window as any).gtag('event', 'conversion', {
+            'send_to': 'AW-17150991250/X2U5CPvho6kcEJK3nfI_',
+            'value': 50.0,
+            'currency': 'USD',
+            'event_callback': sendUserToWindsurfer,
+            'event_timeout': 2000
+          });
+        } else {
+          sendUserToWindsurfer();
+        }
+      }
+    };
+
+    document.addEventListener('click', handleWindsurferClick);
+    return () => document.removeEventListener('click', handleWindsurferClick);
+  }, []);
 
   return (
     <footer className="bg-[#2B3F4E] text-[#FAF7F2]">
@@ -19,14 +61,12 @@ export default function Footer() {
           <p className="font-body font-700 text-[0.6rem] tracking-[0.2em] uppercase text-[#111B30]">
             Ocala's Premier Equestrian Boutique Hotel
           </p>
-          <a
-            href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-body font-700 text-[0.6rem] tracking-[0.2em] uppercase text-[#111B30] hover:underline flex items-center gap-1"
-          >
-            Book Your Stay <ExternalLink className="w-3 h-3" />
-          </a>
+            <a
+              href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
+              className="font-body font-700 text-[0.6rem] tracking-[0.2em] uppercase text-[#111B30] hover:underline flex items-center gap-1 cursor-pointer"
+            >
+              Book Your Stay <ExternalLink className="w-3 h-3" />
+            </a>
         </div>
       </div>
 
@@ -131,9 +171,7 @@ export default function Footer() {
             </p>
             <a
               href="https://res.windsurfercrs.com/ibe/index.aspx?propertyID=17026&nono=1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold text-[0.6rem] px-6 py-3 inline-block"
+              className="btn-gold text-[0.6rem] px-6 py-3 inline-block cursor-pointer"
             >
               Book Now
             </a>
