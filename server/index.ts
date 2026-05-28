@@ -20,6 +20,7 @@ async function startServer() {
   const { default: contentRouter } = await import("./routes/content.js");
   const { default: mediaRouter } = await import("./routes/media.js");
   const { default: usersRouter } = await import("./routes/users.js");
+  const { default: activityRouter } = await import("./routes/activity.js");
 
   // API routes
   app.use("/api", inquiriesRouter);
@@ -27,6 +28,7 @@ async function startServer() {
   app.use("/api/content", contentRouter);
   app.use("/api/media", mediaRouter);
   app.use("/api/users", usersRouter);
+  app.use("/api/activity", activityRouter);
 
   // Serve static files from dist/public in production
   const staticPath =

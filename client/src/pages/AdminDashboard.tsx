@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import { LogOut, FileText, Image, Activity, Users } from "lucide-react";
 import UserManagement from "../components/UserManagement";
+import ActivityLog from "../components/ActivityLog";
 
 interface User {
   id: string;
@@ -324,16 +325,7 @@ export default function AdminDashboard() {
 
         {/* Activity Tab */}
         {activeTab === "activity" && (
-          <div className="space-y-6">
-            <div className="bg-white rounded-lg shadow p-6">
-              <h2 className="text-xl font-bold text-[#1C2B4A] mb-4">
-                Activity Log
-              </h2>
-              <p className="text-gray-600">
-                View all changes made to your website.
-              </p>
-            </div>
-          </div>
+          <ActivityLog token={token} />
         )}
 
         {/* Users Tab (Admin Only) */}
