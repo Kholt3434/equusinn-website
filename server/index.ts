@@ -16,9 +16,15 @@ async function startServer() {
 
   // Import routes
   const { default: inquiriesRouter } = await import("./routes/inquiries.js");
+  const { default: adminRouter } = await import("./routes/admin.js");
+  const { default: contentRouter } = await import("./routes/content.js");
+  const { default: mediaRouter } = await import("./routes/media.js");
 
   // API routes
   app.use("/api", inquiriesRouter);
+  app.use("/api/admin", adminRouter);
+  app.use("/api/content", contentRouter);
+  app.use("/api/media", mediaRouter);
 
   // Serve static files from dist/public in production
   const staticPath =

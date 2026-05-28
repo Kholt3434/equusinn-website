@@ -28,3 +28,21 @@
 - [x] Baseball Tournament landing page (hidden, Google Ads)
 - [x] Swim Tournament landing page (hidden, Google Ads)
 - [x] Group inquiry form with email to kholt@paxproperties.com
+- [ ] Admin dashboard with multi-user authentication
+- [ ] Content editor for homepage copy and sections
+- [ ] Content editor for tournament pages
+- [ ] Image upload and management system
+- [ ] Admin user management (add/remove users)
+- [ ] Activity log for content changes
+
+
+## Admin Dashboard (In Progress)
+- [x] Database schema for admin users, content, media, and activity log
+- [x] Admin authentication routes (login, register, JWT)
+- [x] Content management API routes
+- [x] Media management API routes
+- [x] Admin dashboard UI component with login
+- [ ] Content editor interface (edit sections)
+- [ ] Media upload interface
+- [ ] Activity log display
+- [ ] User management interface

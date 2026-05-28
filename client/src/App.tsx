@@ -19,6 +19,7 @@ import Awards from "./pages/Awards";
 import Rewards from "./pages/Rewards";
 import BaseballTournament from "./pages/BaseballTournament";
 import SwimTournament from "./pages/SwimTournament";
+import AdminDashboard from "./pages/AdminDashboard";
 import AIChat from "./components/AIChat";
 
 function Router() {
@@ -39,6 +40,7 @@ function Router() {
       <Route path={"/faq"} component={FAQ} />
       <Route path={"/baseball-tournament"} component={BaseballTournament} />
       <Route path={"/swim-tournament"} component={SwimTournament} />
+      <Route path={"/admin"} component={AdminDashboard} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
