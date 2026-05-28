@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
-import { LogOut, Settings, FileText, Image, Activity } from "lucide-react";
+import { LogOut, FileText, Image, Activity, Users } from "lucide-react";
+import UserManagement from "../components/UserManagement";
 
 interface User {
   id: string;
@@ -26,6 +27,7 @@ export default function AdminDashboard() {
   const [token, setToken] = useState<string>("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activeTab, setActiveTab] = useState("content");
+  const [isAdmin, setIsAdmin] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [sections, setSections] = useState<ContentSection[]>([]);
@@ -53,6 +55,7 @@ export default function AdminDashboard() {
       if (response.ok) {
         const userData = await response.json();
         setUser(userData);
+        setIsAdmin(userData.role === "admin");
       } else {
         localStorage.removeItem("adminToken");
         setIsLoggedIn(false);
@@ -94,6 +97,7 @@ export default function AdminDashboard() {
         localStorage.setItem("adminToken", data.token);
         setToken(data.token);
         setUser(data.user);
+        setIsAdmin(data.user.role === "admin");
         setIsLoggedIn(true);
         setEmail("");
         setPassword("");
@@ -114,6 +118,7 @@ export default function AdminDashboard() {
     setToken("");
     setUser(null);
     setIsLoggedIn(false);
+    setIsAdmin(false);
     setEmail("");
     setPassword("");
   };
@@ -199,10 +204,10 @@ export default function AdminDashboard() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-8">
         {/* Tabs */}
-        <div className="flex gap-4 mb-8 border-b border-gray-200">
+        <div className="flex gap-4 mb-8 border-b border-gray-200 overflow-x-auto">
           <button
             onClick={() => setActiveTab("content")}
-            className={`flex items-center gap-2 px-4 py-2 font-medium transition-colors ${
+            className={`flex items-center gap-2 px-4 py-2 font-medium transition-colors whitespace-nowrap ${
               activeTab === "content"
                 ? "text-[#D4AF6A] border-b-2 border-[#D4AF6A]"
                 : "text-gray-600 hover:text-gray-900"
@@ -213,7 +218,7 @@ export default function AdminDashboard() {
           </button>
           <button
             onClick={() => setActiveTab("media")}
-            className={`flex items-center gap-2 px-4 py-2 font-medium transition-colors ${
+            className={`flex items-center gap-2 px-4 py-2 font-medium transition-colors whitespace-nowrap ${
               activeTab === "media"
                 ? "text-[#D4AF6A] border-b-2 border-[#D4AF6A]"
                 : "text-gray-600 hover:text-gray-900"
@@ -224,7 +229,7 @@ export default function AdminDashboard() {
           </button>
           <button
             onClick={() => setActiveTab("activity")}
-            className={`flex items-center gap-2 px-4 py-2 font-medium transition-colors ${
+            className={`flex items-center gap-2 px-4 py-2 font-medium transition-colors whitespace-nowrap ${
               activeTab === "activity"
                 ? "text-[#D4AF6A] border-b-2 border-[#D4AF6A]"
                 : "text-gray-600 hover:text-gray-900"
@@ -233,6 +238,19 @@ export default function AdminDashboard() {
             <Activity className="w-4 h-4" />
             Activity
           </button>
+          {isAdmin && (
+            <button
+              onClick={() => setActiveTab("users")}
+              className={`flex items-center gap-2 px-4 py-2 font-medium transition-colors whitespace-nowrap ${
+                activeTab === "users"
+                  ? "text-[#D4AF6A] border-b-2 border-[#D4AF6A]"
+                  : "text-gray-600 hover:text-gray-900"
+              }`}
+            >
+              <Users className="w-4 h-4" />
+              Team
+            </button>
+          )}
         </div>
 
         {/* Content Tab */}
@@ -315,6 +333,13 @@ export default function AdminDashboard() {
                 View all changes made to your website.
               </p>
             </div>
+          </div>
+        )}
+
+        {/* Users Tab (Admin Only) */}
+        {activeTab === "users" && isAdmin && (
+          <div className="bg-white rounded-lg shadow p-6">
+            <UserManagement token={token} currentUserId={user?.id || ""} />
           </div>
         )}
       </main>
