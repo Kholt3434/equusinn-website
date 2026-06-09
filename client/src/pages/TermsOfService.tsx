@@ -37,7 +37,7 @@ export default function TermsOfService() {
             We operate the website <a href="https://equusinn.com/" className="underline hover:text-[#1C2B4A]">https://equusinn.com/</a> (the "Site"), as well as any other related products and services that refer or link to these legal terms (the "Legal Terms") (collectively, the "Services").
           </p>
           <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed mb-4">
-            You can contact us by phone at +1 352-854-3200, email at <a href="mailto:info@equusinn.com" className="underline hover:text-[#1C2B4A]">info@equusinn.com</a>, or by mail to 3434 SW College Rd, Ocala, FL 34474, United States.
+            You can contact us by phone at +1 352-854-3200, email at <a href="mailto:OcalaFD@paxproperties.com" className="underline hover:text-[#1C2B4A]">OcalaFD@paxproperties.com</a>, or by mail to 3434 SW College Rd, Ocala, FL 34474, United States.
           </p>
           <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed mb-4">
             These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you"), and Pax Ocala, LLC, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms. IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.
@@ -76,7 +76,7 @@ export default function TermsOfService() {
               Subject to your compliance with these Legal Terms, we grant you a non-exclusive, non-transferable, revocable license to access the Services and download or print a copy of any portion of the Content solely for your personal, non-commercial use or internal business purpose.
             </p>
             <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed">
-              Except as expressly permitted, no part of the Services, Content, or Marks may be used for commercial purposes without our prior written permission. Requests should be addressed to <a href="mailto:info@equusinn.com" className="underline hover:text-[#1C2B4A]">info@equusinn.com</a>. We reserve all rights not expressly granted to you. Any breach of these Intellectual Property Rights constitutes a material breach of these Legal Terms.
+              Except as expressly permitted, no part of the Services, Content, or Marks may be used for commercial purposes without our prior written permission. Requests should be addressed to <a href="mailto:OcalaFD@paxproperties.com" className="underline hover:text-[#1C2B4A]">OcalaFD@paxproperties.com</a>. We reserve all rights not expressly granted to you. Any breach of these Intellectual Property Rights constitutes a material breach of these Legal Terms.
             </p>
           </div>
 
@@ -296,7 +296,7 @@ export default function TermsOfService() {
             </h3>
             <div className="gold-divider mb-5" />
             <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed">
-              Reply STOP to opt out, or contact support at <a href="mailto:info@equusinn.com" className="underline hover:text-[#1C2B4A]">info@equusinn.com</a>.
+              Reply STOP to opt out, or contact support at <a href="mailto:OcalaFD@paxproperties.com" className="underline hover:text-[#1C2B4A]">OcalaFD@paxproperties.com</a>.
             </p>
           </div>
 
@@ -379,7 +379,7 @@ export default function TermsOfService() {
               <li>Pax Ocala, LLC</li>
               <li>3434 SW College Rd, Ocala, FL 34474, United States</li>
               <li>Phone: +1 352-854-3200</li>
-              <li>Email: <a href="mailto:info@equusinn.com" className="underline hover:text-[#1C2B4A]">info@equusinn.com</a></li>
+              <li>Email: <a href="mailto:OcalaFD@paxproperties.com" className="underline hover:text-[#1C2B4A]">OcalaFD@paxproperties.com</a></li>
             </ul>
           </div>
         </div>

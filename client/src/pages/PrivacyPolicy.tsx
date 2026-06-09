@@ -230,7 +230,7 @@ export default function Rooms() {
               If you have any questions or concerns about this Privacy Policy, please contact us:
             </p>
             <ul className="font-body text-[#2A2A2A]/70 text-base leading-relaxed list-none mt-3 space-y-1">
-              <li>Email: <a href="mailto:info@equusinn.com" className="underline hover:text-[#1C2B4A]">info@equusinn.com</a></li>
+              <li>Email: <a href="mailto:OcalaFD@paxproperties.com" className="underline hover:text-[#1C2B4A]">OcalaFD@paxproperties.com</a></li>
               <li>Website: <a href="https://equusinn.com/contact" className="underline hover:text-[#1C2B4A]">equusinn.com/contact</a></li>
             </ul>
           </div>

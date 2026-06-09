@@ -187,6 +187,10 @@ export default function Footer() {
             © {currentYear} Equus Inn. All rights reserved. Managed by Pax Properties.
           </p>
           <p className="font-body text-[0.6rem] text-[#FAF7F2]/20">
+            <a href="/privacy-policy">Privacy Policy</a> | 
+            <a href="/terms-of-service"> Terms of Service</a>
+          </p>
+          <p className="font-body text-[0.6rem] text-[#FAF7F2]/20">
             Pet-Friendly · Trailer Parking · Free Breakfast · 24/7 Front Desk
           </p>
         </div>
