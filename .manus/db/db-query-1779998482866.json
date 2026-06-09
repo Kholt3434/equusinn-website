@@ -1,0 +1,18 @@
+{
+  "query": "SELECT id, email, username, full_name, role, is_active FROM admin_users WHERE email = 'kholt@paxproperties.com';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway05.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2UZqZAQBQAtZyuf.root --database WfbDi2eLdPQCXATM5yf3fd --execute SELECT id, email, username, full_name, role, is_active FROM admin_users WHERE email = 'kholt@paxproperties.com';",
+  "rows": [
+    {
+      "id": "kholt-admin-001",
+      "email": "kholt@paxproperties.com",
+      "username": "kholt",
+      "full_name": "K Holt",
+      "role": "admin",
+      "is_active": "1"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\temail\tusername\tfull_name\trole\tis_active\nkholt-admin-001\tkholt@paxproperties.com\tkholt\tK Holt\tadmin\t1\n",
+  "stderr": "",
+  "execution_time_ms": 11825
+}

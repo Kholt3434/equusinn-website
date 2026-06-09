@@ -1,0 +1,8 @@
+{
+  "schema": "./server/db/schema.ts",
+  "out": "./server/db/migrations",
+  "dialect": "mysql",
+  "dbCredentials": {
+    "url": "$DATABASE_URL"
+  }
+}

@@ -14,6 +14,10 @@
 - [x] SEO optimization (meta tags, keywords, schema markup)
 - [x] Email capture widget (The Guestbook)
 - [x] Facebook & Instagram pixel tracking
+- [x] Privacy Policy page
+- [x] Terms of Service page
+- [x] Contact form with consent checkboxes
+- [x] Footer with proper email and links
 
 ## In Progress
 - [x] Awards and Recognition page
@@ -28,12 +32,12 @@
 - [x] Baseball Tournament landing page (hidden, Google Ads)
 - [x] Swim Tournament landing page (hidden, Google Ads)
 - [x] Group inquiry form with email to kholt@paxproperties.com
-- [ ] Admin dashboard with multi-user authentication
-- [ ] Content editor for homepage copy and sections
-- [ ] Content editor for tournament pages
-- [ ] Image upload and management system
-- [ ] Admin user management (add/remove users)
-- [ ] Activity log for content changes
+- [x] Admin dashboard with multi-user authentication
+- [x] Content editor for homepage copy and sections (API routes ready)
+- [x] Content editor for tournament pages (API routes ready)
+- [x] Image upload and management system (API routes ready)
+- [x] Admin user management (add/remove users)
+- [x] Activity log for content changes
 
 
 ## Admin Dashboard (In Progress)
