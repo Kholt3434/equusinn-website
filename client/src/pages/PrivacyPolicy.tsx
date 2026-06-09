@@ -209,6 +209,16 @@ export default function Rooms() {
             </p>
           </div>
 
+          <div className="mb-10">
+            <h3 className="font-display text-2xl font-bold text-[#1C2B4A] mb-3">
+              SMS Consent
+            </h3>
+            <div className="gold-divider mb-5" />
+            <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed">
+              SMS consent is not shared with third parties.
+            </p>
+          </div>
+
           {/* Changes to This Privacy Policy */}
           <div className="mb-10">
             <h3 className="font-display text-2xl font-bold text-[#1C2B4A] mb-3">
