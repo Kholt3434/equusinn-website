@@ -17,6 +17,8 @@ import ThingsToDo from "./pages/ThingsToDo";
 import FAQ from "./pages/FAQ";
 import Awards from "./pages/Awards";
 import Rewards from "./pages/Rewards";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import BaseballTournament from "./pages/BaseballTournament";
 import SwimTournament from "./pages/SwimTournament";
 import AdminDashboard from "./pages/AdminDashboard";
@@ -42,6 +44,8 @@ function Router() {
       <Route path={"/swim-tournament"} component={SwimTournament} />
       <Route path={"/admin"} component={AdminDashboard} />
       <Route path={"/404"} component={NotFound} />
+      <Route path={"/privacy-policy"} component={PrivacyPolicy} />
+      <Route path={"/terms-of-service"} component={TermsOfService} />
       <Route component={NotFound} />
     </Switch>
   );

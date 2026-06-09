@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Send, ExternalLink } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Send, ExternalLink, Radio } from "lucide-react";
 import { toast } from "sonner";
 
 const LOBBY_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663435714883/WfbDi2eLdPQCXATM5yf3fd/LobbyLoungeAre_v2_943f919a.webp";
@@ -44,6 +44,8 @@ export default function Contact() {
     guests: "",
     roomType: "",
     message: "",
+    transactionOptIn: 0,
+    marketingOptIn: 0
   });
   const [submitting, setSubmitting] = useState(false);
 
@@ -73,7 +75,7 @@ export default function Contact() {
       });
       if (response.ok) {
         toast.success("Thank you! Your message has been sent. We'll be in touch within 24 hours.");
-        setForm({ name: "", email: "", phone: "", checkIn: "", checkOut: "", guests: "", roomType: "", message: "" });
+        setForm({ name: "", email: "", phone: "", checkIn: "", checkOut: "", guests: "", roomType: "", message: "", transactionOptIn: 0, marketingOptIn: 0 });
       } else {
         toast.error("Failed to send message. Please try again.");
       }
@@ -335,7 +337,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <label className="block font-body text-xs font-600 tracking-widest uppercasetext-[#1C2B4A] mb-2">
-                  Send Us a Message                      </label>
+                        Send Us a Message                      </label>
                       <textarea
                         name="message"
                         value={form.message}
@@ -345,6 +347,22 @@ export default function Contact() {
                         placeholder="Tell us about your stay, any special requests, or questions you have..."
                         className="w-full border border-[#1C2B4A]/20 px-4 py-3 font-body text-sm text-[#2A2A2A] placeholder-[#2A2A2A]/30 focus:outline-none focus:border-[#1C2B4A] transition-colors bg-[#FDFBF7] resize-none"
                       />
+                    </div>
+                    <div>
+                      <input onChange={handleChange} type="checkbox" id="transactionOptInCheckBox" name="transactionOptIn" value="1" />
+
+                      <p className="font-body text-sm text-[#2A2A2A]/55 mb-8">
+                        By checking this box, I consent to receive transactional messages related to my account, orders, or services I have received from Pax Ocala, LLC. These messages may include appointment reminders, order confirmations, and account notifications among others. Message frequency may vary. Message and data rates may apply. Reply HELP for help. Reply STOP to opt-out.
+                      </p>
+
+                    </div>
+                    <div>
+                      <input onChange={handleChange} type="checkbox" id="marketingOptInCheckBox" name="marketingOptIn" value="1" />
+                      <label>
+                        <p className="font-body text-sm text-[#2A2A2A]/55 mb-8">
+                          By checking this box, I consent to receive marketing and promotional messages, including special offers, discounts, new services updates, among others from Pax Ocala, LLC. Message frequency may vary. Message and data rates may apply. Reply HELP for help. Reply STOP to opt-out.
+                        </p>
+                      </label><br />
                     </div>
                     <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-2">
                       <button
@@ -359,6 +377,14 @@ export default function Contact() {
                       <p className="font-body text-xs text-[#2A2A2A]/40">
                         Or call us directly: <a href="tel:+13528543200" className="text-[#1C2B4A] hover:underline">(352) 854-3200</a>
                       </p>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center pt-2">
+                      <a href="/privacy-policy" className="font-body text-xs text-[#2A2A2A]/40">
+                        Privacy Policy
+                      </a>
+                      <a href="/terms-of-service" className="font-body text-xs text-[#2A2A2A]/40">
+                        Terms of Service
+                      </a>
                     </div>
                   </form>
                 </div>
