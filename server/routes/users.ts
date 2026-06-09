@@ -65,7 +65,7 @@ router.post("/", verifyToken, async (req: any, res) => {
     const passwordHash = await bcryptjs.hash(password, 10);
 
     // Create user
-    const newUser = await db
+    await db
       .insert(adminUsers)
       .values({
         email,
@@ -74,15 +74,21 @@ router.post("/", verifyToken, async (req: any, res) => {
         fullName: fullName || username,
         role: role || "editor",
         isActive: true,
-      })
-      .returning({
+      });
+
+    // Fetch the created user
+    const newUser = await db
+      .select({
         id: adminUsers.id,
         email: adminUsers.email,
         username: adminUsers.username,
         fullName: adminUsers.fullName,
         role: adminUsers.role,
         isActive: adminUsers.isActive,
-      });
+      })
+      .from(adminUsers)
+      .where(eq(adminUsers.email, email))
+      .limit(1);
 
     // Log activity
     await db.insert(activityLog).values({
@@ -119,7 +125,7 @@ router.put("/:userId", verifyToken, async (req: any, res) => {
       return res.status(400).json({ error: "Cannot deactivate your own account" });
     }
 
-    const updated = await db
+    await db
       .update(adminUsers)
       .set({
         fullName: fullName !== undefined ? fullName : undefined,
@@ -127,15 +133,21 @@ router.put("/:userId", verifyToken, async (req: any, res) => {
         isActive: isActive !== undefined ? isActive : undefined,
         updatedAt: new Date(),
       })
-      .where(eq(adminUsers.id, userId))
-      .returning({
+      .where(eq(adminUsers.id, userId));
+
+    // Fetch updated user
+    const updated = await db
+      .select({
         id: adminUsers.id,
         email: adminUsers.email,
         username: adminUsers.username,
         fullName: adminUsers.fullName,
         role: adminUsers.role,
         isActive: adminUsers.isActive,
-      });
+      })
+      .from(adminUsers)
+      .where(eq(adminUsers.id, userId))
+      .limit(1);
 
     if (updated.length === 0) {
       return res.status(404).json({ error: "User not found" });
@@ -179,19 +191,25 @@ router.post("/:userId/reset-password", verifyToken, async (req: any, res) => {
     const passwordHash = await bcryptjs.hash(newPassword, 10);
 
     // Update password
-    const updated = await db
+    await db
       .update(adminUsers)
       .set({
         passwordHash,
         updatedAt: new Date(),
       })
-      .where(eq(adminUsers.id, userId))
-      .returning({
+      .where(eq(adminUsers.id, userId));
+
+    // Fetch updated user
+    const updated = await db
+      .select({
         id: adminUsers.id,
         email: adminUsers.email,
         username: adminUsers.username,
         fullName: adminUsers.fullName,
-      });
+      })
+      .from(adminUsers)
+      .where(eq(adminUsers.id, userId))
+      .limit(1);
 
     if (updated.length === 0) {
       return res.status(404).json({ error: "User not found" });
@@ -232,18 +250,24 @@ router.delete("/:userId", verifyToken, async (req: any, res) => {
     }
 
     // Deactivate instead of delete
-    const updated = await db
+    await db
       .update(adminUsers)
       .set({
         isActive: false,
         updatedAt: new Date(),
       })
-      .where(eq(adminUsers.id, userId))
-      .returning({
+      .where(eq(adminUsers.id, userId));
+
+    // Fetch updated user
+    const updated = await db
+      .select({
         id: adminUsers.id,
         email: adminUsers.email,
         username: adminUsers.username,
-      });
+      })
+      .from(adminUsers)
+      .where(eq(adminUsers.id, userId))
+      .limit(1);
 
     if (updated.length === 0) {
       return res.status(404).json({ error: "User not found" });
