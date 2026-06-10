@@ -278,10 +278,21 @@ export default function TermsOfService() {
             </p>
           </div>
 
-          {/* 21. Message & Data Rates */}
+               {/* 20. SMS consent not shared with third parties*/}
           <div className="mb-10">
             <h3 className="font-display text-2xl font-bold text-[#1C2B4A] mb-3">
-              21. Message &amp; Data Rates
+              21. SMS Consent is not shared with Third Parties
+            </h3>
+            <div className="gold-divider mb-5" />
+            <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed">
+              If you opt in to provide SMS consent, that SMS consent will not be shared with third parties.
+            </p>
+          </div>
+
+          {/* 22. Message & Data Rates */}
+          <div className="mb-10">
+            <h3 className="font-display text-2xl font-bold text-[#1C2B4A] mb-3">
+              22. Message &amp; Data Rates
             </h3>
             <div className="gold-divider mb-5" />
             <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed">
@@ -289,10 +300,10 @@ export default function TermsOfService() {
             </p>
           </div>
 
-          {/* 22. Opt-Out Instructions */}
+          {/* 23. Opt-Out Instructions */}
           <div className="mb-10">
             <h3 className="font-display text-2xl font-bold text-[#1C2B4A] mb-3">
-              22. Opt-Out Instructions
+              23. Opt-Out Instructions
             </h3>
             <div className="gold-divider mb-5" />
             <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed">
@@ -300,10 +311,10 @@ export default function TermsOfService() {
             </p>
           </div>
 
-          {/* 23. Privacy */}
+          {/* 24. Privacy */}
           <div className="mb-10">
             <h3 className="font-display text-2xl font-bold text-[#1C2B4A] mb-3">
-              23. Privacy
+              24. Privacy
             </h3>
             <div className="gold-divider mb-5" />
             <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed">
@@ -311,10 +322,10 @@ export default function TermsOfService() {
             </p>
           </div>
 
-          {/* 24. Eligibility */}
+          {/* 25. Eligibility */}
           <div className="mb-10">
             <h3 className="font-display text-2xl font-bold text-[#1C2B4A] mb-3">
-              24. Eligibility
+              25. Eligibility
             </h3>
             <div className="gold-divider mb-5" />
             <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed">
@@ -322,10 +333,10 @@ export default function TermsOfService() {
             </p>
           </div>
 
-          {/* 25. Carrier Disclaimer */}
+          {/* 26. Carrier Disclaimer */}
           <div className="mb-10">
             <h3 className="font-display text-2xl font-bold text-[#1C2B4A] mb-3">
-              25. Carrier Disclaimer
+              26. Carrier Disclaimer
             </h3>
             <div className="gold-divider mb-5" />
             <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed">
@@ -333,10 +344,10 @@ export default function TermsOfService() {
             </p>
           </div>
 
-          {/* 26. Changes to Terms */}
+          {/* 27. Changes to Terms */}
           <div className="mb-10">
             <h3 className="font-display text-2xl font-bold text-[#1C2B4A] mb-3">
-              26. Changes to Terms
+              27. Changes to Terms
             </h3>
             <div className="gold-divider mb-5" />
             <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed">
@@ -344,10 +355,10 @@ export default function TermsOfService() {
             </p>
           </div>
 
-          {/* 27. California Users and Residents */}
+          {/* 28. California Users and Residents */}
           <div className="mb-10">
             <h3 className="font-display text-2xl font-bold text-[#1C2B4A] mb-3">
-              27. California Users and Residents
+              28. California Users and Residents
             </h3>
             <div className="gold-divider mb-5" />
             <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed">
@@ -355,10 +366,10 @@ export default function TermsOfService() {
             </p>
           </div>
 
-          {/* 28. Miscellaneous */}
+          {/* 29. Miscellaneous */}
           <div className="mb-10">
             <h3 className="font-display text-2xl font-bold text-[#1C2B4A] mb-3">
-              28. Miscellaneous
+              29. Miscellaneous
             </h3>
             <div className="gold-divider mb-5" />
             <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed">
@@ -366,10 +377,10 @@ export default function TermsOfService() {
             </p>
           </div>
 
-          {/* 29. Contact Us */}
+          {/* 30. Contact Us */}
           <div className="mb-10">
             <h3 className="font-display text-2xl font-bold text-[#1C2B4A] mb-3">
-              29. Contact Us
+              30. Contact Us
             </h3>
             <div className="gold-divider mb-5" />
             <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed mb-3">
