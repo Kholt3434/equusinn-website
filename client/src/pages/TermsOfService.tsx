@@ -281,11 +281,11 @@ export default function TermsOfService() {
                {/* 20. SMS consent not shared with third parties*/}
           <div className="mb-10">
             <h3 className="font-display text-2xl font-bold text-[#1C2B4A] mb-3">
-              21. SMS Consent is not shared with Third Parties
+              21. SMS Consent is Not Shared with Third Parties
             </h3>
             <div className="gold-divider mb-5" />
             <p className="font-body text-[#2A2A2A]/70 text-base leading-relaxed">
-              If you opt in to provide SMS consent, that SMS consent will not be shared with third parties.
+              If you opt in to provide SMS consent, that SMS consent will not be shared with third parties. No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. Information sharing to subcontractors in support services, such as customer service, is permitted.
             </p>
           </div>
 
