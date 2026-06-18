@@ -71,6 +71,7 @@ export default function Contact() {
           message: form.message,
           _subject: "New General Inquiry from Equus Inn",
           _replyto: form.email,
+          _cc: "kholt@paxproperties.com",
         }),
       });
       if (response.ok) {
@@ -160,9 +161,14 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="font-display font-600 text-sm text-[#1C2B4A] mb-1">Front Desk Email</p>
-                      <a href="mailto:OcalaFD@paxproperties.com" className="font-body text-sm text-[#2A2A2A]/65 hover:text-[#1C2B4A] transition-colors">
-                        OcalaFD@paxproperties.com
-                      </a>
+                          <div className="space-y-1">
+                        <a href="mailto:OcalaFD@paxproperties.com" className="font-body text-sm text-[#2A2A2A]/65 hover:text-[#1C2B4A] transition-colors block">
+                          OcalaFD@paxproperties.com
+                        </a>
+                        <a href="mailto:kholt@paxproperties.com" className="font-body text-sm text-[#2A2A2A]/65 hover:text-[#1C2B4A] transition-colors block">
+                          kholt@paxproperties.com
+                        </a>
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
